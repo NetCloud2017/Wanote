@@ -1,1 +1,1 @@
-!(./home.webp "图片")
+![图片](./home.webp)

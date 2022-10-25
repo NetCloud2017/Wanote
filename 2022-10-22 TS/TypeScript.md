@@ -15,6 +15,8 @@ typeof / instanceof 类型分类场景下的身份确认。
 
 ### 装饰器
 
+在 ts 中使用需要开启 "experimentalDecorators": true,
+
 - 类修饰器
 
 - 属性修饰器

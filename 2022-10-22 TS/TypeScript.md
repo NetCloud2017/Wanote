@@ -21,3 +21,9 @@ typeof / instanceof 类型分类场景下的身份确认。
 
 - 属性修饰器
 - 方法修饰器
+
+### Vue.use 的原码， 详解。
+
+### injectionKey 的作用
+
+### vuex-class 和 vue-class-component

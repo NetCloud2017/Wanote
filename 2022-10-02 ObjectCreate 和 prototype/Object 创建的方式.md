@@ -73,12 +73,126 @@ const p = newFunc(Person, "菜鸡");
 
 ### 继承
 
-#### 原型继承
+### 原型链继承
 
-#### 构造函数的继承
+```js
+function Parent(name) {
+	this.name = name;
+}
 
-#### 组合继承
+Parent.prototype.getName = function () {
+	console.log(this.name);
+};
 
-#### 组合寄生式继承
+function Child() {}
+
+Child.prototype = new Parent();
+Child.prototype.constructor = Child;
+
+(c.__proto__.__proto__ === Child.prototype.__proto__) === Parent.prototype;
+// 隐含的问题
+// 1. 属性如果是引用，一些某个实例修改了，那么都会改。
+// 2. 创建 Child 的时候，是没有办法传参的。
+```
+
+### 构造函数继承
+
+```js
+function Parent(actions, name) {
+	this.actions = actions;
+	this.name = name;
+}
+
+function Child(id) {
+	Parent.apply(this, Array.prototype.slice.call(arguments, 1));
+	this.id = id;
+}
+
+// 隐含的问题
+// 1. 属性或者方法，想被继承的话，只能在构造函数中定义
+// 2. 如果方法在构造函数中定义了，每次都会创建。
+```
+
+### 组合继承
+
+```js
+function Parent(actions, name) {
+	this.actions = actions;
+	this.name = name;
+}
+
+Parent.prototype.getName = function () {
+	console.log(this.name);
+};
+
+function Child(id) {
+	Parent.apply(this, Array.prototype.slice.call(arguments, 1));
+	this.id = id;
+}
+
+Child.prototype = new Parent();
+// Child.prototype.__proto__ = Parent.prototype;
+
+Child.prototype.constructor = Child;
+```
+
+### 组合寄生继承
+
+```js
+function inherit(p) {
+	if (Object.create) {
+		return Object.create(p);
+	}
+	function f() {}
+	f.prototype = p;
+	f.prototype.constructor = f;
+	return new f();
+}
+
+function Parent(actions, name) {
+	this.actions = actions;
+	this.name = name;
+}
+
+Parent.prototype.getName = function () {
+	console.log(this.name);
+};
+
+function Child(id) {
+	Parent.apply(this, Array.prototype.slice.call(arguments, 1));
+	this.id = id;
+}
+
+Child.prototype = inherit(Parent.prototype);
+// Child.prototype.__proto__ = Parent.prototype;
+
+Child.prototype.constructor = Child;
+```
+
+### 逻辑
+
+所谓继承，干得事其实很简单。
+
+1. Child.prototype.**proto** === Parent.prototype;
+2. 你 Parent 构造函数上，初始化的那些个属性，我得有。
+
+#### 1. 使用 new
+
+```js
+const a = new A();
+
+a.__proto__ = A.prototype;
+```
+
+#### 2. 使用 Object.create
+
+```js
+const a = Object.create(A.prototype);
+```
 
 #### 组合寄生继承 和 class 继承有什么区别？
+
+- class 继承，会继承静态属性；
+- 子类中，必须在 consturctor 调用 super， 因为子类自己的 this 对象， 必须通过父类的构造函数完成。
+
+V

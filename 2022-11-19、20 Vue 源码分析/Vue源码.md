@@ -67,13 +67,67 @@ if (cached) {
 
 > Vue 2 入口文件
 
-#### 2. compiler - 编译模块
-
-compiler-core
+#### 2. compiler - 编译模块 compiler-core
 
 1. baseParse() - 模板生成 AST
-2. transform() - AST 进行整合
-3. generate() - 完成 AST 转换后生成 code
+   baseParse 做了哪些事情
+
+```js
+export function baseParse(
+	content: string,
+	options: ParserOptions = {}
+): RootNode {
+	// 内容模板 + 配置 => 上下文
+	const context = createParserContext(content, options);
+	// 根据上下文 获得了锚点
+	const start = getCursor(context);
+	// 生成ast
+	return createRoot(
+		parseChildren(context, TextModes.DATA, []),
+		// 主要核心是子节点的逐层解析
+		getSelection(context, start)
+	);
+}
+```
+
+2. transform() - AST 与 option 进行整合
+
+```js
+
+export function transform(root: RootNode, options: TransformOptions) {
+  // 获取上下文
+  const context = createTransformContext(root, options)
+  // 遍历节点做AST转换
+  traverseNode(root, context)
+  if (options.hoistStatic) {
+    hoistStatic(root, context)
+  }
+  if (!options.ssr) {
+    createRootCodegen(root, context)
+  }
+  // finalize meta information
+  // 完善根节点的元数据赋值
+  root.helpers = new Set([...context.helpers.keys()])
+  root.components = [...context.components]
+  root.directives = [...context.directives]
+  root.imports = context.imports
+  root.hoists = context.hoists
+  root.temps = context.temps
+  root.cached = context.cached
+
+  if (__COMPAT__) {
+    root.filters = [...context.filters!]
+  }
+}
+
+
+```
+
+3. 在 codegen.ts 文件里 generate() - 完成 AST 转换后生成 code
+
+总结
+过程：baseParser() => transform() => generate()
+产物：template => ast => 完整形态 ast => code
 
 <!-- new Function() -->
 <!-- eval -->

@@ -94,7 +94,52 @@ class Dep {
 		this.watchers.forEach((watch) => watch.updata());
 	}
 }
-class Compiler {}
+class Compiler {
+	constructor(vm) {
+		this.el = vm.$el;
+		this.vm = vm;
+		this.methods = vm.$methods;
+		this.compile(vm.$el);
+	}
+	compile(el) {
+		let childNodes = el.childNodes;
+		Array.from(childNodes).forEach((node) => {
+			if (node.nodeType === 3) {
+				this.compileText(node);
+			} else if (node.nodeType == 1) {
+				this.compileElement(node);
+			}
+			if (node.childNodes && node.childNodes.length) this.compile(node);
+		});
+	}
+
+	compileText(node) {
+		if (node.attributes.length) {
+			Array.from(node.attributes).forEach((attr) => {
+				let attrName = attr.name;
+				if (attrName.startsWith("v-")) {
+					attrName =
+						attrName.indexOf(":") > -1
+							? attrName.substr(5)
+							: attrName.substr(2);
+					let key = attr.value;
+					this.updata(node, key, attrName, this.vm[key]);
+				}
+			});
+		}
+	}
+	updata(node, key, attrName, value) {
+		if (attrName === "model") {
+			node.value = value;
+			new Watcher(this.vm, key, (val) => (node.value = val));
+			node.addEventListener("input", () => {
+				this.vm[key] = node.value;
+			});
+		} else if (attrName === "click") {
+			node.addEventListener(attrName, this.methods[key].bind(this.vm));
+		}
+	}
+}
 
 function isEqual(a, b) {
 	return a === b || (Number.isNaN(a) && Number.isNaN(b));

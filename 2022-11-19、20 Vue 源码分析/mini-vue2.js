@@ -81,4 +81,21 @@ class Watcher {
 	}
 }
 
+class Dep {
+	constructor() {
+		this.watchers = new Set();
+	}
+	add(watcher) {
+		if (watcher && watcher.updata) {
+			this.watchers.add(watcher);
+		}
+	}
+	notify() {
+		this.watchers.forEach((watch) => watch.updata());
+	}
+}
 class Compiler {}
+
+function isEqual(a, b) {
+	return a === b || (Number.isNaN(a) && Number.isNaN(b));
+}

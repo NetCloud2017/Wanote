@@ -48,7 +48,37 @@ class Observer {
 		let _this = this;
 		this.watch(value);
 		let dep = new Dep();
-		Object.defineProperty(obj, key, {});
+		Object.defineProperty(obj, key, {
+			configurable: true,
+			enumerable: true,
+			get() {
+				Dep.target && dep.add(Dep.target);
+				return value;
+			},
+			set(target, key, newValue) {
+				if (!isEqual(value, newValue)) {
+					value = newValue;
+					_this.watch(newValue);
+					dep.notify();
+				}
+			},
+		});
 	}
 }
+
+class Watcher {
+	constructor(vm, key, cb) {
+		this.vm = vm;
+		this.key = key;
+		this.cb = cb;
+		Dep.target = this;
+		this._old = vm[key];
+		Dep.target = null;
+	}
+	updata() {
+		let newVal = this.vm[this.key];
+		if (!isEqual(newVal, this._old)) this.cb(newVal);
+	}
+}
+
 class Compiler {}

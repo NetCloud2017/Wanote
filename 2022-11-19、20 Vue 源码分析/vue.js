@@ -1,40 +1,25 @@
-const reactive = (target) => {
-	return new Proxy(target, {
-		get(target, key, receiver) {
-			// 收集依赖
-			const res = Reflect.get(target, key, receiver);
-			return res;
-		},
-		set(target, key, value, receiver) {
-			// 触发依赖
-			const res = Reflect.set(target, key, value, receiver);
-			return res;
-		},
-	});
-};
+function isObject(data) {
+	return data && typeof data === "object";
+}
 
-// 副作用區域
-const effectStack = [];
-const effect = (fn) => {
-	const effectFn = () => {
-		effectStack.push(effectFn);
-		return fn;
-	};
-	effectFn();
-	return effectFn;
-};
+let targetMap = new WeakMap();
+let activeEffect;
 
-// 依賴存儲
-const targetMap = new Map();
-const track = (target, key) => {
+function track(target, key) {
 	let depsMap = targetMap.get(target);
-	if (!depsMap) {
-		depsMap = new Map();
-		targetMap.set(target, depsMap);
-	}
-	let deps = depsMap.get(key);
-	if (!deps) {
-		deps = new Set();
-		depsMap.set(key, deps);
-	}
-};
+	if (!depsMap) targetMap.set(target, (depsMap = new Map()));
+
+	let dep = depsMap.get(key);
+	if (!dep) depsMap.set(key, (dep = new Set()));
+	trackEffect(dep);
+}
+
+function trackEffect(dep) {
+	if (!dep.has(activeEffect)) dep.add(activeEffect);
+}
+
+function trigger(target, key) {
+	const depsMap = targetMap.get(target);
+	if (!depsMap) return;
+	depsMap.get(key).forEach((effect) => effect && effect.run());
+}

@@ -1,5 +1,7 @@
 ### script 标签中 defer 和 async 的区别
 
+参考地址: [defer 和 async 的区别](https://blog.csdn.net/liuhe688/article/details/51247484)
+
 如果没有 defer 或 async 属性，浏览器会立即加载并执行相应的脚本。它不会等待后续加载的文档元素，读取到就会开始加载和执行，这样就阻塞了后续文档的加载。
 
 下图可以直观的看出三者之间的区别:

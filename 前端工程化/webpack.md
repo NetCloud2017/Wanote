@@ -60,5 +60,6 @@ AsyncSeriesWaterfallHook
   CDN Gzip Hash 缓存 提升网络访问速度。
 
 - 热更新原理
+  模块联邦、 持久化缓存、
 - Webpack5 新特性
 - Webpack VS Vite

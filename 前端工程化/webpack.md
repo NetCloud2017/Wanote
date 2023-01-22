@@ -63,3 +63,9 @@ AsyncSeriesWaterfallHook
   模块联邦、 持久化缓存、
 - Webpack5 新特性
 - Webpack VS Vite
+
+### 构建、 测试 、 部署
+
+做一个公共库需要三证齐全
+
+库对比网站： [Overview](https://bundlers.tooling.report/)

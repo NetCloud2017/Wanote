@@ -186,6 +186,24 @@ i (inner), a(around);
 |     c i t     | 删除标签里的内容                       |
 |     c a t     | 删除光标所在的，包括标签在内的所有内容 |
 
+---
+
+### 单词的周边操作
+
+---
+
+<b style="color:#c7254e; background-color: #2f2f2f "> c s \<existing char\> \<desired char\> </b> : 光标所在单词的周边的 ' 换成 " 例如 'test' --> <b> c s ' " </b> 转变为 "test"
+
+---
+
+<b style="color:#c7254e; background-color: #2f2f2f "> d s \<existing char \> </b>: 删除光标所在单词的周边的 ', 例如 'test' --> <b> d s '</b> 变成 test
+
+---
+
+<b style="color:#c7254e; background-color: #2f2f2f "> y s \<motion\> \<desired char\> </b> : 在光标所在的单词周边添加，期望的， 例如 test --><b> y s a w ) </b> 变成 (test)
+
+---
+
 ### 其他操作
 
 |   操作   | 描述                                                 |

@@ -110,6 +110,22 @@ _1 和 2 的若进行次操作可以用 “数字 + 操作” , 如 2j: 向下�
 
 ---
 
+全局快速定位后， 按高亮的字母后， 光标就跳到那个字母所在的位置。
+
+> space 是空格, 可以通过 vsCode 的 setting.json 文件对 `"vim.leader"："<space>"` 进行配置。
+
+|          操作          | 描述                         |
+| :--------------------: | :--------------------------- |
+|   space space s char   | 全局查找 char 字母           |
+| space space f / t char | 光标之后的位置匹配字母 char  |
+| space space F / T char | 光标之前的位置匹配字母 char  |
+|     space space w      | 光标之后的单词的第一个字母   |
+|     space space b      | 光标之前的单词的第一个字母   |
+|     space space e      | 光标之后的单词的最后一个字母 |
+|     space space ge     | 光标之前的单词的最后一个字母 |
+|     space space j      | 光标之后的每行的第一个字母   |
+|     space space k      | 光标之前的每行的第一个字母   |
+
 4.  行间字符定位
 
     |            操作             | 作用                                       |

@@ -19,8 +19,6 @@ vim 的模式三种分别是 normal mode、insert mode、visual mode、 command 
 **visual mode**
 visual mode: 文本选择是以字符为单位的。
 
-> vim 对文本的操作有 c(change）删除或修改进入插入模式， d (delete) 删除或剪切， y (yank) 复制， p(paste）粘贴。
-
 - visual mode 下的一些操作
 
 |          操作          | 作用                                           |
@@ -46,14 +44,6 @@ visual mode: 文本选择是以字符为单位的。
 |     A + string      | 会将选中的内容替换并插入每一行。空行也会插入。        |
 
 ## vim 操作
-
-### 命令行退出
-
-| 命令行                 | 解析                                    |
-| :--------------------- | :-------------------------------------- |
-| <b> : wq + enter</b>   | w 是 write，q 是 quit，先保存文件后退出 |
-| <b> : q! + enter </b>  | 强制退出 vim 编辑器                     |
-| <b> : wqa + enter </b> | a 是 all , 保存所有文件并退出           |
 
 ### 光标插入和移动
 
@@ -120,6 +110,54 @@ _1 和 2 的若进行次操作可以用 “数字 + 操作” , 如 2j: 向下�
       <b> shift + } </b>: 光标移动到下一个行空行;
 
       <b> shift + { </b>: 光标移动回上一个空行
+
+### 动作 （motion）
+
+i (inner), a(around);
+
+1. **i** 选中光标所在的不包括分隔符的非空内容
+2. **a** 选中光标所在的包括分隔符在内的所有内容
+   <img src="./motion.png" />
+   常用的 motion 有
+   `
+iw ，i( 或 ib ， i{ 或 iB , i' , i" ,  i` , i < , i[, it , is , ip
+   `
+   > w: 单词， t:标签，s: 句子， p: 段落；
+
+### 操作符 operator
+
+> 操作符是告诉 vim 做什么， 动作是告诉 vim 怎么做。
+> vim 对文本的操作有 c(change）删除或修改进入插入模式， d (delete) 删除或剪切， y (yank) 复制， p(paste）粘贴。
+
+### 常用操作
+
+|     操作      | 描述                                   |
+| :-----------: | :------------------------------------- |
+|      d d      | 删除光标当前行                         |
+|      c c      | 删除光标当前行, 并进入 insert mode     |
+|  number d d   | 向下删除 number 行                     |
+|     y y p     | 复制当前行并粘贴                       |
+| number y y p  | 向下复制 number 行， 并粘贴            |
+|     y i e     | 复制整个文件内容                       |
+| c i e / d i e | 清除整个文件内容                       |
+|      c $      | 删除光标所在的后面所有的字符。         |
+|     2 c c     | 向下删除两行并进入 insert mode         |
+|     c i t     | 删除标签里的内容                       |
+|     c a t     | 删除光标所在的，包括标签在内的所有内容 |
+
+## command mode 命令行操作
+
+**退出**
+
+| 命令行               | 解析                                    |
+| :------------------- | :-------------------------------------- |
+| <b> : wq enter</b>   | w 是 write，q 是 quit，先保存文件后退出 |
+| <b> : q! enter </b>  | 强制退出 vim 编辑器                     |
+| <b> : wqa enter </b> | a 是 all , 保存所有文件并退出           |
+
+**匹配替换**
+
+<b> : % s / match string / replace string g(默认) enter </b>
 
 ## 安装 NeoVim
 

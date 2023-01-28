@@ -1,5 +1,7 @@
 # vim
 
+[ vsCode Vim 参考地址 ](https://github.com/VSCodeVim/Vim)
+
 <img src="./vim-map.gif" />
 
 ## vim 模式简介
@@ -254,9 +256,3 @@ i (inner), a(around);
 **匹配替换**
 
 <b> : % s / match string / replace string g(默认) enter </b>
-
-## 安装 NeoVim
-
-    winget install Neovim.Neovim
-
-## normal 模式下的光标移动

@@ -1,7 +1,7 @@
 # vim
 
 [ vsCode Vim 参考地址 ](https://github.com/VSCodeVim/Vim)
-
+[Vi 终端编译器](https://note.youdao.com/s/5EZERCDM)
 <img src="./vim-map.gif" />
 
 ## vim 模式简介

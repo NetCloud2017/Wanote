@@ -26,18 +26,20 @@ Packer , Nvimtree, Tokyonight
 
 ### 编写 Neo Vim 配置文件
 
+也可以在 nvim 的 command mode 里输入 :help init.lua, 查看配置文件在哪里配置。
+
 启动 Nvim 编译器, 用 conmand mode 输入 :` echo stdpath('config')` 接着按 enter 就会显示配置文件的位置。一般在 AppData>LocaL>nvim 目录里面。同时将这个 目录也放置到环境变量中。
 
 <img src="./envVar.png"/>
 
-接着在这个文件里面创建 init.vim 文件。
+接着在这个文件里面创建 init.vim 或 init.lua (推荐）文件。
 
 这个文件就是专门放置 neo vim 的配置的。
 
 粘贴如下内容, 然后保存：
 
 ```
-call plug#begin('C:/Users/Ritika/AppData/Local/nvim/plugged')
+call plug#begin('C:/Users/ironMax/AppData/Local/nvim/plugged')
 
 " below are some vim plugins for demonstration purpose.
 " add the plugin you want to use here.
@@ -50,7 +52,7 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-Plug 'fatih/vim-go', { 'tag': '\*' }
+Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'vim-airline/vim-airline'
@@ -78,3 +80,51 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 到这里我们就可以去安装我们的 vim 插件了, 刚刚 编写的 init.vim 文件里面有有一些 Plug 命令，是安装 neo vim 插件的。
 
 接着, 我们在 ~\AppData\Local\nvim 里创建一个 plugged 文件夹, 用来存放我们所有安装的插件。
+
+在命令行里打开 neo vim 编辑器。 cmd --> nvim
+
+`
+:checkhealth:
+
+查看所有的 options ， 在 command mode 输入 :help option-list
+
+安装 packer
+
+https://github.com/wbthomason/packer.nvim#bootstrapping
+
+加入如下代码
+
+```lua
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
+end
+
+local packer_bootstrap = ensure_packer()
+
+return require('packer').startup(function(use)
+  use 'wbthomason/packer.nvim'
+  -- My plugins here
+  -- use 'foo1/bar1.nvim'
+  -- use 'foo2/bar2.nvim'
+
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if packer_bootstrap then
+    require('packer').sync()
+  end
+end)
+
+```
+
+## plugins
+
+nvimtree
+tokyonight
+autopair

@@ -132,6 +132,7 @@ autopair
 ### Nvimtree
 
 [github nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+[github nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
 > Nvimtree 命令
 

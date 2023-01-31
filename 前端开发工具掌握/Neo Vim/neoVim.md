@@ -128,3 +128,66 @@ end)
 nvimtree
 tokyonight
 autopair
+
+### Nvimtree
+
+[github nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+
+> Nvimtree 命令
+
+启动时 进入 command mode :NvimTreeToggle 就可以启动 nvim-tree 了. 这时，sidebar 的图标没有显示可以进入 如下操作
+
+安装 window terminal， 打开软件， 打开软件的设置文件，
+
+> 文件目录：
+> C:\Users\ironMax\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+
+```json
+  "profiles": {
+    "defaults": {},
+    "list": [
+      {
+        "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        // 在这里设置 nerd fonts 下载， 并安装到系统的字体的字体名字
+        "font": {
+          "face": "Arimo NF",
+          "size": 12
+        },
+        // 这三行是gei  windows terminal 设置透明度的, 但是不是 很明显。
+        "useAcrylic": true,
+        "acrylicOpacity": 0.3,
+        "backgroundImageOpacity": 0.3,
+        //
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "hidden": false,
+        "name": "Windows PowerShell"
+      },
+  }
+```
+
+设置后 重新打开 Neovim 就可以看到图标了
+
+o ： 打开文件夹
+
+a： jk 上下选择选择文件， 按 a, 这时可以新建文件。
+
+r: 选择文件， 按 r 然后既可以修改文件名了。
+
+### tokyonight
+
+添加主题的
+[github tokyonight](https://github.com/folke/tokyonight.nvim)
+
+```lua
+local status, tn = pcal1(require, 'tokyonight')
+if not status then
+return
+end
+tn. setup({
+
+    style = 'storn',
+    dim_inactive = true
+})
+
+vim.cmd ('colorscheme tokyonight-storm')
+```

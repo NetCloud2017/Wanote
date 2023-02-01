@@ -28,3 +28,15 @@ function called(context, ...rest) {
 		return result;
 	}
 }
+
+Function.prototype.called = function (ctx, ...args) {
+	const fn = tihs;
+	if (typeof ctx !== "object") {
+		return fn(...args);
+	}
+	ctx.fn = fn;
+	let outcome = ctx.fn(...args);
+	delete ctx.fn;
+
+	return outcome;
+};

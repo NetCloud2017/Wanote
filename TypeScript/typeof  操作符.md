@@ -67,3 +67,27 @@ let requestMethod2 = "Get" as const;
 type R0 = typeof requestMethod; // string
 type R1 = typeof requestMethod2; // "Get"
 ```
+
+使用场景
+
+```ts
+type Msg = {
+	msg: String;
+	type: String;
+};
+let Message = Msg | string;
+function logMsg(msg: Message): number | Msg {
+	if (typeof msg === "object") {
+		return msg;
+	} else {
+		return 404;
+	}
+}
+// let res = logMsg({ msg: "error", type: "server error" });
+// 解决方法：断言
+
+let res = logMsg({ msg: "error", type: "server error" }) as Msg;
+res.msg; // 这里报错
+```
+
+原因是获取返回值时， 返回值是一个联合类型， 因此 res.msg 获取的是这个联合类型的交集里的东西（共有的， 如 toString），交集里没有 msg 所以报错了。

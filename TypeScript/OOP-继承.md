@@ -148,6 +148,19 @@ ChinesePeople.prototype  = new People("wnagwu", '男', '1235 ')
 
 寄生组合继承既沿袭了借用构造函数+原型链继承两个优势，而且解决了借用构造函数+原型链继承调用了两次父类构造函数的不足。寄生组合继承模式保留了借用构造函数继承，寄生组合继承模式使用寄生继承代替了原型链继承。
 
+```js
+// 寄生组合继承实现步骤
+//第一步：创建一个寄生构造函数
+function Middle() {
+	this.count = 23;
+	Middle.prototype = People.prototype;
+}
+//第二步：创建一个寄生新创建的构造函数的对象
+let middle = new Middle();
+//第三步：chinesePeople子类的原型对象空间指向第二步的新创建的构造函数的对象
+ChinesePeople.prototype = middle;
+```
+
 **TS 继承准备：熟练掌握 3 种寄生组合继承实现方法 2【最佳继承模式】**
 
 **TS 继承准备：熟练掌握 3 种寄生组合继承实现方法 3【最佳继承模式】**

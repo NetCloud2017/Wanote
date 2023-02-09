@@ -107,8 +107,46 @@ let chinesePeople=new ChinesePeople("wangwu",'男',"1111");
 借用构造函数实现了子类构造函数向父类构造函数传递参数，但没有继承父类原型的属性和方法，无法访问父类原型上的属性和方法。
 
 **TS 继承准备：借用构造函数+原型链继承组合模式**
+（1）借用构造函数+原型链继承组合模式的优势
+
+优势 1：具备借用构造函数的优点：子类【ChinesePeople 构造函数】的内部可以向父类【People 构造函
+数】传递参数
+
+优势 2：具备原型链继承的优点：ChinesePeople.prototype 和 new ChinesePeople()出来的实例对象变量和
+实例都可以访问父类【People 构造函数】原型对象上的属性和方法。
+
+```js
+function People(name,sex,phone){//People父构造的数【看成是一个父类】
+    this.name=name;//实例属性
+    this.sex=sex:
+    this.phone=phone
+}
+People.prototype.doEat=function(){
+    console.log(this.name +"吃饭...")
+}
+function ChinesePeople(name, sex, phone, national) {
+    People.apply(this, [name, sex, phone]) // 借用父类构造函数继承
+    this.national = national ;// 民族
+}
+ChinesePeople.prototype  = new People("wnagwu", '男', '1235 ')
+```
+
+（2）借用构造函数+原型链继承组合模式的不足：
+
+缺点：调用了两次父类构造函数【People 构造函数】new People 调用构造函数带来问题：
+
+1.进入 People 构造函数为属性赋值，分配内存空间，浪费内存；
+
+2.赋值导致效率下降一些，关键是 new People 赋的值无意义，出现代码冗余，new ChinesePeople 出来的对象和这些值毫不相干，是通过子类 ChinesePeople 构造函数中的 apply 来向父类 People 构造函数赋值。
 
 **TS 继承准备：熟练掌握 3 种寄生组合继承实现方法 1【最佳继承模式】**
+2-24 深度掌握 TS 继承准备：
+
+多方法掌握寄生组合继承
+
+寄生组合继承模式=借用构造函数继承+寄生继承。
+
+寄生组合继承既沿袭了借用构造函数+原型链继承两个优势，而且解决了借用构造函数+原型链继承调用了两次父类构造函数的不足。寄生组合继承模式保留了借用构造函数继承，寄生组合继承模式使用寄生继承代替了原型链继承。
 
 **TS 继承准备：熟练掌握 3 种寄生组合继承实现方法 2【最佳继承模式】**
 

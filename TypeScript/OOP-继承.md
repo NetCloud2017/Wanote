@@ -159,9 +159,25 @@ function Middle() {
 let middle = new Middle();
 //第三步：chinesePeople子类的原型对象空间指向第二步的新创建的构造函数的对象
 ChinesePeople.prototype = middle;
+ChinesePeople.prototype.constructor = ChinesePeople;
 ```
 
 **TS 继承准备：熟练掌握 3 种寄生组合继承实现方法 2【最佳继承模式】**
+优化
+
+```js
+function createNewPrototypeObj(parent, son) {
+	function Middle() {
+		this.count = 23;
+		this.constructor = son;
+	}
+	Middle.prototype = parent.prototype;
+	let middle = new Middle();
+	return middle;
+}
+ChinesePeople.prototype = createNewPrototypeObj(People, ChinesePeople);
+// ChinesePeople.prototype.constructor = ChinesePeople
+```
 
 **TS 继承准备：熟练掌握 3 种寄生组合继承实现方法 3【最佳继承模式】**
 

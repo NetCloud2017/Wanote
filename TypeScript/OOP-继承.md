@@ -148,6 +148,10 @@ ChinesePeople.prototype  = new People("wnagwu", '男', '1235 ')
 
 寄生组合继承既沿袭了借用构造函数+原型链继承两个优势，而且解决了借用构造函数+原型链继承调用了两次父类构造函数的不足。寄生组合继承模式保留了借用构造函数继承，寄生组合继承模式使用寄生继承代替了原型链继承。
 
+什么是寄生继承呢？就是 ChinesePeople.prototype 不再指向 new People()出来的对象空间，而用 People
+类【父构造函数】的原型对象属性“克隆”了一个对象。再让 ChinesePeople.prototype 指向这个新对象，很好
+的避免了借用构造函数+原型链继承调用了两次父类构造函数的不足.
+
 ```js
 // 寄生组合继承实现步骤
 //第一步：创建一个寄生构造函数
@@ -177,8 +181,53 @@ function createNewPrototypeObj(parent, son) {
 }
 ChinesePeople.prototype = createNewPrototypeObj(People, ChinesePeople);
 // ChinesePeople.prototype.constructor = ChinesePeople
+// ES 6 写法
+function _extends(parent) {
+	//继承
+	let middle = Object.create(parent.prototype, {
+		count: {
+			writable: true,
+			value: 23,
+		},
+	});
+}
+
+return middle;
+const middle = _extends(People);
+ChinesePeople.prototype = middle;
+ChinesePeople.prototype.constructor = ChinesePeople;
+let chinesePeopleTwo = new ChinesePeople("王海", "男", "1111", "汉族");
 ```
 
 **TS 继承准备：熟练掌握 3 种寄生组合继承实现方法 3【最佳继承模式】**
 
-**用全栈眼光更深入理解 TS 继承**
+**用全栈眼光更深入理解 TS 继承** 1.理解子类
+（1）什么是子类？
+
+有两个类，比如 A 类和 B 类，如果满足 A 类 is a kind of B 类，那么 A 类就是 B 类的子类
+比如：A 类是顾客类，B 类是人类，因为顾客类 akind of 人类成立【顾客类是人类的一种】，所以顾客类是人
+类的子类。
+
+（2）子类如何继承父类的属性和方法?
+
+以顾客类为例子：顾客类继承了父类【人类】的非私有的属性和方法，也具备子类独有的属性和方法。
+
+顾客类继承父类【人类】的全部非私有的属性和方法外，还有哪些独有的属性和方法呢？
+
+顾客类独有属性：顾客等级，顾客编号
+
+顾客类独有方法；购买
+
+(3）初步理解为什么要用继承？
+
+举例：宠物管理项目中的狗狗类，兔子类，小猫类都是宠物，尽管每个宠物都有独有属性和方法，比如狗狗类
+的品种，看家方法；兔子类的肤色属性等。但这些类都包含了 name,buymoney[购买价格]，healthstatus[健
+康状况]，friendshipstar[和主人的友谊星级数]这些属性，如果每一个类都写这些属性，那么就非常臃肿，可
+以把这些属性提取出来放到一个宠物类中，其他类都继承这个宠物类。当然继承还有更多好处，下面借助汽车
+租赁功能的实现来更深度的掌握继承。
+
+(4)汽车租赁管理功能【深度掌握继承】
+需求 1：汽车租赁功能实现：有小轿车，大巴，卡车三种类型的车，顾客可以租任意一种或多种不同类型的车，按照租用
+的天计算租金，同时为了响应国家对各类车安全的管理，对在租赁期内有过各种超载，超乘客数，酒家等违规
+的车需额外支付一定的费用。
+需求 2：计算退回费用：最终退回顾客的费用为押金扣除使用天数，如押金不足需额外支付不足部分。

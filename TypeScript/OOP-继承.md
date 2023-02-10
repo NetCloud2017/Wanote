@@ -231,3 +231,30 @@ let chinesePeopleTwo = new ChinesePeople("王海", "男", "1111", "汉族");
 的天计算租金，同时为了响应国家对各类车安全的管理，对在租赁期内有过各种超载，超乘客数，酒家等违规
 的车需额外支付一定的费用。
 需求 2：计算退回费用：最终退回顾客的费用为押金扣除使用天数，如押金不足需额外支付不足部分。
+
+- super 的使用
+
+  super 只能方法基类的公共方法和受保护的方法， 不能访问基类的属性。
+
+```js
+class Parent {
+    constructor (a, b, c){
+        console.log(a,b, c)
+    }
+
+    func() {
+        console.log(this, 'parent')
+    }
+}
+class  Sun（） {
+    constructor (a, b, c) {
+        // 传参给父类的 构造函数
+        super(a, b, c)
+    }
+    func (){
+        // 调用和父类同名的方法
+        super.func() // 这句被编译后就是 Parent.func.call(this)
+
+    }
+}
+```

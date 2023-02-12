@@ -2,6 +2,28 @@
 
 - https://geek-docs.com/vscode/vscode-tutorials/introduction-to-vscode.html
 
+## 常用插件
+
+|                                         |                                |                              |
+| :-------------------------------------- | :----------------------------- | :--------------------------- |
+| Simple React Snippets                   | Code Runner                    | Dart                         |
+| Flutter                                 | GitLens                        | Docker                       |
+| Open in browser                         | Prettier                       | ESlint                       |
+| Vim                                     | Vetur                          | Project Manager              |
+| live server                             | auto close tag auto rename tag | guides: 显示代码对齐辅助线。 |
+| Path Intellisense ： 自动填充文件路径。 | path autocomplete              | typescript hero              |
+| Debugger for Chrome                     |                                |                              |
+
+## 拓展：
+
+color Highlight
+
+color manager
+
+peacock ： 不同的项目展示不同的 vscode 主题颜色
+
+code time： 记录每日写代码的时间。
+
 ## vs code 常用快捷键
 
 若是安装了 Vim, 以下所有的快捷键只有在 编辑模式下才能使用， 其他模式下失效。 在编辑模式下不生效， 很有可能被其他运行中的软件占用 快捷键 如 搜狗输入法。

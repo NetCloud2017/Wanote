@@ -1,40 +1,5 @@
 **TS 继承的重要+长远意义**
 
-- 练就更深厚的 JS 原型，原型链功底
-
-  TS 编译后的 JS 中有经典的 JS 原型和原型链的源码实现，虽然稍显复杂，但源码并不长，这将是练就更深厚的 JS
-  原型，原型链功底的绝佳场景。通过这几次课的认真磨练，大家将拥有更深厚的 JS 原型，原型链功底【当然你
-  必须认真看完，多练方可】。这不仅让你日后面试大受益，而且也为你能阅读 Vue3,React 源码或其他流行框架
-  源码铺路，因为不管是那种源码，JS 原型链继承一定会用到，再加上你的 TS 功底，那么这些都成让你日后前端
-  之路走的更远，走的更高！
-
-- 提升前端项目架构的根基技术
-
-  如果要你现在用开发一个工具库，组件库，你打算怎么开发？可以写出 n 多个版本的代码，都可以实现，但版
-  本和版本之间的价值却差别巨大，你可以用 JS 原型写出 1 年左右工作经验的前端水准的代码，当然，上乘之选
-  肯定是用 TS 来开发，你也可以灵活运用 TS 继承，多态等多种技术写出高水准的代码。但如果你不具备后端思
-  维能力，就算你工作了 5 年，你也不一定能有这样的思维，甚至随时有可能被一个拥有了后端思维的只有 1 到 2
-  年工作经验水准的前端工程师超越。
-
-- 突破前端技术瓶颈之一的技能，晋级中、高级前端工程师必会技能
-
-如果你只掌握了单个类的使用，而不知道如何运用继承，那这也是技能缺失，将会限制你日后技术发展的高
-度，限制你的技术视野，让你的前端变得过于前端化。
-说深度掌握了 TS 继承就能突破所有的前端技术瓶颈，那很显然是夸大其词，但要想突破前端技术瓶颈，深度
-掌握继承必然是其中一项技能，而且是根基技术之一，可见继承的重要性不言而喻。
-
-比如一个简单的汽车租赁项目，让你来实现，你把前端功能实现了，展示在页面上了，但是打开你用 TS 写的
-Vuex 代码，用 TS 写的 Nodejs 代码，过于前端化的思维让你编写的代码可能让人不堪入目。这里不单单是说
-用到封装继承，多态，解耦这些技术，更多的是你过于前端化的思维编写的项目可扩展性将非常差，可读性也
-将差，可重用性【复用性】也低，而这些是评判一个项目是否值钱的关键因素。
-
-如果你希望未来职业生涯拥有更广阔的技术视野；更远的未来你甚至希望自己能胜任技术总监，那么你就一定
-从一个更广阔的技术视野来提升自己的技术能力，不能让自己被框在过于前端化的路上。
-
-虽然老师不能三言两语给同学们描述出什么才叫完全突破前端瓶颈，但有一点是可以肯定的，就是要有一定的
-后端思维能力，这里当然不是要拥有 Java 后端能力，而是起码具备 Nodejs 后端的项目架构能力，Nodejs 可
-以前端工程师提升晋级一定要掌握的技能。而深度掌握了 TS 继承已经为突破前端技术瓶颈开了一个好头。
-
 - 继承
 
 ```js
@@ -169,6 +134,7 @@ ChinesePeople.prototype.constructor = ChinesePeople;
 **TS 继承准备：熟练掌握 3 种寄生组合继承实现方法 2【最佳继承模式】**
 优化
 
+<div id="#setPrototypeOf"
 ```js
 function createNewPrototypeObj(parent, son) {
 	function Middle() {
@@ -193,11 +159,12 @@ function _extends(parent) {
 }
 
 return middle;
-const middle = _extends(People);
+const middle = \_extends(People);
 ChinesePeople.prototype = middle;
 ChinesePeople.prototype.constructor = ChinesePeople;
 let chinesePeopleTwo = new ChinesePeople("王海", "男", "1111", "汉族");
-```
+
+````
 
 **TS 继承准备：熟练掌握 3 种寄生组合继承实现方法 3【最佳继承模式】**
 
@@ -265,7 +232,8 @@ class Parent {
 class  Sun（） {
     constructor (a, b, c) {
         // 传参给父类的 构造函数
-        super(a, b, c)
+        super(a, b, c) // 编译后 _super.call(this, a, b, c)
+        //  super 被编译后就是 传入的类名。名字是 _super,
     }
     func (){
 
@@ -274,4 +242,105 @@ class  Sun（） {
 
     }
 }
+````
+
+（1）相关技术：setPrototypeOf 使用+和 Object.create 的区别；
+利用 setPrototypeOf 实现寄生继承
+
+<a heft="#setPrototypeOf" > create 实现寄生继承的问题 </a>
+creat 实现寄生继承的问题是， 替换了原有在原型的地址指向， 原有的属性和方法偶读会失效。而无法继承原有的属性和方法。而 setPrototypeOf 测可以解决这个问题。
+
+```js
+function _extends(parents) {
+	let middle = {
+		count: 112,
+	};
+	return Object.setPrototypeOf(middle, parents.prototype);
+	//  相当于做了这个操作: middle.__proto__ = parents.prototype
+}
+
+ChinesePeople.prototype = _extends(People);
+ChinesePeople.prototype.constructor = ChinesePeople;
 ```
+
+（2）父类静态方法和属性在子类中的继承：setPrototypeOf 和 Object.create 分别实现；
+
+1. 原始方法实现静态属性继承
+   [for in 解析]('../JavaScript/jsLoop.md')
+
+```js
+for (let key in People) {
+	// for in 可以获取原型上的静态属性。
+	if (Object.hasOwnProperty.call(People, key)) {
+		ChinesePeople[key] = People[key];
+	}
+}
+```
+
+2. 第二章实现方式。
+
+```js
+Object.keys(People).forEach((key) => {
+	ChinesePeople[key] = People[key];
+});
+```
+
+3. 第三种方式
+
+```js
+ChinesePeople.__proto__ = People;
+```
+
+4. 第四种方式
+
+```js
+Object.setPrototypeOf(ChinesePeople, People);
+```
+
+（2）深度掌握+手写+优化底层 extendsStatics 方法的实现；extendsStatics 方法的作用：完成父类静态方法和属性在子类中的继承
+
+```js
+// es6 编译后的静态属性继承源码
+let extendsStatics = +functiont  () {
+    let extends = Object.setPrototypeOf ||
+    function objKeys(Son, Parent) {
+        Object.keys(People).ForEach(key => {
+            Son[key] = People[key]
+        })
+    }
+     ||
+    function _proto (Son, Parent) {
+        Son.__proto__ = Parent
+    }
+    ||
+   funtion forIn() {
+        for(let key in People) {
+            if(Object.hasOwnProperty.call(People, key)) {
+                Son[key] = People[key]
+            }
+        }
+    }
+    return extends;
+}();
+
+extendsStatics(Son,Parent)
+```
+
+(3）深度掌握\_extends 方法
+
+```js
+let _extends = function (Son, Parent) {
+	extendsStatics(Son, Parent);
+	function Middle() {
+		this.constructor = Son;
+	}
+	if (Parent) {
+		Middle.prototype = Parent.prototype;
+		Son.prototype = new Middle();
+	} else {
+		Son.prototype = Object.create(null);
+	}
+};
+```
+
+缺了 编译后的类

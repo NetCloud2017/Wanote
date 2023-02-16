@@ -4,7 +4,8 @@ any 类型和 unknown 类型 都是 top type （顶级类型）；
 
 any 类型可以进行任何操作在编译阶段不进行检测和报错， 但是在运行时才会报错。 而 unknown 类型 则是为了解决 any 类型的这一问题而设计的。unknown 类型只能赋值给 unknown 类型和 any 类型。
 
-unknow 只能作为其他类型的父类型， 而不能作为它类型的子类型。
+unknown 只能作为其他类型的父类型， 而不能作为它类型的子类型。
+unknown 类型只能由 any 和 unknown 赋值，其他类型不能赋值给 unknown。
 
 ```js
 let value: unknown;

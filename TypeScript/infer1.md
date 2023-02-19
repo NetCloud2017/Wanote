@@ -119,3 +119,19 @@ let MyChinesePeople3: Constructor<ChinesePeople> = ChinesePeople
 ```
 
 # infer 在 Vue3 中的使用
+
+```ts
+function unref<T>(ref: T): T extends Ref<infer V> ? V : T {
+	return isRef(ref) ? (ref.value as any) : ref;
+}
+let iRef = ref(23)// {value:23}
+console.log('响应整数类型的ref'，iRef)
+//let iValue = unref<Ref<number>>(iRef)
+let iValue = unref(iRef)
+console.log('iValue:', iValue)
+type objType100={username:string}
+let obj100:objType100={ username:'wangwu'};
+let iValue2 = unref(obj100)
+console.log('iValue2:', iValue2)
+
+```

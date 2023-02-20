@@ -33,9 +33,72 @@ type fiveResultType = oneType<symbol>;
 3; //symbol
 ```
 
-3.理解 K in keyof T
+3.理解 K in T
+Record<K, P> ： 将 K 这个联合类型的每个值作为 key ，每个 key 的值是 T
 
-4.理解 K in T
+```ts
+type Obj = {
+	name: string;
+	age: number;
+};
+type RecordValue = {
+	id: string;
+	disc: string;
+};
+type newType = Record<keyof Obj, RecordValue>;
+// newType = {
+//     name:  RecordValue,
+//     age: RecordValue
+// }
+// 另一种写法是
+type Record<K, T> = {
+	[P in K]: T;
+};
+```
+
+```ts
+type Worker = {
+	custname: string;
+};
+type Customer = {
+	custname: string;
+	age: number;
+	phone: string;
+};
+
+type Record<K extends keyof any, T> = {
+	[P in "username" | "age"]: T;
+	// in 会遍历  "username" | "age" 这个联合类型的值作为 对象的 key , 并将 T 赋值给 对应的 key
+};
+
+// type resultRecord = {
+//   username: Customer;
+//   age: Customer;
+// }
+
+type resultRecord = Record<string, Customer>;
+//let cust: Customer = { custname: "wangwu", age: 23, phone: "111" }
+
+//  [P in string]可以代表任意一个字符串的可索引类型
+type Record<K extends keyof any, T> = {
+	[P in string]: T; // 生成 {[x:string]: T}
+};
+type resultRecord = Record<string, Customer>;
+let obj: resultRecord = {
+	// key 可以是任意字符串
+	usernamed: { custname: "wangwu", age: 23, phone: "111" },
+	agde: { custname: "lisi", age: 33, phone: "23" },
+};
+
+type resultRecord2 = Record<number, Customer>;
+/**
+ * resultRecord2 = {
+ *  [x: number]: Customer
+ * }
+ */
+```
+
+4.理解 K in keyof T
 
 5.深入 Record 完成异步数据扁平化【实现方式 1】
 

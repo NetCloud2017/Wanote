@@ -125,11 +125,13 @@ const goodsList: Goods[] = [
 ];
 // 实现数据扁平化
 // Record类型
+// 方式 1
 type Record<K extends keyof any, T> = {
 	[P in K]: T;
 };
 type resultGoodsType = Record<number, Goods>;
 let goodRecord: Record<number, Goods> = {};
+// let goodRecord: Record<string, Goods> = {}; // key 可以是string 类型。
 goodsList.forEach((goods) => {
 	goodRecord[goods[goodSymid]] = goods;
 });
@@ -143,8 +145,43 @@ goodsList.forEach((goods) => {
 
 4.理解 K in keyof T
 
-5.深入 Record 完成异步数据扁平化【实现方式 1】
+```ts
+// 方式2
+type Record<T> = {
+	[P in keyof any]: T;
+};
+// 会转变成这种类型 ，因为 number 作为对象的 key 时 会被转化成 string 类型。
+/**
+ * {
+ *	 [x:string] : T
+ * }
+ */
+```
+
+方式 1 和方式 2 的区别是, 方式 1 key 只能是数字， 而方式而，可以是 字符串，也可以是数字 5.深入 Record 完成异步数据扁平化【实现方式 1】
 
 6.深入 Record 完成异步数据扁平化【实现方式 2】
 
 7.object 和 Map 和 Record 区别
+
+> Record 和 object 区别
+
+区别 1：Record 获取到是索引参数类型，所以可以赋初值为{} , 而 object 也可以，但是再次赋值，比如： goodRecord[103] = good2; 会出现错误，会查找 103 属性是否存在于 object 类型的对象变量中
+
+区别 2： Record 是泛型，获取值可以有自动提示功能，而 object 无法实现自动提示。
+
+> Map 和 Record 的区别
+
+实际开发为什么我们在显示数据，数据扁平化时用 Record?
+
+原因 1：是因为 Record 有多种实现方式，比如 S100 实现方式，Map 就需要改底层源码才能做到【一般是不会改的】
+
+```ts
+type Record<T> = {
+	// 可以时一个参数， 也可以有 两个参数
+	[P in keyof any]: T;
+};
+let goods = new Map<string, Goods>();
+```
+
+原因 2：Record 是属于一个轻量级的 type 类型,Map 相对 Record 是重量级, 而且 Map 需要 new 出来的，所以要更加占用内存空间如果读取数据和显示数据频繁，就应该采用 Record 如果增删改比较多，那还是使用 Map。

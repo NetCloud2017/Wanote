@@ -46,3 +46,28 @@ let pickobj2: Picktype2 = {
 ```
 
 2 Pick+ Record 结合应用【真实应用场景】
+
+具体描述：怎样实现完成这个数组只允许保留 title 和 completed 这两个属性，模拟异步从服务器中获取到数据。
+
+```ts
+let todoList: Todo[] =[
+    {
+        title：'开发权限管理模块'，
+        completed: true,
+        description:'使用Vue3+typescript来开发',
+    },
+    {
+        title:'年会'，
+        completed: false,
+        description：'12月29号上午开心酒店1楼105',
+    }
+]
+type Record<T> = {
+    [P in keyof any]：T
+}
+type Pick<T, K extends keyof T> = {
+    [P in K]: T[P]
+}
+type TodoListItem = Pick<Todo, 'title' | 'compluted'>
+let  newList: TodoListItem[] = list
+```

@@ -8,9 +8,22 @@ Extract 不同场景下的不同理解+和类型断言的异同
 
 ```ts
 // 这里的 extends 不是继承，而是泛型约束
+// extract 的原码就是这个。
 type Extract<T, U> = T extends U ? T : never;
 
 // 首先了解一下 Extract 的运行流程： T 若是 U 的子类型 则条件成立， 返回 T 类型， 否则返回 never;
+
+type func1 = (one: number, two: string) => string;
+type func2 = (one: number) => string;
+
+//  参数少的函数类型 extends 参数多的函数类型 返回true
+//  参数多的函数类型 extends 参数少的函数类型 返回false
+type beginType1 = func1 extends func2 ? func1 : never; //never
+type beginType2 = func2 extends func1 ? func2 : never; //func2
+
+//这个Extract是TS内置方法
+type tType1 = Extract<func1, func2>; //never
+type tType2 = Extract<func2, func1>; //= (one: number) => string  和上面有区别
 ```
 
 ```ts

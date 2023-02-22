@@ -35,7 +35,7 @@ let englishSubject=new Subject(101,"英语")
 let setZhangSanSubject = new Set<Subject>([chinesesubject, mathSubject,englishSubject)
 
 type ss = typeof setZhangSanSubject
-type ElementOf0<T> = T extends Set<infer E> ? E : never
+type ElementOf0<T> = T extends Set<infer E> ? E : never;
 let result: Subject
 let result:Elementof0< typeof setZhangSanSubject>
 

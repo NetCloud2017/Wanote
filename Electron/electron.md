@@ -13,3 +13,5 @@ https://evite.netlify.app/guide/#scaffolding-your-first-electron-vite-project
 听小听
 
 https://www.electronjs.org/zh/docs/latest/tutorial/打包教程
+
+https://www.electronjs.org/zh/docs/latest/api/desktop-capturer

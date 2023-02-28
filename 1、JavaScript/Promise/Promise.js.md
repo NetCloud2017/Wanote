@@ -46,7 +46,7 @@ class Promise <T=any> {
         } catch(err) {
             this.status = 'pending'
             this.reject(err.toString())
-            throw new Error('程序终止....')
+            throw new Error('程序终止....') // 这里会终止掉当前的 js 线程'
         }
 
 
@@ -63,12 +63,18 @@ class Promise <T=any> {
         }
     }
     then(resolveThen: ResolveType, rejectThen: RejectType) {
-        if(this.judgeStatus('success')) {
-            resovleThen(tihs.resolve_executor_value)
-        }
-        if(this.judgeStatus('fail')) {
-            rejectThen(this.reject_executor_value)
-        }
+        // 实现 then 方法后面链式调用
+        return new Promise ((resolve, reject) => {
+            let res
+            if(this.judgeStatus('success')) {
+                res = resovleThen(tihs.resolve_executor_value)
+                resolve(res)
+            }
+            if(this.judgeStatus('fail')) {
+                res = rejectThen(this.reject_executor_value)
+                reject(res)
+            }
+        })
     }
 }
 ```

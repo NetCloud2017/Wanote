@@ -10,3 +10,11 @@ console.log(promise);
 setTimeout(function () {
 	console.log(promise, promise1);
 }, 1000);
+
+import { aPromise } from "./apromise";
+
+let p1 = new aPromise((resovle, reject) => {
+	setTimeout(() => {
+		resovle("123");
+	}, 1000);
+});

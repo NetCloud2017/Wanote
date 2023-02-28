@@ -23,18 +23,22 @@ class Promise <T=any> {
     public resolve!: ResolveType;
     public reject!: RejectType;
     public status!: string;
+    public resolve_executor_value!: any // resolve 传递的值
+    public reject_executor_value!: any // resolve 传递的值
     constructor(executor:  Executor) {
         this.status= 'pending'
 
         this.reject = (value: any) any => {
             if(this.jugdeSsta('pending')) {
                 this.status= 'fail'
+                this.reject_executor_value = value
             }
 
         }
         this.resolve = (value: any) : any=> {
             if(this.jugdeSsta('pending')) {
                 this.status = 'success'
+                this.resolve_executor_value = value
             }
         }
 
@@ -53,7 +57,12 @@ class Promise <T=any> {
         }
     }
     then(resolveThen: ResolveType, rejectThen: RejectType) {
-
+        if(this.judgeStatus('success')) {
+            resovleThen(tihs.resolve_executor_value)
+        }
+        if(this.judgeStatus('fail')) {
+            rejectThen(this.reject_executor_value)
+        }
     }
 }
 ```

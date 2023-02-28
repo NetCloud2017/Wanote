@@ -27,15 +27,33 @@ class Promise <T=any> {
         this.status= 'pending'
 
         this.reject = (value: any) any => {
-            this.status= 'success'
+            if(this.jugdeSsta('pending')) {
+                this.status= 'fail'
+            }
+
         }
         this.resolve = (value: any) : any=> {
-            this.status = 'fail'
+            if(this.jugdeSsta('pending')) {
+                this.status = 'success'
+            }
         }
 
         executor(this.resolve,this.reject)
 
     }
+    judgeStatus(status: string): boolean | string {
+        if (status.length > 0) {
+            if(status === 'pending' || status === 'success' || status === 'fail') {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return this.status
+        }
+    }
+    then(resolveThen: ResolveType, rejectThen: RejectType) {
 
+    }
 }
 ```

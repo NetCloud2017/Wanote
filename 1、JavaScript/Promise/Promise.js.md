@@ -41,8 +41,14 @@ class Promise <T=any> {
                 this.resolve_executor_value = value
             }
         }
+        try {
+            executor(this.resolve,this.reject)
+        } catch(err) {
+            this.status = 'pending'
+            this.reject(err.toString())
+            throw new Error('程序终止....')
+        }
 
-        executor(this.resolve,this.reject)
 
     }
     judgeStatus(status: string): boolean | string {

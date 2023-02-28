@@ -25,6 +25,9 @@ class Promise <T=any> {
     public status!: string;
     public resolve_executor_value!: any // resolve 传递的值
     public reject_executor_value!: any // resolve 传递的值
+    public resolve_then_callbacks:(() => void )[] = []
+    public reject_then_callbacks:(() => void)[] = []
+
     constructor(executor:  Executor) {
         this.status= 'pending'
 
@@ -39,6 +42,8 @@ class Promise <T=any> {
             if(this.jugdeSsta('pending')) {
                 this.status = 'success'
                 this.resolve_executor_value = value
+                // 当调用 then 方法的时候这个 then 就是 上一次new 的promise 的实例.
+                this.resolve_then_callbacks.forEach(callback => callback())
             }
         }
         try {
@@ -73,6 +78,14 @@ class Promise <T=any> {
             if(this.judgeStatus('fail')) {
                 res = rejectThen(this.reject_executor_value)
                 reject(res)
+            }
+            if(this.judgeStatus('pending')) {
+                this.resolve_then_callback.push(() => {
+                    res = resovleThen(tihs.resolve_executor_value)
+                })
+                this.reject_then_callback.push(() => {
+                    res = rejectThen(this.reject_executor_value)
+                })
             }
         })
     }

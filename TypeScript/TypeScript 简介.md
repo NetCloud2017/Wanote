@@ -161,6 +161,55 @@ function calToal(product: Product) {
 	console.log("product总价：", product.price * product.count);
 }
 calToal({ id: 100, name: "电脑", price: 5000, count: 10 });
+
+
+新的接口只是在原来接口继承之上增加了一些属性或方法，这时就用接口继承
+
+// 例子1：
+// 开始定义了一个接口
+interface  Point{
+    x:number;
+    y:number;
+}
+
+// 需求发生了变化，但是是在原来 Point 接口的基础之上增加了一个新的 z:number 属性。
+interface  Point3d extends Point{
+    z:number;
+}
+
+
+// 例子2：Vue3源码中 稍复杂一点的接口继承
+interface Error {
+  name: string;
+  message: string
+}
+
+interface CompilerError extends Error {
+  code: number
+}
+
+const enum ErrorCodes {
+  // parse errors
+  ABRUPT_CLOSING_OF_EMPTY_COMMENT,
+  CDATA_IN_HTML_CONTENT,
+  DUPLICATE_ATTRIBUTE,
+  END_TAG_WITH_ATTRIBUTES,
+  END_TAG_WITH_TRAILING_SOLIDUS,
+  EOF_BEFORE_TAG_NAME,
+  EOF_IN_CDATA,
+  EOF_IN_COMMENT,
+  EOF_IN_SCRIPT_HTML_COMMENT_LIKE_TEXT,
+  EOF_IN_TAG,
+  INCORRECTLY_CLOSED_COMMENT
+   ......
+}
+
+ interface CoreCompilerError extends CompilerError {
+  code: ErrorCodes
+}
+
+//  其他应用比较少的场景:
+//  1 接口也可以继承多个接口  2 接口可以继承类  3 类可以继承一个或多个接口
 ```
 
 应用场景

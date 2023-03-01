@@ -41,6 +41,14 @@ let custobj = { name: "wangwu", age: 23 };
 
 ## 函数和函数类型 ， rest 参数
 
+```ts
+type Func = (str: string, count: munber) => void;
+let func: function;
+interface Func1 {
+	(num1: number, num2: numver): number;
+}
+```
+
 ## 函数类型升级
 
 ## string & String 或 object & Object
@@ -91,3 +99,42 @@ let result = obj[username]; // 报错
  */
 // let result = (obj as any)[username]; // 正确
 ```
+
+## 什么场景 never 能被直接推导出来而不用定义？
+
+```ts
+type DataFlow = string | number;
+function dataFlowAnalysisWithNever(dataFlow: DataFlow) {
+	if (typeof dataFlow === "string") {
+		console.log("字符串类型：", dataFlow.length);
+	} else if (typeof dataFlow === "number") {
+		console.log("数值类型：".dataFlow.toFixed(2));
+	} else {
+		// (parameter) dataFlow: never
+		let data = dataFlow; // 这时  dataFlow 就是 never类型
+	}
+}
+dataFlowAnalysisWithNever("免税店");
+dataFlowAnalysisWithNever(3.199923);
+```
+
+## 为什么要用枚举？
+
+在作订单流程的时候我们的商品会有很多状态例如 待发货， 运输中，待签收， 待付款 等等。 这么多状态我们为了代码变得容易维护和直观这时我们就要用 到枚举这种数据了。 我们不可能就用数字来表示这些状态吧。
+
+枚举带来的好处：1.有默认值和可以自增值，节省编码时间; 2.语义更清晰，可读性增强，因为枚举是一种值类型的数据类型，方法参数可以明确参数类型为枚举类型
+
+## 深入枚举，枚举分类，枚举底层，枚举好处【真实应用场景】
+
+1.枚举的定义 2.枚举分类 3.枚举取值方式 4.枚举底层 5.枚举应用
+
+## 元组
+
+1.为什么用元组(tuple)
+
+格式和顺序固定时就用 元组。
+
+2.符合下面条件的数组就是一个元组
+
+1. 定义时的元素的类型确定，但各个元素的类型不必相同
+2. 为元素赋值时，该值必须是当前位置的类型

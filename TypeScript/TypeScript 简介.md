@@ -385,4 +385,29 @@ declare namespace JQuery {
 
 ## 模块声明
 
+```ts
+declare module "JQueryModule" {
+	type cssSelector = {
+		css: (key: string, value: string) => cssSelector;
+	};
+	// declare function·$(ready:()=>·void):void // 里面不能再用 declare
+	function $(ready: () => void): void;
+	function $(selector: any): cssSelector;
+	// 嵌套的命名空间
+	// 使用时 JQuery.$.ajax()
+	namespace $ {
+		function ajax(url: string, settings?: any): void;
+		function get(url: string, settings?: any): void;
+		function post(url: string, settings?: any): void;
+	}
+	// export default $
+	export = $; // 这种写法 可以兼容 AMD 和 commonjs 模块化。一般这样写。
+}
+// 其他文件使用是
+import $ from "JQueryModule";
+$.ajax();
+```
+
 ## 如何在 TS 中引入 js 文件
+
+"allowJs": true, // 允许 js 在 TS 文件中被编译。 ts 中 使用 js 文件。

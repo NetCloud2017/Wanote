@@ -296,3 +296,93 @@ let data: GroupMemeber = {
     happen："中途有组员差点滑落，有惊无险",
 }
 ```
+
+## 一种用接口定义的特殊写法的类型
+
+```ts
+interface Func {
+    (state： any, commit: any): void
+}
+let func: Func = (state, commit: any): void {
+
+}
+```
+
+## 一个联合类型技巧性使用的场景
+
+```ts
+type IncreaseBoolean = Boolean | 1 | 0;
+function mounted(isStartUp: IncreaseBoolean) {
+	if (isstartUp) {
+		console.log("yes");
+	} else {
+		console.log("no");
+	}
+}
+mounted(1);
+```
+
+## 为什么要用声明文件？
+
+如果文件使用 TS 编写，在编译时可以自动生成声明文件，并在发布的时候将.d.ts 文件一起发布，我们无需编写声明文件。
+
+当我们在 TS 文件中引入使用第三方库的类型或使用集成库时，有可能需要编写声明文件, 比如：@types/jquery 库，ES6 库的 Map 类型，这些库用 JS 开发，不能获取 TS 一样的类型提示，需要一个声明文件来帮助库的使用者来获取库的类型提示。
+
+注意：声明文件中只对类型定义，不能进行赋值和实现。
+
+## 声明文件实现
+
+1js 文件如何感知声明文件的作用
+
+在方法上按 Ctrl + 点击的时候， 会跳到对应的 d.ts 文件。没有才会跳到对应的原码
+2 学会定义和使用声明文件
+
+声明文件只有声明， 没有实现。
+文件在有导出的情况想才会有声明文件。
+
+```ts
+//关键字declare表示声明的意思，我们可以用它来做出各种声明：
+declare let/const //声明全局变量
+declare function //声明全局方法
+declare class //声明全局类
+declare enum //声明全局枚举类型
+declare namespace //声明（含有子属性的）全局对象
+interface/type //声明全局类型 这两种类型不需要加 declare 关键字。 因为它在编译成js 之后是没有的。他们只是作类型检查的。 因此凡是可以编译出内容的 都用 declare 声明。
+
+```
+
+声明文件的作用范围就是 rootDir 的范围。 declare 可以重复声明相同的 变量。
+
+## 正确理解 declare
+
+用于声明 全局类型
+
+## 命名空间在声明文件中的使用
+
+namespace 用于防止声明重名的， 把他当作一个对象看就可以了。底层就是一个对象。
+
+```ts
+// 对外暴露的 就时 JQuery
+// 使用时 用 JQuery.$
+declare namespace JQuery {
+	type cssSelector = {
+		css: (key: string, value: string) => cssSelector;
+	};
+	// declare function·$(ready:()=>·void):void // 里面不能再用 declare
+	export function $(ready: () => void): void;
+	export function $(selector: any): cssSelector;
+	// 嵌套的命名空间
+	// 使用时 JQuery.$.ajax()
+	export namespace $ {
+		function ajax(url: string, settings?: any): void;
+		function get(url: string, settings?: any): void;
+		function post(url: string, settings?: any): void;
+	}
+}
+```
+
+但是 命名空间还有一个小小的问题， 就是 使用时都需要提前获取命名空间 如 JQuery。 有没有不需要提前获取的, 直接就用 用上 $ 吗？ 用模块声明。
+
+## 模块声明
+
+## 如何在 TS 中引入 js 文件

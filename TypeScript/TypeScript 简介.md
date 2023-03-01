@@ -284,3 +284,15 @@ type TypVechile = [Car, Plane];
 区别 2：接口可以 extends 一个或者多个接口或类，也可以继承 type，但 type 类型没有继承功能，但一般接口继承类和 type 的应用场景很少见，同学们记住有这样的语法即可。
 
 区别 3：用 type 交叉类型&可让类型中的成员合并
+
+```ts
+type Group = { groupName: string, memberNum: number }
+type GroupInfoLog = { info: string, happen: string }
+type GroupMemeber=Group & GroupInfoLog//type 交叉类型合并
+let data: GroupMemeber = {
+    groupName: "001",
+    memberNum: 10,
+    info："集体爬山",
+    happen："中途有组员差点滑落，有惊无险",
+}
+```

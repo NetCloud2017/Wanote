@@ -138,3 +138,100 @@ dataFlowAnalysisWithNever(3.199923);
 
 1. 定义时的元素的类型确定，但各个元素的类型不必相同
 2. 为元素赋值时，该值必须是当前位置的类型
+
+## 接口 interface
+
+定义: 是为一系列同类对象或同类别的类提供属性定义和方法声明但没有任何赋值和实现的数据类型。
+
+接口实现
+
+```ts
+interface Product {
+	id: number;
+	name?: string; // 可选属性
+	price: number;
+	count: number;
+    [key:string]: any； // 索引属性， 即你可以加无限个属性， key 是任意组合的 string类型 value 是 any 类型；
+
+    // 定义方法
+    func: () => void
+    [key: string]: (state: any) => void // 可索引非方法
+}
+function calToal(product: Product) {
+	console.log("product总价：", product.price * product.count);
+}
+calToal({ id: 100, name: "电脑", price: 5000, count: 10 });
+```
+
+应用场景
+
+1 提供方法的对象类型的参数时使用
+
+2 为多个同类别的类提供统一的方法和属性声明【参见第 7 章泛型接囗】
+
+## 联合 类型
+
+```ts
+// 基础数据的联合类型
+type ID = number | string;
+let id: ID = "";
+// id. // 可以获取到数字和 string共有的方法。
+
+//2.引用类型的联合类型
+interface Car {
+	brand: string; // 品牌
+	No: number; //车牌号
+	price: number;
+	placeorigin: string; //产地
+	load(): void;
+}
+interface Plane {
+	category: string; //飞机类别
+	price: number; //价格
+	placeorigin: string; //产地
+	airline: string; //所属航空公司
+	load(): void;
+}
+function carry(vechile:Car | Plane) {
+    vechile. // 可以获取到 Car 和 Plane 共有的方法和属性
+}
+```
+
+## 使用 type 定义类型
+
+type 和接口类似，都用来定义类型，但 type 和 interface 区别如下：
+
+区别 1：定义类型范围不同
+
+interface 只能定义对象类型或接口当名字的函数类型。
+
+type 可以定义任何类型，包括基础类型、联合类型，交叉类型，元组。
+
+```ts
+//type定义基础类型
+type num = number;
+// type定义联合类型例子1：
+type baseType = string | number | symbol;
+// type 定义联合类型例子2：
+interface Car {
+	brandNo: string;
+}
+interface Plane {
+	No: string;
+	brandNo: string;
+}
+type TypVechile = Car | Plane;
+// 元组
+interface Car {
+	brandNo: string;
+}
+interface Plane {
+	No: string;
+	brandNo: string;
+}
+type TypVechile = [Car, Plane];
+```
+
+区别 2：接口可以 extends 一个或者多个接口或类，也可以继承 type，但 type 类型没有继承功能，但一般接口继承类和 type 的应用场景很少见，同学们记住有这样的语法即可。
+
+区别 3：用 type 交叉类型&可让类型中的成员合并

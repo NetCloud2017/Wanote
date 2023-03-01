@@ -8,6 +8,7 @@
 			"DOM", // 对浏览器dom 操作的库, 当代码有document 之类的就用它。
 			"ES2020" // 编译新语法的库
 		] /*  指定 TS 编码期间可以使用的库文件版本 比如：ES5就不支持Set集合 */,
+		"allowJs": true, // 允许 js 在 TS  文件中被编译。 ts 中 使用 js文件。
 		"outDir": "./dist", //     指定 TS 文件编译成 JS 后的输出目录                 /* Redirect output structure to the directory. */
 		"rootDir": "./src", // 指定 TS 文件源码目录
 		"strict": true, // 启用严格检查模式
@@ -24,7 +25,7 @@
 			"@/131/*": ["131/*"],
 			"@/132/*": ["132/*"]
 		},
-		// 有些依赖库底层 为了兼容CommonJs规范、AMD规范这二者的规范中相互兼容，
+		// 有些依赖库底层 为了兼容CommonJs规范、AMD规范这二者的规范中相互兼     容，
 		// 使用了 export =，将二者规范统一。
 		// "esModuleInterop":true表示允许依赖库中出现export = 这种兼容规范导出的格式，
 		//  TS 可以用import from导入

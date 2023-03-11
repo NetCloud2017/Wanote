@@ -56,3 +56,11 @@ user-scalable ：是否允许用户缩放(yes/no）
 - follow：页面上的链接可以被查询；
 - noindex：文件将不被检索；
 - nofollow：页面上的链接不可以被查询。
+
+(7)、 用来限制加载哪些域名下的资源。
+
+开启 资源安全策略 （CSP)
+
+```js
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">
+```

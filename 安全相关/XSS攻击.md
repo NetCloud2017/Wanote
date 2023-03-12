@@ -35,6 +35,15 @@ XSS 攻击类型：
 
   还提供了上报机制，这样可以帮助我们尽快发现有哪些 XSS 攻击，以便尽快修复问题。
 
+  [meta 标签](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta#attr-content)
+
+  ```html
+  <meta
+  	http-equiv="Content-Security-Policy"
+  	content="default-src 'self'; img-src https://*; child-src 'none';"
+  />
+  ```
+
 - 使用 HttpOnly
 
   ```

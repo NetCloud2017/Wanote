@@ -411,3 +411,46 @@ $.ajax();
 ## 如何在 TS 中引入 js 文件
 
 "allowJs": true, // 允许 js 在 TS 文件中被编译。 ts 中 使用 js 文件。
+
+namespace 之间相互引用的声明怎么写呢
+
+```ts
+///<reference path='./components.ts'/>
+// 表示 namespace 里面的东西是依赖于 ./components.ts  这个文件的。
+namespace Home {
+	export class Page {
+		constructor() {
+			new Components.Header();
+			new Components.Content();
+			new Components.Footer();
+		}
+	}
+}
+
+// components.ts
+
+namespace Components {
+	export namespace SubComponents {
+		// 子命名空间
+		export class Test {}
+	}
+
+	export interface User {
+		name: string;
+	}
+	export class Header {
+		constructor() {
+			const elem = document.createElement("div");
+			elem.innerText = "This is Header";
+			document.body.appendChild(elem);
+		}
+	}
+	export class Footer {
+		constructor() {
+			const elem = document.createElement("div");
+			elem.innerText = "This is Footer";
+			document.body.appendChild(elem);
+		}
+	}
+}
+```

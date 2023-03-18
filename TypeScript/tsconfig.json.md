@@ -1,6 +1,8 @@
 ```json
 {
 	"compilerOptions": {
+		"incremental": true /* Enable incremental compilation 增量编译， 没改动过的文件就不会重新编译*/,
+
 		"target": "es2020", // 指定 TS 编译成 JS 后的js版本
 		"module": "commonjs", // TS 编译成 JS 后采用的模块规范 commonjs amd cmd  es等
 		"lib": [
@@ -40,3 +42,5 @@
 	"exclude": ["./src/**/test", "./src/**/premit"]
 }
 ```
+
+直接运行 tsc 会参考项目中的 tsconfig 配置文件， 如果运行`tsc index.ts` 他就不会参考配置文件

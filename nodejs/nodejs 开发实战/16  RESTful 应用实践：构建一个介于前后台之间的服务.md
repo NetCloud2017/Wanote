@@ -15,8 +15,6 @@
 <p data-nodeid="160657" class=""><img src="https://s0.lgstatic.com/i/image6/M00/39/F3/Cgp9HWB9T6WALOD3AAESrBDsph0977.png" alt="Drawing 0.png" data-nodeid="160661"></p>
 <div data-nodeid="160658"><p style="text-align:center">图 1 Node.js 与后台兼容方案</p></div>
 
-
-
 <p data-nodeid="159093">由于我在该课程测试过程中没有非 Node.js 的后台服务，所以我们需要模拟使用 Node.js 来模拟一个后台服务。</p>
 <p data-nodeid="159094">图 1 中，我假设 15 课时的代码为后台服务，15 课时分别有 2 个启动文件：</p>
 <ul data-nodeid="159095">
@@ -86,10 +84,6 @@ upstream lagou-backend {
 <p data-nodeid="161993" class=""><img src="https://s0.lgstatic.com/i/image6/M00/39/F3/Cgp9HWB9T7aAdPm4AAGL6gtb52U583.png" alt="Drawing 1.png" data-nodeid="161998"></p>
 <div data-nodeid="161994"><p style="text-align:center">图 2 lagou-nodejs Nginx 配置</p></div>
 
-
-
-
-
 <p data-nodeid="159136">图 2 中 /test/index 转发到<a href="http://lagou-nodejs?fileGuid=xxQTRXtVcqtHK6j8" data-nodeid="159243">http://lagou-nodejs</a>虚拟 host 下（以 music 开头的也是一样的配置），而其他的都是转发到<a href="http://lagou-backend?fileGuid=xxQTRXtVcqtHK6j8" data-nodeid="159247">http://lagou-backend</a>下。注意所有 Nginx 配置修改，都需要使用 nginx -s reload 进行重启。</p>
 <p data-nodeid="159137">这样一来，我们就完成了 Nginx 的配置，第二步就是透传转发和名字服务。</p>
 <h4 data-nodeid="159138">透传转发和名字服务</h4>
@@ -97,8 +91,6 @@ upstream lagou-backend {
 <p data-nodeid="159140">首先你肯定要知道在 Node.js 服务中是否有相应的路径处理服务，所以要修改 router.js 中的代码，在匹配到具体的 Controller 逻辑时，在 ctx 中标记已匹配服务，而如果没有匹配到相应的 Controller 时则不做任何标记，如图 3 中红色框部分逻辑：</p>
 <p data-nodeid="162886" class=""><img src="https://s0.lgstatic.com/i/image6/M00/39/FB/CioPOWB9T8CARhfuAAJXX2CAbd0870.png" alt="Drawing 2.png" data-nodeid="162890"></p>
 <div data-nodeid="162887"><p style="text-align:center">图 3 router.js 标记匹配到服务</p></div>
-
-
 
 <p data-nodeid="159143">接下来我们在 routerMiddleware 中间件下增加一个新的中间件 backendRouter，用来处理转发到后台服务的功能：</p>
 <pre class="lang-javascript" data-nodeid="159144"><code data-language="javascript"><span class="hljs-keyword">const</span> proxy = <span class="hljs-built_in">require</span>(<span class="hljs-string">'koa-better-http-proxy'</span>);
@@ -110,8 +102,7 @@ upstream lagou-backend {
         }
         <span class="hljs-comment">/// 转发相应的数据到指定服务，并且记录下系统日志</span>
         <span class="hljs-keyword">const</span> newService = nameService.get(<span class="hljs-string">'poxyBackendServer'</span>);
-        ctx.log.add(<span class="hljs-string">'info'</span>, <span class="hljs-string">'system'</span>, <span class="hljs-string">`current server do not find the <span class="hljs-subst">${ctx.pathname}</span> path, forward the request to <span class="hljs-subst">${newService}</span>`</span>);
-        
+        ctx.log.add(<span class="hljs-string">'info'</span>, <span class="hljs-string">'system'</span>, <span class="hljs-string">`current server do not find the <span class="hljs-subst">${ctx.pathname}</span> path, forward the request to <span class="hljs-subst">${newService}</span>`</span>); 
         <span class="hljs-keyword">return</span> proxy(newService)(ctx, next);
     }
 }
@@ -146,13 +137,10 @@ upstream lagou-backend {
 <p data-nodeid="159153">这里是一个简版的路径，在实际开发中你可以单独实现一个本地服务来做名字服务，如果没有这类服务也可以参考这种方法来实现。</p>
 <h4 data-nodeid="163333">实现 Node.js 服务</h4>
 
-
 <p data-nodeid="159156">上面我们已经为 Node.js 服务做了一些基础工作，接下来我们就来实现这个 Node.js 相关的业务功能。在 Controller 中增加一个 test.js 类，并在类中增加 index 方法，这部分比较简单，和原来的 Controller 相比也没太大区别。为了让大家了解如何在单个服务中启用多个端口，我主要说一下怎么在一个项目中启动多个端口服务。</p>
 <p data-nodeid="159157">复制一个 app.js 为 app-3001.js 文件，然后将其中的 3000 端口修改为 3001 （包括里面的 console.log 中的 3000，避免误解），其次修改 pm2.config.js 在配置文件中的 apps 数组中增加一项启动配置，两个数组元素的配置差异就是启动文件和进程名，改动如下图 4 所示：</p>
 <p data-nodeid="164214" class=""><img src="https://s0.lgstatic.com/i/image6/M00/39/F3/Cgp9HWB9T8yAUpkWAAHVHZ00FDk139.png" alt="Drawing 3.png" data-nodeid="164218"></p>
 <div data-nodeid="164215"><p style="text-align:center">图 4 pm2.config.js 文件配置</p></div>
-
-
 
 <p data-nodeid="159160">以上修改完成后，我们使用下面的命令来启动服务：</p>
 <pre class="lang-java" data-nodeid="159161"><code data-language="java">pm2 start pm2.config.js
@@ -176,8 +164,6 @@ http:<span class="hljs-comment">//127.0.0.1:3001/activity/info/index</span>
 
 <div data-nodeid="165104" class=""><p style="text-align:center">图 5 当前 PM2 进程列表</p></div>
 
-
-
 <p data-nodeid="159172">接下来我们再次访问下面 4 个连接：</p>
 <pre class="lang-java" data-nodeid="159173"><code data-language="java">http:<span class="hljs-comment">//127.0.0.1:3000/test/index</span>
 http:<span class="hljs-comment">//127.0.0.1:3001/test/index</span>
@@ -193,7 +179,6 @@ http:<span class="hljs-comment">//127.0.0.1:3001/activity/info/index</span>
 </code></pre>
 <p data-nodeid="159176">这样一来，就实现了透传请求，接下来我们使用域名来访问。</p>
 <h4 data-nodeid="165988">配置 host 测试</h4>
-
 
 <p data-nodeid="159179">因为我们做的是一个测试虚拟域名，所以在本地配置一个 host ，如果你是在 Mac 或者 Linux 可以直接修改 /etc/hosts 文件，增加下面一行：</p>
 <pre class="lang-java" data-nodeid="159180"><code data-language="java"><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span> lagou-nodejs.com
@@ -215,9 +200,10 @@ http:<span class="hljs-comment">//lagou-nodejs.com/activity/info/index</span>
 
 ### 精选评论
 
-##### **7000：
+##### \*\*7000：
+
 > 啥时候更新实战啊
 
- ###### &nbsp;&nbsp;&nbsp; 讲师回复：
-> &nbsp;&nbsp;&nbsp; 已经更新了。
+###### &nbsp;&nbsp;&nbsp; 讲师回复：
 
+> &nbsp;&nbsp;&nbsp; 已经更新了。

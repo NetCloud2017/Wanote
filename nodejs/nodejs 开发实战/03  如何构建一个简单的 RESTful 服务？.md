@@ -131,7 +131,6 @@
     }
     <span class="hljs-comment">// 从 db 查询数据，并获取，有可能返回空数据</span>
     <span class="hljs-keyword">let</span> contents = <span class="hljs-keyword">await</span> queryData({}, {<span class="hljs-attr">limit</span>: <span class="hljs-number">10</span>});
-
     contents = <span class="hljs-keyword">await</span> filterUserinfo(contents);
     <span class="hljs-keyword">return</span> setResInfo(res, <span class="hljs-literal">true</span>, <span class="hljs-string">'success'</span>, contents);
 });
@@ -310,7 +309,6 @@
 <pre class="lang-javascript" data-nodeid="22386"><code data-language="javascript"> <span class="hljs-keyword">async</span> list() {
         <span class="hljs-keyword">let</span> contentList = <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> ContentModel().getList();
         contentList = <span class="hljs-keyword">await</span> contentService.filterUserinfo(contentList);
-
         <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.resAPI(<span class="hljs-literal">true</span>, <span class="hljs-string">'success'</span>, contentList);
     }
 </code></pre>
@@ -328,42 +326,54 @@
 
 ### 精选评论
 
-##### *宇：
-> 这一章看得很过瘾啊，麻雀虽小五脏俱全🙇
+##### \*宇：
 
-##### *振：
-> 同步异步都可以用await吧
+> 这一章看得很过瘾啊，麻雀虽小五脏俱全 🙇
 
-##### **文：
-> 还是没理解为什么一个restful，一个api层😂
+##### \*振：
 
- ###### &nbsp;&nbsp;&nbsp; 讲师回复：
-> &nbsp;&nbsp;&nbsp; 这里只是一个演示，为了告诉大家获取数据的方式可能有多种，一种是来自数据库，一种是来自其他服务，而这里的api层，就是代表其他服务层。
+> 同步异步都可以用 await 吧
 
-##### **3813：
-> MVC的图中，为什么V和M之间也有交互呢？
+##### \*\*文：
 
- ###### &nbsp;&nbsp;&nbsp; 讲师回复：
-> &nbsp;&nbsp;&nbsp; 在目前这种前后端分离的场景是比较少的，在以往没有前后端分离的时候，比如说PHP或者JSP的时候，都是直接在前端页面中使用模版引擎，那样事可以直接调用 Model 层的数据的。而你说的就是进阶版 MVP 了，那就是阻隔了 M 与 V。
+> 还是没理解为什么一个 restful，一个 api 层 😂
 
-##### **业：
+###### &nbsp;&nbsp;&nbsp; 讲师回复：
+
+> &nbsp;&nbsp;&nbsp; 这里只是一个演示，为了告诉大家获取数据的方式可能有多种，一种是来自数据库，一种是来自其他服务，而这里的 api 层，就是代表其他服务层。
+
+##### \*\*3813：
+
+> MVC 的图中，为什么 V 和 M 之间也有交互呢？
+
+###### &nbsp;&nbsp;&nbsp; 讲师回复：
+
+> &nbsp;&nbsp;&nbsp; 在目前这种前后端分离的场景是比较少的，在以往没有前后端分离的时候，比如说 PHP 或者 JSP 的时候，都是直接在前端页面中使用模版引擎，那样事可以直接调用 Model 层的数据的。而你说的就是进阶版 MVP 了，那就是阻隔了 M 与 V。
+
+##### \*\*业：
+
 > 很精炼
 
 ##### console_man：
+
 > 醍醐灌顶呀，受益匪浅
 
-##### **菁：
-> 赞👍
+##### \*\*菁：
 
-##### **博：
+> 赞 👍
+
+##### \*\*博：
+
 > 老师你的画图工具用的什么呀
 
- ###### &nbsp;&nbsp;&nbsp; 讲师回复：
+###### &nbsp;&nbsp;&nbsp; 讲师回复：
+
 > &nbsp;&nbsp;&nbsp; draw.io 需要 VPN 才能访问，国内的话建议使用 processon 。
 
-##### **用户2267：
-> 为什要拆成两个server呢
+##### \*\*用户 2267：
 
- ###### &nbsp;&nbsp;&nbsp; 讲师回复：
+> 为什要拆成两个 server 呢
+
+###### &nbsp;&nbsp;&nbsp; 讲师回复：
+
 > &nbsp;&nbsp;&nbsp; 可以哈，没有问题。
-

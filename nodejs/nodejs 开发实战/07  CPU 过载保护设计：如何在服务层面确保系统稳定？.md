@@ -76,14 +76,12 @@
  */</span>
 <span class="hljs-keyword">async</span> _getProcessInfo() {
     <span class="hljs-keyword">let</span> pidInfo, cpuInfo;
-
     <span class="hljs-keyword">if</span> (platform === <span class="hljs-string">'win32'</span>) { <span class="hljs-comment">// windows 平台</span>
       pidInfo = <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>._getWmic();
     } <span class="hljs-keyword">else</span> { <span class="hljs-comment">// 其他平台 linux &amp; mac</span>
       pidInfo = <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>._getPs();
     }
     cpuInfo = <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>._parseInOs(pidInfo);
-
     <span class="hljs-keyword">if</span>(!cpuInfo) { <span class="hljs-comment">// 异常处理</span>
       <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
     }
@@ -96,7 +94,6 @@
       <span class="hljs-attr">virtual</span>: <span class="hljs-built_in">parseInt</span>(cpuInfo.vmem, <span class="hljs-number">10</span>),
       <span class="hljs-attr">usage</span>: cpuInfo.pmem / totalmem * <span class="hljs-number">100</span>
     };
-
     <span class="hljs-keyword">return</span> {
       pid, name, cpu, mem
     }
@@ -308,22 +305,26 @@ Requests/sec:&nbsp; <span class="hljs-number">13874.51</span>
 
 ### 精选评论
 
-##### *皇：
+##### \*皇：
+
 > 很想知道那个丢失概率的计算公式是怎么得出来的，或者是有参考资料和依据介绍一下吗？想举一反三
 
- ###### &nbsp;&nbsp;&nbsp; 讲师回复：
+###### &nbsp;&nbsp;&nbsp; 讲师回复：
+
 > &nbsp;&nbsp;&nbsp; 没有非常明确的资料来说明，我是根据自己一些经验依据来分析得出的。首先概率丢弃我觉得应该是没有问题的。
-首先找到因变量，概率会随着哪些因素调整
-找到因变量与结果的关系，首先分为正向和逆向，其次就是影响程度，可以近视的按照几种关系来判断，一种是直线型（但是有影响因素），一种是指数型，一种是 log(a)x类型，a分为大于1和小于1。从这些关系去摸索，找出合适的指标来分析，当然不可能完全准确，只能先假设后验证，需要多进行实验然后对比数据效果。
-根据这种方法，我之前也做过一个直播推荐的算法的，正常的算法是根据多个指标，比如说礼物数、当前房间人数、总房间进出房人数，这些按照产品重要性，添加系数就可以了，但是产品提了另外一个需求，希望增加 PGC 的权重，比如一个 PGC 一开播就先给到一定的基础分排在前面。这时候你就考虑时间衰减的算法了，随着时间变化，这个基础分应该不断的降低，直至降低到0，这时候你就可以找出各种因变量，然后考虑其可能的涉及变化曲线，然后再调参数，一直调到满意为止。
-很大可能是需要很长时间去调整的，也可能给不到最满意的答案，但是在这种不需要非常精准的时候，近视能解决问题也是可以的。
+> 首先找到因变量，概率会随着哪些因素调整
+> 找到因变量与结果的关系，首先分为正向和逆向，其次就是影响程度，可以近视的按照几种关系来判断，一种是直线型（但是有影响因素），一种是指数型，一种是 log(a)x 类型，a 分为大于 1 和小于 1。从这些关系去摸索，找出合适的指标来分析，当然不可能完全准确，只能先假设后验证，需要多进行实验然后对比数据效果。
+> 根据这种方法，我之前也做过一个直播推荐的算法的，正常的算法是根据多个指标，比如说礼物数、当前房间人数、总房间进出房人数，这些按照产品重要性，添加系数就可以了，但是产品提了另外一个需求，希望增加 PGC 的权重，比如一个 PGC 一开播就先给到一定的基础分排在前面。这时候你就考虑时间衰减的算法了，随着时间变化，这个基础分应该不断的降低，直至降低到 0，这时候你就可以找出各种因变量，然后考虑其可能的涉及变化曲线，然后再调参数，一直调到满意为止。
+> 很大可能是需要很长时间去调整的，也可能给不到最满意的答案，但是在这种不需要非常精准的时候，近视能解决问题也是可以的。
 
-##### **宇：
-> 大佬，实际应用中，真的需要在node层面，增加这种过载保护的策略吗？还是换成，在几个node服务之前，增加nginx服务，有策略的抛弃一些请求，或者路由到更多的其他服务上？
+##### \*\*宇：
 
- ###### &nbsp;&nbsp;&nbsp; 讲师回复：
+> 大佬，实际应用中，真的需要在 node 层面，增加这种过载保护的策略吗？还是换成，在几个 node 服务之前，增加 nginx 服务，有策略的抛弃一些请求，或者路由到更多的其他服务上？
+
+###### &nbsp;&nbsp;&nbsp; 讲师回复：
+
 > &nbsp;&nbsp;&nbsp; 实际应用过程中，看真实的架构情况，比如说你们服务经过 nginx 的那么可以直接在 nginx 处理，这种是有域名的。另外一种情况是，你们使用 Node.js 来作为网关，或者你们是内部服务调用（没有域名），没有经过 nginx，那么这些情况下都是需要 Node.js 来加一层这种保护机制的。
 
-##### **强：
-> 评论1楼：这种丢弃请求的肯定是最后的选择呀！你可以负载均衡，但是还是能过载的，还是要做过载处理，动态扩容。反正吧这个还是要站在用户和钱角度去想方案的
+##### \*\*强：
 
+> 评论 1 楼：这种丢弃请求的肯定是最后的选择呀！你可以负载均衡，但是还是能过载的，还是要做过载处理，动态扩容。反正吧这个还是要站在用户和钱角度去想方案的

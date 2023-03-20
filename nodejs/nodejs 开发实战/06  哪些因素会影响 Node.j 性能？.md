@@ -40,7 +40,6 @@
         <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>; i&lt;<span class="hljs-number">10000000000</span>; i++){
             sum = sum + i;
         }
-
         <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.resApi(<span class="hljs-literal">true</span>, <span class="hljs-string">'success'</span>, {<span class="hljs-string">'sum'</span> : sum});
     }
     <span class="hljs-comment">/**
@@ -124,9 +123,6 @@ http:<span class="hljs-comment">//127.0.0.1:4000/v1/normal</span>
 <p data-nodeid="1246">你会发现虽然 /v1/cpu 很慢，但是并不影响 /v1/normal 的请求，这就是我们上面介绍到的为什么 Node.js 适合网络 I/O 密集型的服务的原因了。</p>
 <p data-nodeid="4518" class="">从上面的例子中，看到了网络 I/O 其实是 Node.js 的优势，虽然不影响主线程的处理，但是对于 <a href="http://127.0.0.1:4000/v1/cpu" data-nodeid="4522">http://127.0.0.1:4000/v1/cpu</a> 这个请求，如果要提升性能，我们应该关注什么呢？</p>
 
-
-
-
 <ul data-nodeid="1248">
 <li data-nodeid="1249">
 <p data-nodeid="1250"><strong data-nodeid="1377">通道复用</strong>，比如我们现在每次访问 :4000/v1/cpu 时都会发起一个 TCP 到 :3000/v1/cpu，如果能够通道复用，减少 TCP 握手，那么就可以提升该接口的性能，或者将某些内部服务使用 UDP 来实现。</p>
@@ -183,12 +179,14 @@ http:<span class="hljs-comment">//127.0.0.1:4000/v1/normal</span>
 
 ### 精选评论
 
-##### **杰：
+##### \*\*杰：
+
 > 虽然还是有点迷糊具体实践，但是总归是有个大体概念了，就是通过多进程来解决单线程的缺陷
 
-##### *舒：
-> 看完这章节，我觉得我做BFF更有信心了
+##### \*舒：
 
-##### **田：
+> 看完这章节，我觉得我做 BFF 更有信心了
+
+##### \*\*田：
+
 > 666
-

@@ -112,3 +112,23 @@ function isFunction(val): val is Function {
 	return typeof val === "function";
 }
 ```
+
+```js
+let a = "";
+try {
+	a();
+	let ab = new Promise((resolve, reject) => {
+		let randon = Math.random();
+		resolve();
+	}).then(() => {
+		a();
+	});
+	ab.catch((err) => {
+		console.log(err, "123");
+	});
+} catch (err) {
+	// 不能捕获到 promise 里面的错误
+
+	console.log(err, "err");
+}
+```

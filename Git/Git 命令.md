@@ -10,6 +10,26 @@ git branch -D feature-vulcan
 
 强制删除分支， 还没有合并的分支是不能用小写 - d 来删除的 需要用大写 - D 来强制删除
 
+取消文件跟踪：
+
+git rm -r –cached a.txt 　//删除 a.txt 的跟踪，并保留在本地
+
+git rm -r –f a.txt 　//删除 a.txt 的跟踪，并且删除本地文件
+
+git rm -r -n –cached 文件/目录名 //列出需要取消跟踪的文件，不会删除文件；-r 表示递归，-n 表示列出文件
+
+git rm -r –cached D:/WorkSpace/demo/out //取消对 out 文件夹下文件取消追踪
+对所有文件取消追踪
+
+git rm -r –cached . 　//不删除本地文件
+
+git rm -r –f .　//删除本地文件
+示例：追踪后文件是绿色显示，未追踪文件标记为红色
+
+git rm -r –cached . 取消对所有文件的追踪后，再次 git status 查看文件状态；
+
+[取消文件跟踪](https://cloud.tencent.com/developer/article/2220221#:~:text=1.%E5%8F%96%E6%B6%88%E6%96%87%E4%BB%B6%E8%BF%BD%E8%B8%AA%20%E5%AF%B9%E6%9F%90%E4%B8%AA%E6%96%87%E4%BB%B6%E5%8F%96%E6%B6%88%E8%BF%BD%E8%B8%AA%20git%20rm%20-r%20%E2%80%93cached%20a.txt%E3%80%80%2F%2F%E5%88%A0%E9%99%A4a.txt%E7%9A%84%E8%B7%9F%E8%B8%AA%EF%BC%8C%E5%B9%B6%E4%BF%9D%E7%95%99%E5%9C%A8%E6%9C%AC%E5%9C%B0%20git,%E3%80%80%2F%2F%E5%88%A0%E9%99%A4a.txt%E7%9A%84%E8%B7%9F%E8%B8%AA%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%20git%20rm%20-r%20-n%20%E2%80%93cached%20%E6%96%87%E4%BB%B6%2F%E7%9B%AE%E5%BD%95%E5%90%8D%20%2F%2F%E5%88%97%E5%87%BA%E9%9C%80%E8%A6%81%E5%8F%96%E6%B6%88%E8%B7%9F%E8%B8%AA%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%8C%E4%B8%8D%E4%BC%9A%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%EF%BC%9B-r%E8%A1%A8%E7%A4%BA%E9%80%92%E5%BD%92%EF%BC%8C-n%E8%A1%A8%E7%A4%BA%E5%88%97%E5%87%BA%E6%96%87%E4%BB%B6)
+
 git stash
 
 保存当初还没有完成的工作的分支去 创建一个分支去解决紧急任务。如 bug;

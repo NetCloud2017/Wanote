@@ -30,6 +30,18 @@ speed-measure-webpack-plugin 打包性能分析。
 
 cross-env
 
+webpack-bundle-analyzer 打包分析
+
+thread-loader
+
+copy-webpack-plugin
+
+webpack.DllPlugin
+
+webpack.DllReferencePlugin
+
+add-asset-html-webpack-plugin
+
 [查看 node 兼容情况网站](https://node.green)
 
 [ts-node](https://www.npmjs.com/package/ts-node) 可以直接运行 ts 文件

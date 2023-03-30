@@ -42,6 +42,21 @@ webpack.DllReferencePlugin
 
 add-asset-html-webpack-plugin
 
+semver: 对版本号进行比较。
+
+chokidar 做文件监听。
+
+child_process: 开启子进程
+
+detect-port : node 中 检测端口是否被占用。
+
+glob 使用 shell 模式匹配文件
+[glob ](https://www.jianshu.com/p/5274cb9d1fc6)
+[node glob](https://juejin.cn/post/6844903906024095758)
+
+mini-css-extract-plugin
+purgecss-webpack-plugin
+
 [查看 node 兼容情况网站](https://node.green)
 
 [ts-node](https://www.npmjs.com/package/ts-node) 可以直接运行 ts 文件

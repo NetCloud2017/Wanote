@@ -1,4 +1,6 @@
-# npm link
+# NPM 命令
+
+## npm link
 
 这个命令相当于 `npm  install -g  pkg` ， 这个命令常在创建自己的 npm 包时使用， 尤其是在创建自己的脚手架工具时。当自己创建的 npm 包时，包的 `package.json` 配置为：
 
@@ -18,3 +20,15 @@
 当我们执行 ccli 命令行的时候。node 就会找到全局安装的 `bin/index.js` 文件运行。
 
 但是我们运行 `npm unlink my-cli` 的时候， 我们再在终端里运行 ccli 发现， 还是会可以运行。这是因为它只会删除本地的软链接，而不会删除全局安装的二进制文件。 需要运行 `npm uninstall -g  my-cli` 才会完全删掉。
+
+## npm list -g --depth 0
+
+查看全局安裝了哪些包
+
+## npm ls <package name> -g
+
+查看全局是否安裝过某个包
+
+## npm ls <package name>
+
+查看当前项目哪里安装过这个包。

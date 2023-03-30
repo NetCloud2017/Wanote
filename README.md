@@ -50,6 +50,18 @@ child_process: 开启子进程
 
 detect-port : node 中 检测端口是否被占用。
 
+inquirer： 命令行交互。
+
+commander：命令解析工具
+
+chalk: 美化命令行文字样式
+
+download-git-repo: git 模板下载库
+
+fs-extra: 返回 promise 对象的， fs 拓展库， 用于代替 fs.
+
+ora: 命令行里的 loading 图标。
+
 glob 使用 shell 模式匹配文件
 [glob ](https://www.jianshu.com/p/5274cb9d1fc6)
 [node glob](https://juejin.cn/post/6844903906024095758)

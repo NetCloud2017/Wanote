@@ -6,7 +6,7 @@
 
 下图可以直观的看出三者之间的区别:
 
-![defer和async](./scriptArttr.png)
+![defer和async](./img/defer_scriptAttr.png)
 
 其中蓝色代表 js 脚本网络加载时间，红色代表 js 脚本执行时间，绿色代表 html 解析。
 defer 和 async 属性都是去异步加载外部的 JS 脚本文件，它们都不会阻塞页面的解析，其区别如下：

@@ -1,13 +1,4 @@
 // 手写 promise
-class ClonePromise {
-	constructor() {
-		this.state = "pendding";
-	}
-
-	then(func) {}
-	resolve() {}
-	reject() {}
-}
 
 async function pipe(promiseArr, count = 6) {
 	let requestMap = [],
@@ -26,4 +17,40 @@ async function pipe(promiseArr, count = 6) {
 		resolve(_res);
 	});
 	return res;
+}
+
+//
+class Bromise {
+	constructor(initFunc) {
+		this.state = "pendding";
+		this.value = null;
+		try {
+			initFunc(this.resolve, this.reject);
+		} catch (err) {
+			this.reject(err);
+		}
+	}
+	changeState(state) {
+		if (this.state === "pendding") {
+			this.state = state;
+		}
+	}
+	resolve(value) {
+		this.value = value;
+		this.changeState("fullfilled");
+	}
+	reject(error) {
+		this.changeState("reject");
+	}
+	then(onResolve, onReject) {
+		let { state } = this;
+		if (state === "fullfilled") {
+			onResolve();
+		}
+		if (state === "reject") {
+			onReject();
+		}
+		return new Promise();
+	}
+	catch(func) {}
 }

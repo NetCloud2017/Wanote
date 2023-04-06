@@ -36,11 +36,11 @@ thread-loader
 
 copy-webpack-plugin
 
-webpack.DllPlugin
+webpack.DllPlugin: 对 vandor 第三方模块进行打包。
 
-webpack.DllReferencePlugin
+webpack.DllReferencePlugin：dll 检测哪些文件 被 dll 打包过。
 
-add-asset-html-webpack-plugin
+add-asset-html-webpack-plugin: 将 dll 分包的模块插入到 html 文件里
 
 semver: 对版本号进行比较。
 
@@ -62,12 +62,12 @@ fs-extra: 返回 promise 对象的， fs 拓展库， 用于代替 fs.
 
 ora: 命令行里的 loading 图标。
 
-glob 使用 shell 模式匹配文件
+glob: node 的 glob 模块允许你使用 \*等符号, 来写一个 glob 规则,像在 shell 里一样,获取匹配对应规则的文件.，这个 glob 工具基于 javascript.它使用了 minimatch 库来进行匹配
 [glob ](https://www.jianshu.com/p/5274cb9d1fc6)
 [node glob](https://juejin.cn/post/6844903906024095758)
 
-mini-css-extract-plugin
-purgecss-webpack-plugin
+mini-css-extract-plugin: 压缩 CSS
+purgecss-webpack-plugin: 删除没有的 CSS
 
 [查看 node 兼容情况网站](https://node.green)
 

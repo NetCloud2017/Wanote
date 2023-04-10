@@ -168,3 +168,7 @@ readStream.on('close', () => {
 });
 
 ```
+
+```js
+fs.statSync(file);
+```

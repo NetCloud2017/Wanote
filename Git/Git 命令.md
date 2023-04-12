@@ -220,6 +220,15 @@ git config --global alias.br branch
 
 ```
 
+获取 git 配置
+
+```
+option： --global | --local | --system
+
+git config [option] --list
+
+```
+
 https 协议 克隆 输入的 账号密码长期保存
 
 ```bash

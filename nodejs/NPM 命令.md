@@ -32,3 +32,11 @@
 ## npm ls <package name>
 
 查看当前项目哪里安装过这个包。
+
+## ps -ef
+
+查看当前所有进程
+
+```bash
+ps -ef|gred node # 查看node下有多少个进程
+```

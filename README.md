@@ -28,7 +28,13 @@ memory-fs 将文件放到内存中
 
 speed-measure-webpack-plugin 打包性能分析。
 
-cross-env
+cross-env: 在 package.json 的 script 中修改环境变量。
+
+```json
+{
+	"script": "cross-env mode=production webpack  --c ./config/webpack.config.json"
+}
+```
 
 webpack-bundle-analyzer 打包分析
 
@@ -66,8 +72,14 @@ glob: node 的 glob 模块允许你使用 \*等符号, 来写一个 glob 规则,
 [glob ](https://www.jianshu.com/p/5274cb9d1fc6)
 [node glob](https://juejin.cn/post/6844903906024095758)
 
+fast-glob: 比 glob 更高效的 文件匹配库。
+
+npmlog： 脚手架日志打印。
+
 mini-css-extract-plugin: 压缩 CSS
 purgecss-webpack-plugin: 删除没有的 CSS
+
+webpack-chain: 让你创建一个额外的 webpack 配置。
 
 [查看 node 兼容情况网站](https://node.green)
 

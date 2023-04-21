@@ -1,10 +1,22 @@
-### webpack 原理
+# webpack 5
+
+**Question**
 
 ·Webpack Module 和 Chunk 有什么区别
+
 ·webpack 5 模块联邦的使用场景
+
 ·vite 为什么比 webpack 快
+
 ·webpack 性能调优手段
 
+[Webpack 5 知识体系](https://gitmind.cn/app/docs/m1foeg1o)
+
+[Webpack 5 核心原理](https://juejin.cn/post/6949040393165996040#heading-13)
+
+[深入 Webpack Plugin](https://mp.weixin.qq.com/s/tXkGx6Ckt9ucT2o8tNM-8w)
+
+[深入 Webapck loader](https://mp.weixin.qq.com/s/TPWcB4MfVrTgFtVxsShNFA)
 初始化
 
 编译

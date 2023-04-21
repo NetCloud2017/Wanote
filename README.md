@@ -125,7 +125,8 @@ webpack-chain: 让你创建一个额外的 webpack 配置。
 
 [babel 地址](https://babel.docschina.org/docs/en/plugins/)
 
-专门编译 js 的库群
-所有的共功能都包含在 @babel/preset-xxx 这些专门处理的库里，
+专门处理 js 编译工作， 不做模块化处理的库群, 模块化还是要用 webpack 等打包工具处理， 所有的共功能都包含在 @babel/preset-xxx 这些专门处理的库里。
 
 在配置文件里， plugin 是安装顺序执行的， 而 preset 是按颠倒顺序执行的。
+
+core-js：是一个第三方的 js 兼容处理库 ， 对应的 pollify 库有 pollify, transform-runtime 配合 babel-transform-runtime

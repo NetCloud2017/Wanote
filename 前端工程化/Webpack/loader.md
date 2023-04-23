@@ -16,11 +16,23 @@ if (require.main === module){
 
 ```javascript
 // loader
-
+const path = require("path");
 exports.default = function (content) {
 	console.log(content.replace(";", ""), this.data);
 	let { resourcePath, resourceQuery } = this;
 
+	if (resourceQuery === "?vue&type=template&id=12345") {
+		return "console.log('new code ');";
+	} else {
+		// content = `import '${resourcePath}?vue&type=template&id=12345';\n${content}`;
+		// 加上 -！ 所有循环解析的所有loader 都不执行
+		// content = `import '-!${resourcePath}?vue&type=template&id=12345';\n${content}`;
+		// 某个loader 处理这个 导入。
+		content = `import '-!${path.resolve(
+			__dirname,
+			"loader2.js"
+		)}!${resourcePath}?vue&type=template&id=12345';\n${content}`;
+	}
 	return content;
 };
 

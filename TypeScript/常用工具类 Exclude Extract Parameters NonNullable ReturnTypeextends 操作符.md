@@ -82,3 +82,23 @@ type T7 = NonFunctionPropertyNames<User>;
 type T8 = NonFunctionProperties<User>;
 //  {id: number; name: string; age: number }
 ```
+
+## Record
+
+```ts
+type Record<K extends keyof any, T> = {
+	[P in K]: T;
+};
+```
+
+```ts
+type Ingredient = "chocolate" | "peanuts" | "cocoa" | "marshmallow" | "cherry";
+
+export const ingredients: Record<Ingredient, string> = {
+	chocolate: "Chocolate",
+	cocoa: "Cocoa Powder",
+	cherry: "Cherry",
+	marshmallow: "Marshmallow",
+	peanuts: "Peanut Butter",
+};
+```

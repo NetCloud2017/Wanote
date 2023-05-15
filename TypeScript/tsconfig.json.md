@@ -1,3 +1,7 @@
+# TS configuration
+
+[config options](https://www.typescriptlang.org/zh/tsconfig)
+
 ```json
 {
 	"compilerOptions": {

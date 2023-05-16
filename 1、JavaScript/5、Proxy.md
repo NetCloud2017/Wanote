@@ -13,7 +13,7 @@ var proxy = new Proxy(obj, {
 		/*
         target: 是 obj
         propKey: 拦截的 键名 key
-        receiver: 操作的对象
+        receiver: 操作的对象, 就是 proxy 这个代理对象。 
     */
 		return Reflect.get(target, propKey, receiver);
 	},

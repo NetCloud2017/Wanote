@@ -45,6 +45,7 @@ var myObject = {
 	foo: 1,
 	bar: 2,
 	get baz() {
+		// get 标识符
 		return this.foo + this.bar;
 	},
 };
@@ -194,4 +195,40 @@ Object.getOwnPropertySymbols(myObject);
 // 新写法
 Reflect.ownKeys(myObject);
 // ['foo', 'bar', Symbol(baz), Symbol(bing)]
+```
+
+## test
+
+```javascript
+
+const p1  = {
+	lastName: '张',
+	firstName: '三',
+	get  fullName() {
+		console.log(this);
+		return this.lastName  + this.firstNcame;
+	}
+}
+const proxy = new Proxy(p1, {
+	get (target, key, receiver) {
+		console.log('getter 触发了');
+		return target[key]
+	}
+})
+
+
+console.log(proxy.fullName)；//张三
+//思考：getter 行为应该被触发几次？ 1次 为啥不是三次。
+
+
+// 因为这是；触发了代理对象的 get 方法， 这时， this是 P1 并不是代理对象
+// 要使触发三次应为这样：
+
+const proxy = new Proxy(p1, {
+	get (target, key, receiver) {
+		console.log('getter 触发了');
+		// 这样就触发三次了。
+		return Reflect.get(target, key, receiver)
+	}
+})
 ```

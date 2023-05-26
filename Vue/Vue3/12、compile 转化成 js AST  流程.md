@@ -11,6 +11,8 @@
 transform 方法是 transform.ts 文件里的。 他的核心是 traverseNode 方法 。
 
 ```TS
+// 遍历转化对应的节点
+
 export function traverseNode(
   node: RootNode | TemplateChildNode,
   context: TransformContext
@@ -19,6 +21,8 @@ export function traverseNode(
   // apply transform plugins
   const { nodeTransforms } = context
   const exitFns = []
+
+//    将所有处理 节点的方法保存到 exitFns 里面
   for (let i = 0; i < nodeTransforms.length; i++) {
     const onExit = nodeTransforms[i](node, context)
     if (onExit) {
@@ -37,6 +41,8 @@ export function traverseNode(
     }
   }
 
+
+// 2.  接着处理所有的子节点。
   switch (node.type) {
     case NodeTypes.COMMENT:
       if (!context.ssr) {
@@ -68,6 +74,7 @@ export function traverseNode(
   }
 
   // exit transforms
+  // 3。 最后执行保存在 exitFns 里的函数。
   context.currentNode = node
   let i = exitFns.length
   while (i--) {
@@ -78,5 +85,10 @@ export function traverseNode(
 
 ```
 
-transformText 的作用是将相邻的 花括号表达式和普通文本合并成一个节点。
+transformText 的作用是将相邻的 花括号表达式和普通文本合并成一个表达式 。
 transformElement
+
+遍历转化节点，转化的过程一定要是深度优先的（即：孙->子->父），因为当前节点的
+状态往往需要根据子节点的情况来确定。
+
+转化的过程分为两个阶段： 1.进入阶段：存储所有节点的转化函数到 exitFns 中 2.退出阶段：执行 exitFns 中缓存的转化函数，且一定是倒叙的。因为只有这样才能保证整个处理过程是深度优先的

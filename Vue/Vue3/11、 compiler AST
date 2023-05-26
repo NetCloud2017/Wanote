@@ -118,7 +118,7 @@ export function baseParse(
 
 整个 AST 生成的核心就是 parseChildren 方法。
 
-通过 while 循环解析 template ，当遇到 最后返回的 nodes 就是 children.
+通过 while 循环解析 template ，当遇到 最后返回的 nodes 就是 children. 它组要是由： 构建有限自动状态机解析模板和扫描 token 生成 AST 结构。
 
 2.生成的过程中，对整个 template：<div> hello world</div>进行了解析，整个解析分为 5 步（第二小节的讲解）：
 
@@ -127,6 +127,8 @@ export function baseParse(
     3.第三次解析：hello world：此时context.source=</div>
     4.第四次解析：</div：此时context.source=>
     5.第五次解析：>：此时`context.source = "" `
+
+    就是通过 parseTag 解析标签， 和 advanceBy 右移记录解析的位置。直至解析完 template为止。
 
 3.在这个解析过程中，我们逐步扫描（第三小节的讲解）对应的每次 token，得到了一个对应的 AST 对象
 

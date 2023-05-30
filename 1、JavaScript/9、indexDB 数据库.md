@@ -59,7 +59,7 @@ export default class DB {
 
         const store = this.db.transaction([storeName], 'readwrite').objectStore(storeName)
 
-        // 只添加不修改就用 add
+        // 只添加不修改就用 add, 用 put 可以做增删操作。
         const request = store.put({
             .….data,
             // put 相同的数据会报错
@@ -88,6 +88,36 @@ export default class DB {
         }
         request.onerror = (event: any)=>{
             console.log（'数据删除失败'）
+            console.log(event)
+        }
+    }
+
+    //查询所有数据
+    getList(storeName: string) {
+        const store = this.db.transaction([storeName]).objectStore(storeName)；
+
+        const request = store.getAl1()
+        request.onsuccess =(event:any)=>{
+            console.log（'查询所有数据成功'）
+            console.log(event.target.result)
+        }
+        request.onerror =(event: any) => {
+            console.log('查询所有数据失败'）
+            console.log(event)
+        }
+    }
+
+
+    // 查询某一条数据
+    getItem(storeName: string, key: number I string) {
+        const store = this.db.transaction([storeName]).objectStore(storeName)
+        const request = store.get(key)
+        request.onsuccess =(event: any)=> {
+            console.log('查询某一条数据成功'）
+            console.log(event.target.result)
+        }
+        request.onerror = (event: any) => {
+            console.log('查询某一条数据失败'）
             console.log(event)
         }
     }

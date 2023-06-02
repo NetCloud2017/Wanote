@@ -24,3 +24,29 @@
     -server.js // Nodejs服务
 
 占位符不能换行， 换行会渲染两次。
+
+如何同意服务端和客服端的数据同步？
+
+```javascript
+window.__INITAIL_STATE__ = "<!--vuex-state-->";
+```
+
+数据预取
+
+路由跳转前和路由跳转后。
+
+防止数据重复预取
+
+将路由信息同步到 vuex 的 store 中 vuex-router-sync
+
+```javascript
+import { sync } from "vuex-router-sync";
+
+sync(store, router);
+```
+
+路由懒加载
+
+生成 mainifest 文件, 对文件进行预加载。防止样式错乱问题。
+
+"build:client":"vite build --outDir dist/client --ssrManifest"

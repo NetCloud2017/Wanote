@@ -121,6 +121,14 @@ webpack-chain: 让你创建一个额外的 webpack 配置。
 [vuex]
 [@vue/cli-service]
 
+vuex-router-sync 将 store 注入到 route 中。
+
+## vite
+
+@vitejs/plugin-vue : 处理 vue SFC 文件。
+
+vite-plugin-compression： vite 项目打包开启 zip 压缩。
+
 ## babel
 
 [babel 地址](https://babel.docschina.org/docs/en/plugins/)

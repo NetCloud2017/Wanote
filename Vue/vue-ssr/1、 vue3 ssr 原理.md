@@ -50,3 +50,8 @@ sync(store, router);
 生成 mainifest 文件, 对文件进行预加载。防止样式错乱问题。
 
 "build:client":"vite build --outDir dist/client --ssrManifest"
+
+```javascript
+// 路由的 首页为 '/' 的时候一定要 配置 {index: false}
+app.use(servestatic(path.resolve(dirname, "dist/client"), { index: false }));
+```

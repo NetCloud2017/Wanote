@@ -4,7 +4,7 @@
 
 从头搭建一个服务端渲染的应用是相当复杂的，基于 Vue 技术栈的 Nuxt.js 框架让这一切变得非常简单，Nuxt.js 中大量的配置项可以开启自动引入，比如组件、视图、路由、一些内置 APl 等等，依葫芦画瓢就行，但是如果你需要更直接地控制应用程序的结构，Nuxt.js 并不适合这种使用场景，这也正是我们后面需要学习的另一种 SSR 方案。
 
-> npx nuxi@latest init my-app
+> `npx nuxi@latest init my-app` or `npx nuxi init <project-name>`
 
 > `Error: Failed to download template from registry: fetch failed` 出现这个错误可以更改电脑的 DNS 服务地址。
 

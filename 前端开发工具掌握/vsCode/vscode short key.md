@@ -4,15 +4,15 @@
 
 ## 常用插件
 
-|                                         |                                |                              |
-| :-------------------------------------- | :----------------------------- | :--------------------------- |
-| Simple React Snippets                   | Code Runner                    | Dart                         |
-| Flutter                                 | GitLens                        | Docker                       |
-| Open in browser                         | Prettier                       | ESlint                       |
-| Vim                                     | Vetur                          | Project Manager              |
-| live server                             | auto close tag auto rename tag | guides: 显示代码对齐辅助线。 |
-| Path Intellisense ： 自动填充文件路径。 | path autocomplete              | typescript hero              |
-| Debugger for Chrome                     |                                |                              |
+|                                         |                                                                  |                              |
+| :-------------------------------------- | :--------------------------------------------------------------- | :--------------------------- |
+| Simple React Snippets                   | Code Runner                                                      | Dart                         |
+| Flutter                                 | GitLens                                                          | Docker                       |
+| Open in browser                         | Prettier                                                         | ESlint                       |
+| Vim                                     | Vetur                                                            | Project Manager              |
+| live server                             | auto close tag auto rename tag                                   | guides: 显示代码对齐辅助线。 |
+| Path Intellisense ： 自动填充文件路径。 | path autocomplete                                                | typescript hero              |
+| Debugger for Chrome                     | <b style="color:#aaffaa"> Live Preview </b> 在 vscode 里打开窗口 |                              |
 
 ## 拓展：
 

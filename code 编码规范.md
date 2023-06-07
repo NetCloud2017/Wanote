@@ -7,3 +7,6 @@ https://imooc-lego.yuque.com/imooc-lego/elp4vn/cwu0z1
 ## 3. git flow 工作流
 
 ## 4. commit 提交规范
+
+全埋点
+https://zhuanlan.zhihu.com/p/79439716

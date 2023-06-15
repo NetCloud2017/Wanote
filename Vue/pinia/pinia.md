@@ -1,4 +1,4 @@
-# Pinia
+# [Pinia](https://pinia.vuejs.org/zh/)
 
 ## 使用 pinia , 定义 store
 
@@ -183,6 +183,8 @@ const userStore =  useUserStore()
 ## actions 使用
 
 actions 里面也是不能使用 箭头函数的， 因为里面也是需要使用 指向 store 的这个 this 。
+
+actions 与 getters 不同的是它支持返回值类型推断和内部还支持 async/ await 异步操作。
 
 ```js
 // store.ts

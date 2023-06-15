@@ -47,12 +47,6 @@ export const useUserStore = defineStore("user", {
 			return state.age + 25;
 		},
 	},
-	actions: {
-		addAge(data) {
-			this.age += 1;
-			console.log(data);
-		},
-	},
 });
 ```
 
@@ -181,6 +175,42 @@ const userStore =  useUserStore()
     <div>{{userStore.anotherAge}}</div>
     <div>{{userStore.pramasAge(10)}}</div>
 
+  </div>
+</template>
+
+```
+
+## actions 使用
+
+actions 里面也是不能使用 箭头函数的， 因为里面也是需要使用 指向 store 的这个 this 。
+
+```js
+// store.ts
+import { defineStore } from "pinia";
+
+export const useUserStore = defineStore("user", {
+	state: () => ({ age: 18, name: "张三" }),
+	actions: {
+		addAge(data) {
+			this.age += 1;
+		},
+		// 异步操作
+		async asyncActionAPI() {
+			let res = await API("http:xxxxx");
+		},
+	},
+});
+```
+
+```ts
+<script setup lang="ts">
+    import { useUserStore } from '../store/index'
+    const {addAge} =  useUserStore()
+</script>
+
+<template>
+  <div>
+    <button @click="addAge">点击</button>
   </div>
 </template>
 

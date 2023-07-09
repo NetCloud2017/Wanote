@@ -46,8 +46,10 @@ justify-content 属性定义了项目在主轴上的对齐方式。
 
     flex-start | flex-end | center | baseline | stretch;
     baseline: 项目的第一行文字的基线对齐。
-    stretch（默认值）：如果项目未设置高度或设为auto，
-    将占满整个容器的高度。
+
+    stretch（默认值）：
+
+    如果项目未设置高度或设为auto，将占满整个容器的高度。拉伸所有行来填满剩余空间。剩余空间平均地分配给每一行。
 
 **align-content**
 
@@ -91,24 +93,22 @@ flex-basis: initial;
 flex-basis: unset;
 ```
 
-flex： 是 flex-grow, flex-shrink 和 flex-basis 的简写，默认值为 0 1 auto。
+<b style="color:#aaffaa">flex </b>： 是 flex-grow, flex-shrink 和 flex-basis 的简写，默认值为 initial (0 1 auto)。该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。
 
-该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。
+[MDN flex 解析](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex)
 
 <b style="color:#aaffaa">单值语法: 值必须为以下其中之一：</b>
 
-1、 一个无单位数 (<number>): 它会被当作 flex:<number> 1 0;<flex-shrink>的值被假定为 1，然后<flex-basis> 的值被假定为 0。
+1、**一个无单位数** ( number ): 它会被用作 flex 的值, 其余将 flex-shrink 的值定为 1， flex-basis 的值被定为 0%。
 
-2、一个有效的宽度 (width)值：它会被当作 <flex-basis>的值。
+2、**一个有单位的数值**：它会被当作 flex-basis 的值， 其余的 flex-grow He 。
 
 3、关键字 none，auto 或 initial.
 
-<b style="color:#aaffaa">
-双值语法: 第一个值必须为一个无单位数，并且它会被当作 <flex-grow> 的值。第二个值必须为以下之一：
-</b>
+<b style="color:#aaffaa">双值语法: </b> 第一个值 **必须为一个无单位数**，并且它会被当作 flex-grow 的值。第二个值必须为以下之一：
 
-- 一个无单位数：它会被当作 <flex-shrink> 的值。
-- 一个有效的宽度值：它会被当作 <flex-basis> 的值。
+- 一个无单位数：它会被当作 flex-shrink 的值。
+- 一个有单位数：它会被当作 flex-basis 的值。
 
 <b style="color:#aaffaa">
 三值语法：
@@ -130,18 +130,19 @@ flex: initial;
 flex: none;
 
 /_ 一个值，无单位数字：flex-grow _/
-flex: 2;
+
+flex: 2;  相当于 flex: 2 1 0%;
 
 /_ 一个值，width/height: flex-basis _/
 flex: 10em;
-flex: 30px;
+flex: 30px; 相当于 flex：1 1 30px;
 flex: min-content;
 
 /_ 两个值：flex-grow | flex-basis _/
-flex: 1 30px;
+flex: 1 30px; 相当于flex: 1 1 30px;
 
 /_ 两个值：flex-grow | flex-shrink _/
-flex: 2 2;
+flex: 2 2; 相当于 flex: 2 2 0%;
 
 /_ 三个值：flex-grow | flex-shrink | flex-basis _/
 flex: 2 2 10%;

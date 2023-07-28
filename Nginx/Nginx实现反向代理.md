@@ -74,15 +74,15 @@ nginx 配置文件所在目录：/usr/local/nginx/conf/nginx.conf
 
 main：用于进行 nginx 全局信息的配置
 
-events：用于 nginx 工作模式的配置
+event：用于 nginx 配置工作模式以及连接数
 
 http：用于进行 http 协议信息的一些配置(常用）
 
-server:用于进行服务器访问信息的配置，一个网站配置就是一个 serve,可以参考小峰哥的 NGINX 配置（常用）
+server:用于进行服务器访问信息的配置，虚拟主机配置可以多个，一个网站配置就是一个 serve,可以参考小峰哥的 NGINX 配置（常用）
 
 location：用于进行访问路由的配置（常用）
 
-upstream:用于进行负载均衡的配置
+upstream:用于进行负载均衡的配置，集群配置
 
 ![](./img/1explain.png)
 
@@ -239,3 +239,20 @@ screen -r 进程名称
 screen -X -S 进程名称 quit
 
 ```
+
+## NGINX 进程模型
+
+主要分为两类 master 和 worker; master 是用来管理 worker 进程的， worker 进程是用来处理用户请求的。
+
+    查看进程
+    ps -ef|grep nginx
+
+    更改工作进程数量
+
+```bash
+worker_processes 2; # 用两个工作进程；
+```
+
+## worker 抢占机制
+
+那个 worker 抢占了 accept_mutex 这个锁谁就处理用户的请求。

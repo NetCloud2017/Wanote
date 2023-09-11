@@ -285,3 +285,69 @@ git mv 文件地址 目标地址
 ```
  git branch --set-upstream-to-origin/master master
 ```
+
+## 切换到远程分支
+
+- 方法 1：
+
+  > 查看远程分支列表
+
+  ```shell
+  git branch -r
+  ```
+
+  拉取远程分支到本地
+
+  ```shell
+  git fetch origin 远程分支名:本地分支名
+  如： git fetch origin dev:origin/dev
+  ```
+
+  切换到本地分支
+
+  ```shell
+  git checkout 本地分支名
+  ```
+
+  推送到远程分支
+
+  ```shell
+  git push origin 本地分支名:远程分支名
+  如： git push origin dev:origin/dev
+  ```
+
+- 方法 2：
+
+  将远程 test 分支拉取到本地， 并在本地创建 test 分支；
+
+  ```shell
+  git checkout -b test origin/test
+  ```
+
+## Git 命令简写配置
+
+**查看 git 配置：**
+
+    git config --system -l
+
+    git config --global -l
+
+    git config --local -l
+
+**常用命令简写配置**
+
+    git config --global alias.st status
+
+    git config --global alias.pl pull
+
+    git config --global alias.ps push
+
+    git config --global alias.ci commit -m
+
+    git config --global alias.lg log
+
+    git config --global alias.co checkout
+
+    git config --global alias.br branch
+
+    git config --global alias.mg merge

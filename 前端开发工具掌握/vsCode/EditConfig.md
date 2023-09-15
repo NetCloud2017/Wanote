@@ -8,6 +8,7 @@ Editorconfig 文件
 
 ```json
 {
+	"editor.wordWrapColumn": 80,
 	"workbench.colorTheme": "Solarized Dark",
 	"[html]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"

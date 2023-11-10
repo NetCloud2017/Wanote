@@ -1,40 +1,73 @@
+# Git
+
+相对于集中是管理的 svn, git 是一个分布式的版本管理工具。
+
+## 初始化
+
+```bash
 git init
+```
 
-git 初始化
+git 初始化, 生成一个 `.git` 文件， 对当前目录下的所有文件进行管理。
 
+## 分支管理
+
+**分支创建**
+
+```bash
 git branch dev
+```
 
 创建 dev 分支
 
+**分支删除**
+
+```bash
 git branch -D feature-vulcan
+```
 
 强制删除分支， 还没有合并的分支是不能用小写 - d 来删除的 需要用大写 - D 来强制删除
 
-取消文件跟踪：
+**取消文件跟踪：**
 
-git rm -r –cached a.txt 　//删除 a.txt 的跟踪，并保留在本地
+参考文章
 
-git rm -r –f a.txt 　//删除 a.txt 的跟踪，并且删除本地文件
+> [取消文件跟踪](https://cloud.tencent.com/developer/article/2220221#:~:text=1.%E5%8F%96%E6%B6%88%E6%96%87%E4%BB%B6%E8%BF%BD%E8%B8%AA%20%E5%AF%B9%E6%9F%90%E4%B8%AA%E6%96%87%E4%BB%B6%E5%8F%96%E6%B6%88%E8%BF%BD%E8%B8%AA%20git%20rm%20-r%20%E2%80%93cached%20a.txt%E3%80%80%2F%2F%E5%88%A0%E9%99%A4a.txt%E7%9A%84%E8%B7%9F%E8%B8%AA%EF%BC%8C%E5%B9%B6%E4%BF%9D%E7%95%99%E5%9C%A8%E6%9C%AC%E5%9C%B0%20git,%E3%80%80%2F%2F%E5%88%A0%E9%99%A4a.txt%E7%9A%84%E8%B7%9F%E8%B8%AA%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%20git%20rm%20-r%20-n%20%E2%80%93cached%20%E6%96%87%E4%BB%B6%2F%E7%9B%AE%E5%BD%95%E5%90%8D%20%2F%2F%E5%88%97%E5%87%BA%E9%9C%80%E8%A6%81%E5%8F%96%E6%B6%88%E8%B7%9F%E8%B8%AA%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%8C%E4%B8%8D%E4%BC%9A%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%EF%BC%9B-r%E8%A1%A8%E7%A4%BA%E9%80%92%E5%BD%92%EF%BC%8C-n%E8%A1%A8%E7%A4%BA%E5%88%97%E5%87%BA%E6%96%87%E4%BB%B6)
 
-git rm -r -n –cached 文件/目录名 //列出需要取消跟踪的文件，不会删除文件；-r 表示递归，-n 表示列出文件
+```bash
 
-git rm -r –cached D:/WorkSpace/demo/out //取消对 out 文件夹下文件取消追踪
-对所有文件取消追踪
+git rm -r –cached a.txt
+# 删除 a.txt 的跟踪，并保留在本地
 
-git rm -r –cached . 　//不删除本地文件
+git rm -r –f a.txt 　
+#删除 a.txt 的跟踪，并且删除本地文件
 
-git rm -r –f .　//删除本地文件
-示例：追踪后文件是绿色显示，未追踪文件标记为红色
+git rm -r -n –cached
+# 文件/目录名 //列出需要取消跟踪的文件，不会删除文件；-r 表示递归，-n 表示列出文件
 
-git rm -r –cached . 取消对所有文件的追踪后，再次 git status 查看文件状态；
+git rm -r –cached D:/WorkSpace/demo/out
+## 取消对 out 文件夹下文件取消追踪
+```
 
-[取消文件跟踪](https://cloud.tencent.com/developer/article/2220221#:~:text=1.%E5%8F%96%E6%B6%88%E6%96%87%E4%BB%B6%E8%BF%BD%E8%B8%AA%20%E5%AF%B9%E6%9F%90%E4%B8%AA%E6%96%87%E4%BB%B6%E5%8F%96%E6%B6%88%E8%BF%BD%E8%B8%AA%20git%20rm%20-r%20%E2%80%93cached%20a.txt%E3%80%80%2F%2F%E5%88%A0%E9%99%A4a.txt%E7%9A%84%E8%B7%9F%E8%B8%AA%EF%BC%8C%E5%B9%B6%E4%BF%9D%E7%95%99%E5%9C%A8%E6%9C%AC%E5%9C%B0%20git,%E3%80%80%2F%2F%E5%88%A0%E9%99%A4a.txt%E7%9A%84%E8%B7%9F%E8%B8%AA%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%20git%20rm%20-r%20-n%20%E2%80%93cached%20%E6%96%87%E4%BB%B6%2F%E7%9B%AE%E5%BD%95%E5%90%8D%20%2F%2F%E5%88%97%E5%87%BA%E9%9C%80%E8%A6%81%E5%8F%96%E6%B6%88%E8%B7%9F%E8%B8%AA%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%8C%E4%B8%8D%E4%BC%9A%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%EF%BC%9B-r%E8%A1%A8%E7%A4%BA%E9%80%92%E5%BD%92%EF%BC%8C-n%E8%A1%A8%E7%A4%BA%E5%88%97%E5%87%BA%E6%96%87%E4%BB%B6)
+<b style="color:rgba(255,100,22,1)">\* 对所有文件取消追踪</b>
 
-git stash
+```bash
+git rm -r –cached .
+# 不删除本地文件
 
-保存当初还没有完成的工作的分支去 创建一个分支去解决紧急任务。如 bug;
+git rm -r –f .　
+# 删除本地文件
 
-修复后再 checkout 回来。但是工作区是干净的，刚才的工作现场存到哪去了？用 git stash list 命令看看存储的：（多次 stash，恢复的时候，先用 git stash list 查看，然后恢复指定的 stash，用命令：git stash apply stash@{0}）
+# 示例：追踪后文件是绿色显示，未追踪文件标记为红色
+git rm -r –cached .
+# 取消对所有文件的追踪后，再次 git status 查看文件状态；
+```
+
+## 文件暂存 `git stash`
+
+`git stash` 操作用于保存当前还没有完成的工作的分支去创建一个新分支解决当前的紧急任务。如突如其来的线上 bug;
+
+修复后再 checkout 回来。用 `git stash list` 命令看看存储的：（多次 stash，恢复的时候，先用 git stash list 查看，然后恢复指定的 stash，用命令：git stash apply stash@{0}）
 
 工作现场还在，Git 把 stash 内容存在某个地方了，但是需要恢复一下，有两个办法：
 一是用 git stash apply 恢复，但是恢复后，stash 内容并不删除，你需要用 git stash drop 来删除；
@@ -351,3 +384,21 @@ git mv 文件地址 目标地址
     git config --global alias.br branch
 
     git config --global alias.mg merge
+
+## 合并
+
+本地分支合并远程某个分支
+
+```bash
+# 合并本地分支
+
+git merge branchName
+
+# 合并远程分支
+
+git merge origin/branchName
+```
+
+- git merge origin/branchName 和 git merge origin branchName 的区别
+
+  git merge 是可以合并多个分支的，`git merge origin branchName` 这样操作就是就是合并多个分支，

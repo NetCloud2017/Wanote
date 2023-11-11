@@ -67,7 +67,39 @@ git rm -r –cached .
 
 `git stash` 操作用于保存当前还没有完成的工作的分支去创建一个新分支解决当前的紧急任务。如突如其来的线上 bug;
 
-修复后再 checkout 回来。用 `git stash list` 命令看看存储的：（多次 stash，恢复的时候，先用 git stash list 查看，然后恢复指定的 stash，用命令：git stash apply stash@{0}）
+修复后再 checkout 回来。用 `git stash list` 命令看看缓存的列表; 列表以 0 索引开始的， 若是想恢复第一个可以用 `git stash pop` 或 `git stash apply stash@{0}`;
+
+**`git stash pop` 和 `git stash apply stash@{0}` 的区别**
+
+前者应用后会将其从存储列表中删除，而后者则不会。
+
+> git stash 命令总结
+
+```bash
+# 缓存
+git stash
+
+# 带备注信息缓存
+git stash save 'msg'
+
+# 查看缓存列表
+git stash list
+
+# 查看更改信息
+git stash show 或者 git stash show stash@{1} -p
+
+# 还原操作
+git stash pop 或 git stash apply stash@{1}
+
+# 清除缓存列表
+
+# 清楚某个
+git stash drop stash@{index}
+
+# 清楚所以
+git stash clear
+
+```
 
 工作现场还在，Git 把 stash 内容存在某个地方了，但是需要恢复一下，有两个办法：
 一是用 git stash apply 恢复，但是恢复后，stash 内容并不删除，你需要用 git stash drop 来删除；

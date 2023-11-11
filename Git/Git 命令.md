@@ -1,6 +1,6 @@
 # Git
 
-相对于集中是管理的 svn, git 是一个分布式的版本管理工具。
+相对于集中是管理的 svn, git 是一个分布式的版本管理工具。git 的版本管理有三个仓， 分别是工作仓、暂存仓和版本仓。
 
 ## 初始化
 
@@ -101,50 +101,57 @@ git stash clear
 
 ```
 
-工作现场还在，Git 把 stash 内容存在某个地方了，但是需要恢复一下，有两个办法：
-一是用 git stash apply 恢复，但是恢复后，stash 内容并不删除，你需要用 git stash drop 来删除；
-另一种方式是用 git stash pop，恢复的同时把 stash 内容也删了：
+## git 打标签
 
-**给摸个版本打标签：**
+给某个版本打标签
 
 ```bash
-git tag -a v0.1 -m "version 0.1 released" 1094adb (这个是指定版本的 hash)
+git tag v0.9 hash值
 
-还可以创建带有说明的标签，用-a 指定标签名，-m 指定说明文字：
+# 如
+git tag v0.9 23fsaae
 
-git tag v0.9 ff43531 对某个 commit 打 tag
+# 带有备注的
+git tag -a v0.1 -m "version 0.1 released" hash值
+
+# 推送标签到远程
+git push origin v1.0
+
+# 推送所有标签到远程
+git push orgin --tags
+
 ```
 
-**添加修改到暂存区**
+## 文件暂存、提交、推送
 
-git add \* 或 .
+```bash
+# 暂存所有
+git add * 或 git add .
 
-全部提交
-
+# 暂存对应文件
 git add file2.txt file3.txt
 
-只提交对应的文件
+# 文件提交
+git commit -m"commit modifile file "
 
-**git commit -m"commit modifile file "**
+# 文件推送
 
-**git push origin 分支**
+# 首次推送
+git push -u origin branchName
 
-同时 push 到同一个分支也会冲突
+# 非首次推送
+git push origin branchName
+
+# 文件更新加载
+git push 或 git fetch
 
 ```
-解决 先 git pull 若 git pull 也失败了，原因是没有指定本地 dev 分支与远程 origin/dev 分支的链接，根据提示，设置 dev 和 origin/dev 的链接 git branch --set-upstream-to=origin/dev dev
 
-再 git pull
+## 本地分支与远程分支建立关联
 
+```bash
+git branch --set-upstream-to=origin/remoteBranchName localBranchName
 ```
-
-(如果 git pull 提示 no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令 git branch --set-upstream-to=origin/<branch-name> 本地分支名；
-
-因为创建的标签都只存储在本地，不会自动推送到远程。所以，打错的标签可以在本地安全删除。
-如果要推送某个标签到远程，使用命令**git push origin v1.0**
-
-一次性推送所有没有推送到远程的 tag
-**git push orgin --tags **
 
 **git clone "https......"**
 当你从远程仓库克隆时，实际上 Git 自动把本地的 master 分支和远程的 master 分支对应起来了，并且，远程仓库的默认名称是 origin。

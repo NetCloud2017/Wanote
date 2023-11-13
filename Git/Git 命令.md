@@ -153,19 +153,19 @@ git push 或 git fetch
 git branch --set-upstream-to=origin/remoteBranchName localBranchName
 ```
 
-**git clone "https......"**
+## git clone
+
 当你从远程仓库克隆时，实际上 Git 自动把本地的 master 分支和远程的 master 分支对应起来了，并且，远程仓库的默认名称是 origin。
+
+## 本地仓库和远程仓库建立关联
 
 ```bash
 git remote add origin git@github.com:michaelliao/learngit.git
 
 ```
 
-把本地库的内容推送到远程，用 git push 命令，实际上是把当前分支 master 推送到远程。
+## 代码合并
 
-由于远程库是空的，我们第一次推送 master 分支时，加上了-u 参数，Git 不但会把本地的 master 分支内容推送的远程新的 master 分支，还会把本地的 master 分支和远程的 master 分支关联起来，在以后的推送或者拉取时就可以简化命令。不过就是省略了-u
-
-**合并**
 **git merge dev **
 通常，合并分支时，如果可能，Git 会用 Fast forward 模式，但这种模式下，删除分支后，会丢掉分支信息。
 如果要强制禁用 Fast forward 模式，Git 就会在 merge 时生成一个新的 commit，这样，从分支历史上就可以看出分支信息。
@@ -174,23 +174,25 @@ git remote add origin git@github.com:michaelliao/learngit.git
 写法 git merge --no-ff -m "merge with no-ff" dev 合并 dev 分支并提交；
 ```
 
-**切换 **
+## 分支切换
 
-**git checkout -b master**
+```bash
+git checkout -b dev
+# 创建一个 dev 分支， 并切换到这个分支
 
-**git checkout -dev**
-
-**删除**
+git checkout dev
+# 切换到本地的 dev 分支， 没有则报错；
 
 ```
+
+## 文件删除
+
 rm 文件名（这样直接删除文件会报警， 接着再 git rm test.txt 再 git commit -m "remove test.txt"就不会了
 
 若是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：
 
 $ git checkout -- test.txt
 git checkout 其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。)
-
-```
 
 **git tag -d v1.0** 本地删除标签
 

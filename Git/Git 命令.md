@@ -18,7 +18,10 @@ git 初始化, 生成一个 `.git` 文件， 对当前目录下的所有文件�
 git branch dev
 
 git branch -a
-# 查看远程所以分支
+# 查看所有分支
+
+git branch -r
+# 查看远程分支
 
 ```
 
@@ -187,6 +190,15 @@ git remote add origin git@github.com:michaelliao/learngit.git
 git merge dev
 # 将dev 分支合并到当前的分支
 
+git merge origin/branchName
+# 本地分支合并远程分支
+
+```
+
+`git merge origin/branchName` 和 `git merge origin branchName` 的区别:
+
+```
+git merge 是可以合并多个分支的，`git merge origin branchName` 这样操作就是就是合并多个分支，
 ```
 
 > [`git merge` 和 `git rebase` 的区别](https://juejin.cn/post/7026724793047220254)
@@ -366,57 +378,32 @@ cat ~/.ssh/id_rsa.pub
 
 成功出现 ： Hi xxxx! You've successfully authenticated, but GitHub does not provide shell access.
 
-> 去除 git 管理过的 文件 添加到 .gitignore 里
+## 去除 git 管理过的 文件 添加到 .gitignore 里
 
-git rm -r --cached ： 去除 本地的文件管理目录， 然后重新 add 、 commit ;
+```bash
+git rm -r --cached
+```
 
-git 移动文件
+去除本地的文件管理目录，然后重新 add 、 commit;
 
+## git 移动文件
+
+```bash
 git mv 文件地址 目标地址
-
-在本地和远程都创建了相同的仓库之后， 关联到远程仓库用：
-
-```
- git branch --set-upstream-to-origin/master master
 ```
 
-## 切换到远程分支
+## 将远程某个分支拉取到本地
 
-- 方法 1：
+```bash
+# 1
+git checkout -b test origin/test
 
-  > 查看远程分支列表
+# 2
+git fetch origin 远程分支名:本地分支名
 
-  ```shell
-  git branch -r
-  ```
-
-  拉取远程分支到本地
-
-  ```shell
-  git fetch origin 远程分支名:本地分支名
-  如： git fetch origin dev:origin/dev
-  ```
-
-  切换到本地分支
-
-  ```shell
-  git checkout 本地分支名
-  ```
-
-  推送到远程分支
-
-  ```shell
-  git push origin 本地分支名:远程分支名
-  如： git push origin dev:origin/dev
-  ```
-
-- 方法 2：
-
-  将远程 test 分支拉取到本地， 并在本地创建 test 分支；
-
-  ```shell
-  git checkout -b test origin/test
-  ```
+# 如：
+git fetch origin dev:localdev
+```
 
 ## Git 命令简写配置
 
@@ -445,21 +432,3 @@ git mv 文件地址 目标地址
     git config --global alias.br branch
 
     git config --global alias.mg merge
-
-## 合并
-
-本地分支合并远程某个分支
-
-```bash
-# 合并本地分支
-
-git merge branchName
-
-# 合并远程分支
-
-git merge origin/branchName
-```
-
-- git merge origin/branchName 和 git merge origin branchName 的区别
-
-  git merge 是可以合并多个分支的，`git merge origin branchName` 这样操作就是就是合并多个分支，

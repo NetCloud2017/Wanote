@@ -16,6 +16,10 @@ git 初始化, 生成一个 `.git` 文件， 对当前目录下的所有文件�
 
 ```bash
 git branch dev
+
+git branch -a
+# 查看远程所以分支
+
 ```
 
 创建 dev 分支
@@ -106,7 +110,14 @@ git stash clear
 给某个版本打标签
 
 ```bash
+git tag
+# 查看所以标签
+
 git tag v0.9 hash值
+# 给某个commit 版本打标签
+
+git show v0.9
+# 查看标签v0.9的信息
 
 # 如
 git tag v0.9 23fsaae
@@ -119,6 +130,12 @@ git push origin v1.0
 
 # 推送所有标签到远程
 git push orgin --tags
+
+# 删除本地标签
+git tag -d v0.9
+
+# 删除远程仓库标签
+git push origin :refs/tags/v0.9
 
 ```
 
@@ -166,13 +183,13 @@ git remote add origin git@github.com:michaelliao/learngit.git
 
 ## 代码合并
 
-**git merge dev **
-通常，合并分支时，如果可能，Git 会用 Fast forward 模式，但这种模式下，删除分支后，会丢掉分支信息。
-如果要强制禁用 Fast forward 模式，Git 就会在 merge 时生成一个新的 commit，这样，从分支历史上就可以看出分支信息。
+```bash
+git merge dev
+# 将dev 分支合并到当前的分支
 
 ```
-写法 git merge --no-ff -m "merge with no-ff" dev 合并 dev 分支并提交；
-```
+
+> [`git merge` 和 `git rebase` 的区别](https://juejin.cn/post/7026724793047220254)
 
 ## 分支切换
 
@@ -187,54 +204,90 @@ git checkout dev
 
 ## 文件删除
 
-rm 文件名（这样直接删除文件会报警， 接着再 git rm test.txt 再 git commit -m "remove test.txt"就不会了
+```bash
+git rm filePath
+```
 
-若是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：
-
-$ git checkout -- test.txt
-git checkout 其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。)
-
-**git tag -d v1.0** 本地删除标签
-
-删除远程的标签
-要先从本地删除 `git tag -d v0.9` 再从远程删除 `git push origin :refs/tags/v0.9`
-
-**还原**
-
-命令 git checkout -- readme.txt(丢弃工作区)意思就是，把 readme.txt 文件在工作区的修改全部撤销，这里有两种情况：
-一种是 readme.txt 自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
-一种是 readme.txt 已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
-总之，就是让这个文件回到最近一次 git commit 或 git add 时的状态。
-现在，看看 readme.txt 的文件内容
-
-用命令 git reset HEAD readme.txt （丢弃暂存区） 可以把暂存区的修改撤销掉（unstage），重新放回工作区
-git reset 命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用 HEAD 时，表示最新的版本。
-git log 查看 commit 的版本信息以及 提交日记， 可以利用 提交 版本 ID 回退到某个版本
-
-可以用 git log --pretty=oneline 省略多余的信息
-
-直接退回上一个版本 git reset -- hard HEAD^ 上上个版本 git reset --hard HEAD^^
-
-前 10 个版本 git reset -- hard HEAD~10
-
-注意 ： 如果要找回最新的版本就不要关闭当前的命令窗口，往上找 git log 输出的东西
-
-git reset comitID --hard
-
-Git 提供了一个命令 git reflog 用来记录你的每一次命令 (输出的结果里有 commit ID )
-
-用标签来拉回某个版本
-
-**git tag v1.3**
-
-**显示/查看**
-
-**pwd 显示当前目录**
-**cd 文件路径 进入某个目录**
-**ls --ah** 查看当前目录隐藏的文件
+## 文件恢复
 
 ```bash
-ls -al # 查看文件所有信息，包括权限
+git checkout -- readme.txt
+```
+
+`git checkout -- readme.txt` 意思就是，把 readme.txt 文件在工作区的修改全部撤销，这里有两种情况：
+
+一种是 readme.txt 自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+
+一种是 readme.txt 已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+
+总之，就是让这个文件回到最近一次 git commit 或 git add 时的状态。
+
+```bash
+git reset HEAD readme.txt
+```
+
+`git reset HEAD readme.txt` 可以把暂存区的修改撤销掉（unstage），重新放回工作区;
+
+## git 日志查看
+
+```bash
+git log
+
+git log --pretty=oneline
+# 可以用省略多余的信息
+
+git log -1
+# 显示最后一次提交信息 1 (是 一)
+
+git reflog
+# git reflog 用来记录你的每一次命令 (输出的结果里有 commit ID )
+```
+
+## git 版本回滚
+
+```bash
+git reset -- hard HEAD^
+# 直接退回上一个版本
+
+git reset --hard HEAD^^
+# 回滚到上上个版本
+
+git reset -- hard HEAD~10
+# 回滚到第前 10 个版本
+
+git reset commitID --hard
+# 回滚到某次commit 的版本
+```
+
+## 常用命令
+
+```bash
+pwd
+# 查看当前目录地址
+```
+
+**cd**
+
+```bash
+cd folder path
+# 进入某个目录
+
+# 例如
+cd ../
+
+cd ./src
+```
+
+**ls**
+
+```bash
+ls
+
+ls --ah
+# 查看当前目录隐藏的文件
+
+ls -al
+# 查看文件所有信息，包括权限
 
 ls -a
 
@@ -242,109 +295,76 @@ ls -l
 
 ```
 
-**cat 文件名 . 后缀名** 查看文件
-
-**git log --graph** 命令可以看到分支合并图
-
-**git rebase**
-
-rebase 操作可以把本地未 push 的分叉提交历史整理成直线；
-rebase 的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
-
-git branch -a 可以查看到本地和远程到所有分支 （remotes 开头到都是远程分支）
-
-当本地之前的分支删除的情况下也可以用 checkout 回来 git checkout -b 本地创建的分支名 origin / 远程的分支名
-例如 ：git checkout -b dev，
-
-查看远程库的信息 ：**git remote** 详细的 用 ： git remote -v
-
-**git tag** 查看所有的标签
-
-**git show v0.9** 查看标签信息
-
-标签总是和某个 commit 挂钩。如果这个 commit 既出现在 master 分支，又出现在 dev 分支，那么在这两个分支上都可以看到这个标签。
-
-配置一个 git last，让其**显示最后一次提交信息：**
+**cat 文件查看**
 
 ```bash
-git config --global alias.last 'log -1'
-```
+cat file path
 
-**对比**
-git diff
-
-git diff 文件名 将当前工作区文件和版本区的作比较；
-用 git diff HEAD -- readme.txt 命令可以查看工作区和版本库里面最新版本的（readme.txt 文件）区别
-
-**配置**
-
-```
-git 配置颜色 git config --global color.ui true
+# 例如
+cat ./readme.md
 
 ```
 
-强制添加别忽略的文件
-git add -f 忽略的文件名
+## 查看远程地址
 
 ```bash
-
-git 配置别名 git config --global alias.co checkout
-git config --global alias.ci commit
-git config --global alias.br branch
+git remote -v
 
 ```
 
-获取 git 配置
-
-```
-option： --global | --local | --system
-
-git config [option] --list
-
-```
-
-https 协议 克隆 输入的 账号密码长期保存
-
-```bash
-
-git config –global credential.helper store
-
-```
-
-这样就设置一个小时之后失效
-
-git config credential.helper ‘cache –timeout=3600’
-
-使用 ssh 协议 clone / pull / push 项目
+## 使用 ssh 协议 clone / pull / push 项目
 
 进入 .ssh 文件看看有没有公钥和私钥
 
-cd ~/.ssh ----> ls
+```bash
+cd ~/.ssh
 
-有 id_dsa 为私钥 。id_dsa.pub 为公钥
+ls
 
-没有测用以下命令生成
+# 有 id_dsa 为私钥 。id_dsa.pub 为公钥
+
+```
+
+没有测用以下命令生成公钥和私钥：
+
+```bash
 ssh-keygen -t rsa -C "you registor gitlab emaiil"
 
+# 例如
+
+ssh-keygen -t rsa -C "12345@gmail.com"
+```
+
 然后出现
+
+```
 
 Enter file in which to save the key (/home/you/.ssh/id_rsa):
 
 Enter same passphrase again: [Type passphrase again]
+```
+
 这两个都直接回车可以了
 
 最后出现
+
+```
 Your public key has been saved in /home/you/.ssh/id_rsa.pub.
+```
 
-查看生成的公钥
+查看生成的公钥:
+
+```bash
 cat ~/.ssh/id_rsa.pub
+```
 
-然后在 gitlab 或 github 的个人设置里 将公钥放到 ssh-key 里
+然后在 gitlab 或 github 的个人设置里 将公钥放到 ssh-key 里;
 
-然后检测是否成功
-ssh -T git@github.com
+检测是否可以链接成功
 
-成功出现 ： Hi NetCloud2017! You've successfully authenticated, but GitHub does not provide shell access.
+`ssh -T git@github.com`
+
+成功出现 ： Hi xxxx! You've successfully authenticated, but GitHub does not provide shell access.
 
 > 去除 git 管理过的 文件 添加到 .gitignore 里
 

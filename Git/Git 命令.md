@@ -258,17 +258,21 @@ git reflog
 ## git 版本回滚
 
 ```bash
-git reset -- hard HEAD^
+git reset --hard HEAD^
 # 直接退回上一个版本
 
 git reset --hard HEAD^^
 # 回滚到上上个版本
 
-git reset -- hard HEAD~10
+git reset --hard HEAD~10
 # 回滚到第前 10 个版本
 
 git reset commitID --hard
 # 回滚到某次commit 的版本
+
+git reset --soft HEAD~1 main.js
+# 将 main.js 文件回滚到 上一个版本
+
 ```
 
 ## 常用命令

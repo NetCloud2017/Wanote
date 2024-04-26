@@ -17,6 +17,10 @@ ctrl + alt 鼠标退出虚拟机控制
 **路径**
 
 ```shell
+
+#查看 ascii 码
+man ascii
+
 # 进入linux 用户目录
 cd ~
 

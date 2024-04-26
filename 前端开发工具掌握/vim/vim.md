@@ -4,6 +4,13 @@
 [Vi 终端编译器](https://note.youdao.com/s/5EZERCDM)
 <img src="./vim-map.gif" />
 
+查看 vim 编辑器查看文档
+
+```shell
+# 在 linux 环境下运行
+vimtutor zh
+```
+
 ## vim 模式简介
 
 vim 的模式三种分别是 normal mode、insert mode、visual mode、 command mode， 在初始启动是 normal mode，在 normal mode 下,进入 insert mode 按 <b> i </b>, 进入 visual mode 可以按 <b> v </b> 键， 进入 command mode 可以按 <b> shift + : </b>; 退出可以按 <b> Esc </b> 键或者按 <b> j j </b> 键两下（vscode vim 的默认配置是 j j）。 推出后就是 normal mode。

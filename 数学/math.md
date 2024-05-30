@@ -32,3 +32,7 @@ $$
     x + y = -\frac{4}{15}
 \end{cases}
 $$
+
+$\frac{1}{3} \times (\frac{1}{3} - x) =$
+
+$\frac{1}{3} \times x = 1$

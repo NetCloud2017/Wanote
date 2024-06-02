@@ -36,3 +36,51 @@ $$
 $\frac{1}{3} \times (\frac{1}{3} - x) =$
 
 $\frac{1}{3} \times x = 1$
+
+$$
+\begin{cases}
+    \frac{3}{7}x - \frac{4}{7}y = -3 \space \textcircled{1} \\
+    x - \frac{1}{2}y = -\frac{7}{6} \space \textcircled{2}
+\end{cases}
+$$
+
+?? 感觉你之前学的分数知识没怎么理解透呀？ 你的第一步是多余的。不用化整呀。虽然没有问题， 但是这样解题速度会变慢的。其实你直接写出 $\textcircled{4}$ 这一步就可以了。 然后就可以代入 $\textcircled{1}$ 式。
+
+你的解答过程在 y 这个答案这里就错误了。 怎么会是 35 的？ 怎么计算的哦？
+
+以下是我的解答步骤：
+
+由 $\textcircled{2}$ 式得： $x = -\frac{6}{7} + \frac{1}{2}y \space \textcircled{3}$
+
+将 $\textcircled{3}$ 式代入 $\textcircled{1}$ 式得：
+
+$$
+    \begin{aligned}
+      \frac{3}{7}\times(-\frac{6}{7}+\frac{1}{2}y)-\frac{4}{7}y&=-3\\
+      \frac{3}{7} \times -\frac{6}{7} + \frac{3}{7} \times \frac{1}{2}y - \frac{4}{7}y &= -3 \\
+      -\frac{18}{49} + \frac{3}{14}y - \frac{4}{7}y &= -3 \\
+      \frac{3}{14}y - \frac{4}{7}y &= -3 + \frac{18}{49} \\
+      \frac{3}{14}y - \frac{8}{14}y &= -3 + \frac{18}{49} = -2\frac{31}{49} = -\frac{129}{49}\\
+      -\frac{5}{14}y &= -\frac{129}{49} \\
+      y&= \frac{129}{49} \times \frac{14}{5} \\
+      y&= \frac{258}{35}
+    \end{aligned}
+$$
+
+由 $y = \frac{258}{35}$ 代入 $\textcircled{3}$得：
+
+$$
+    \begin{aligned}
+        x &= -\frac{6}{7} + \frac{1}{2} \times \frac{258}{35}\\
+        &=-\frac{6}{7} + \frac{258}{70}\\
+        &=-\frac{60}{70} + \frac{258}{70}\\
+        &=\frac{198}{70}\\
+    \end{aligned}
+$$
+
+$$
+\begin{cases}
+    2x + y = 17 \\
+    3x - 2y = 1
+\end{cases}
+$$

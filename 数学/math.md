@@ -50,31 +50,35 @@ $$
 
 以下是我的解答步骤：
 
-由 $\textcircled{2}$ 式得： $x = -\frac{6}{7} + \frac{1}{2}y \space \textcircled{3}$
+由 $\textcircled{2}$ 式得： $x = -\frac{7}{6} + \frac{1}{2}y \space \textcircled{3}$
 
 将 $\textcircled{3}$ 式代入 $\textcircled{1}$ 式得：
 
 $$
     \begin{aligned}
-      \frac{3}{7}\times(-\frac{6}{7}+\frac{1}{2}y)-\frac{4}{7}y&=-3\\
-      \frac{3}{7} \times -\frac{6}{7} + \frac{3}{7} \times \frac{1}{2}y - \frac{4}{7}y &= -3 \\
-      -\frac{18}{49} + \frac{3}{14}y - \frac{4}{7}y &= -3 \\
-      \frac{3}{14}y - \frac{4}{7}y &= -3 + \frac{18}{49} \\
-      \frac{3}{14}y - \frac{8}{14}y &= -3 + \frac{18}{49} = -2\frac{31}{49} = -\frac{129}{49}\\
-      -\frac{5}{14}y &= -\frac{129}{49} \\
-      y&= \frac{129}{49} \times \frac{14}{5} \\
-      y&= \frac{258}{35}
+      \frac{3}{7}\times(-\frac{7}{6}+\frac{1}{2}y)-\frac{4}{7}y&=-3\\
+      \frac{3}{7} \times -\frac{7}{6} + \frac{3}{7} \times \frac{1}{2}y - \frac{4}{7}y &= -3 \\
+      这一步考的是分数乘法，加减法\\
+      -\frac{21}{42} + \frac{3}{14}y - \frac{4}{7}y &= -3 \\
+      \frac{3}{14}y - \frac{4}{7}y &= -3 + \frac{21}{42} \\
+      \frac{3}{14}y - \frac{8}{14}y &= -3 + \frac{21}{42} = -2\frac{21}{42} = -2\frac{1}{2} = -\frac{5}{2}\\
+      -\frac{5}{14}y &= -\frac{5}{2} \\
+      -\frac{5}{14} \times y \div -\frac{5}{14} &= -\frac{5}{2} \div -\frac{5}{14} \\
+      \frac{1}{5} \times \frac{1}{2} \div \frac{1}{5} = ? \\
+      y&= \frac{5}{2} \times \frac{14}{5} \\
+      y&= 7
     \end{aligned}
 $$
 
-由 $y = \frac{258}{35}$ 代入 $\textcircled{3}$得：
+由 $y = 7$ 代入 $\textcircled{3}$得：
 
 $$
     \begin{aligned}
-        x &= -\frac{6}{7} + \frac{1}{2} \times \frac{258}{35}\\
-        &=-\frac{6}{7} + \frac{258}{70}\\
-        &=-\frac{60}{70} + \frac{258}{70}\\
-        &=\frac{198}{70}\\
+        x &= -\frac{7}{6} + \frac{1}{2} \times 7\\
+        &=-\frac{7}{6} + \frac{7}{2}\\
+        &=-\frac{14}{12} + \frac{42}{12}\\
+        &=\frac{28}{12}\\
+        &= \frac{7}{3}
     \end{aligned}
 $$
 

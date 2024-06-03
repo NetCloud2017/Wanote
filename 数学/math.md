@@ -88,3 +88,50 @@ $$
     3x - 2y = 1
 \end{cases}
 $$
+
+_二元一次方程组题目_
+
+解方程 1：
+
+$$
+\begin{cases}
+    \frac{2}{7}x + \frac{4}{5}y =\frac{2}{7} \space \textcircled{1}\\
+    \frac{7}{4}x - \frac{14}{3}y = \frac{55}{8} \space \textcircled{2}
+\end{cases}
+$$
+
+解方程 2：
+
+$$
+\begin{cases}
+    1\frac{2}{3}x - 2\frac{1}{6}y =3\frac{3}{4} \space \textcircled{1}\\
+    \frac{1}{3}x - \frac{52}{45}y = -1 \space \textcircled{2}
+\end{cases}
+$$
+
+解方程 3：
+
+$$
+\begin{cases}
+    3x - 4y = 1 \\
+    2x + 3y = 29
+\end{cases}
+$$
+
+解方程 4：
+
+$$
+\begin{cases}
+    2x + 2y = -58 \\
+    x - 3y = -5
+\end{cases}
+$$
+
+解方程 5：
+
+$$
+\begin{cases}
+    -\frac{7}{12}x + 2y = 2 \\
+    2x + 8y = -5
+\end{cases}
+$$

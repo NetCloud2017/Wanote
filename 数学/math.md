@@ -135,3 +135,28 @@ $$
     2x + 8y = -5
 \end{cases}
 $$
+
+$ax^2 + bx + c = 0 ，求一元二次方程 x 的解$
+
+解：
+
+$$
+    \begin{aligned}
+        移项得 \\
+        ax^2 + bx &= -c \\
+        两边同时除以 a 得 \\
+        x^2 + \frac{b}{a}x &= - \frac{c}{a} \\
+        通过 (a + b)^2 = a^2 + 2ab + b^2 得， a 是 x , \\
+        2ab = \frac{b}{a}x 得 2xb = \frac{b}{a}x , b = \frac{b}{2a}\\
+        x^2 + \frac{b}{a}x + (\frac{b}{2a})^2 &= (\frac{b}{2a})^2 - \frac{c}{a} \\
+        (x + \frac{b}{2a})^2 &= (\frac{b}{2a})^2 - \frac{c}{a} \\
+        (x + \frac{b}{2a})^2 &= \frac{b^2}{4a^2} - \frac{c}{a} \\
+        (x + \frac{b}{2a})^2 &= \frac{b^2}{4a^2} - \frac{4ac}{4a^2} \\
+        (x + \frac{b}{2a})^2 &= \frac{b^2 - 4ac}{4a^2}\\
+        开平方得\\
+        x + \frac{b}{2a} &= \pm{\frac{\sqrt{b^2 - 4ac}}{2a}}
+        所以 x 解得： \\
+        x_1 &= +\frac{\sqrt{b^2 - 4ac} -b}{2a} \\
+        x_2 &= -\frac{\sqrt{b^2 - 4ac} -b}{2a} \\
+    \end{aligned}
+$$

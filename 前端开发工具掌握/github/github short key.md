@@ -1,5 +1,7 @@
 > 参考地址： https://docs.github.com/cn/get-started/using-github/keyboard-shortcuts
 
+## github 访问速度提升
+
 ## 键盘快捷键
 
 几乎 GitHub 上的每一页都有键盘快捷键，可以更快地执行操作。

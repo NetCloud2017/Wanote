@@ -26,7 +26,8 @@ Packer , Nvimtree, Tokyonight
 
 ### 编写 Neo Vim 配置文件
 
-也可以在 nvim 的 command mode 里输入 :help init.lua, 查看配置文件在哪里配置。
+也可以在 nvim 的 command mode 里输入 :help init.lua, 查看配置文件可以在哪里配置。
+<img src="./vimConfigFilePath.png"/>
 
 启动 Nvim 编译器, 用 conmand mode 输入 :` echo stdpath('config')` 接着按 enter 就会显示配置文件的位置。一般在 AppData>LocaL>nvim 目录里面。同时将这个 目录也放置到环境变量中。
 

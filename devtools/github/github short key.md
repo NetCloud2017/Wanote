@@ -2,6 +2,8 @@
 
 ## github 访问速度提升
 
+[hosts 配置更新地址](https://gitee.com/if-the-wind/github-hosts)
+
 ## 键盘快捷键
 
 几乎 GitHub 上的每一页都有键盘快捷键，可以更快地执行操作。

@@ -24,7 +24,7 @@ Packer , Nvimtree, Tokyonight
 `C:\Users\ironMax\AppData\Roaming\Microsoft\Windows\Start Menu\Programs`
 这个目录即可。
 
-### 编写 Neo Vim 配置文件
+## Neo Vim windows 配置
 
 也可以在 nvim 的 command mode 里输入 :help init.lua, 查看配置文件可以在哪里配置。
 <img src="./vimConfigFilePath.png"/>
@@ -33,7 +33,7 @@ Packer , Nvimtree, Tokyonight
 
 <img src="./envVar.png"/>
 
-接着在这个文件里面创建 init.vim 或 init.lua (推荐）文件。
+接着在这个文件里面创建 init.vim 或 init.lua （推荐, 以后 不支持 点 vim 文件配置了）文件。
 
 这个文件就是专门放置 neo vim 的配置的。
 
@@ -124,7 +124,9 @@ end)
 
 ```
 
-## plugins
+## Linux 配置
+
+## Neo vim plugins
 
 nvimtree
 tokyonight

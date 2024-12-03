@@ -126,6 +126,33 @@ end)
 
 ## Linux 配置
 
+进入 ~/.config/ 目录 创建 nvim 文件夹目录结构如下
+
+```
+├── init.lua
+├── lua
+   └── usr
+       ├── core
+       │   ├── colorscheme.lua
+       │   ├── keymaps.lua
+       │   └── options.lua
+       ├── plugins
+       │   ├── lsp
+       │   │   ├── lspconfig.lua
+       │   │   ├── lspsaga.lua
+       │   │   ├── mason.lua
+       │   │   └── null-ls.lua
+       │   ├── autopairs.lua
+       │   ├── comment.lua
+       │   ├── gitsigns.lua
+       │   ├── lualine.lua
+       │   ├── nvim-cmp.lua
+       │   ├── nvim-tree.lua
+       │   ├── telescope.lua
+       │   └── treesitter.lua
+       └── plugins-setup.lua
+```
+
 ## Neo vim plugins
 
 nvimtree

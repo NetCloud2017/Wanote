@@ -1176,3 +1176,126 @@ pet  追
 compete [kəmˈpiːt] 竞争， com ⼀起 相互之间的追逐
 
 competent [ˈkɒmpɪtənt] 能胜任的， ent 形容词 ，能追上表示有能⼒
+
+repeat [ri'pi:t] ᯿复 ， re 再次，᯿新去⾏动的
+
+## Q
+
+<span style="color:red">
+ques quer quis quir 寻求 询问
+</span>
+
+question 问 ，寻求根源 要求
+
+quest [kwest] 询问
+
+acquire [əˈkwaɪə(r)] 获得 ，ac ⽅向 朝着能寻求的⽅向
+
+inquire [ɪn'kwaɪə(r)] 询问， in ⾥⾯，追求到底，⼀问到底
+
+<span style="color:red">
+quiet quil  静
+</span>
+
+quiet 静 安静 平静
+
+tranquil [ˈtræŋkwɪl]安静 tran = trans 转移， 转移到安静的地⽅
+
+disquiet [dɪsˈkwaɪət] dis 否定 ，不安静
+
+## R
+
+字⺟ R 代表转，和发⾳时⾆型有关。语⾔发展的相似 — ear ⽿ 汉语 [ěr]
+
+<span style="color:red">
+roll rot 卷
+</span>
+roll cake 蛋卷   roll 卷
+
+role [rəʊl]⻆⾊ 演员表演时⼿⾥会拿着台词的纸卷
+
+roll [rəul] 滚动
+
+control [kənˈtrəʊl] contra 相反的，往前滚动时给相反的⼒，就是控制住
+
+rotate [rə(ʊ)ˈteɪt] ate 动词 滚动 循环
+
+<span style="color:red">
+rupt 破裂
+</span>
+
+字⺟ R = L ⾳变 表示直 right 直 root 根 rise 升起 rip ，撕裂= rupt (开始用来形容花朵刚刚张开的那种画面来形容破裂)
+
+bankrupt [ˈbæŋkrʌpt] 破产， bank 银⾏ 资⾦的断裂
+
+corrupt [kə'rʌpt] 腐烂， co ⼀起，完全腐烂后断裂开
+
+interrupt [ˌɪntəˈrʌpt] 中断， inter 中间 从中破裂
+
+irrupt [i'rʌpt] 闯⼊， ir = in ，从中断裂的很突然
+
+<span style="color:red">
+rect 直 正确
+</span>
+
+和 right 同源。 直 = 正直 = 正确
+
+right [raɪt] 正确 右边 权利，权利需要正确的⾏使
+
+direct [dɪˈrekt] 指导 直接 ，di 分开 ，让很多⼈分⼯不同的去做正确的事情
+
+<span style="color:red">
+rig 硬
+</span>
+
+和 right rect 同源
+
+rigid [ˈrɪdʒɪd] id 形容词， 坚硬的
+
+rigor ['rɪgə] 严格 or 名词 ， 直的没有余地
+
+<span style="color:red">
+rat reas思考
+</span>
+
+和 read 读 同源 阅读理解训练⼀个⼈的思维能⼒
+
+reason [ˈriːz(ə)n] 理由 ，⼀件事情的理由是思考的结果
+
+rate [reɪt] ⽐率 估价 ，⽐率和估价都是思考计算的结果
+
+<span style="color:red">
+rul reg reig 规定 统治
+</span>
+
+ruler 尺⼦直的 — 条框的规则 — 制定规则的统治者
+
+rich [ritʃ] 丰富 富有，有钱⼈ richer ，ch = c = g，统治阶层就会富有
+
+rule [ruːl] 规则 统治 管理，画条框的，制定规则的
+
+region [ˈriːdʒ(ə)n] 地区， ion 名词，画出条框的范围，统治管理的领地
+
+reign [reɪn] 统治时期 reig = reg
+
+<span style="color:red">
+riv 竞争
+</span>
+
+river 同源
+
+rival[ˈraɪvl] 竞争 ，⼈类早期围绕河⽔⽔源展开地盘上的争夺，从邻居变成对⼿
+
+arrive [əˈraɪv] 到达，ar = a ⽅向，⼈们乘船出⾏，当船靠岸的时候就是到达
+
+derive [dɪˈraɪv] 获得; 起源于；de 往下 ，⼀条河流分⽀出来另⼀条，获得了⼀个新的
+
+## S
+
+<span style="color:red">
+spec spic spect sequ spis sec secut 看 跟随
+</span>
+
+和 see 同源 s 前缀 + e 窗户，来⾃印欧语 sekw；古英语 see ，希腊词根 scop — telescope 望远镜，拉丁语词根 spect
+
+second ['sekənd] 第⼆，词根 sec = spec p 脱落，紧盯着跟在分针的后⾯

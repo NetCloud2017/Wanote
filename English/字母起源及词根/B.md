@@ -1,4 +1,68 @@
-## B
+# B
+
+## 字母起源
+
+> 拟声 — 爆破声⾳ 英⽂ BANG = 汉语 爆[BÀO]
+
+bark [bɑːk]狗叫 拟声
+
+bomb [bɒm]爆炸
+
+bump[bʌmp] 撞击 肿块
+
+> 爆，因为肿胀会爆，引申 — ⿎起来，圆
+
+bald [bɒ:ld] 秃头 ，⼜圆⼜亮
+
+bulb [bʌlb] 灯泡，⼜⼤⼜圆
+
+bag [bæg] 袋⼦像是⿎起来的
+
+balloon [bəˈluːn] ⽓球
+
+> 由拟声，打击的声⾳，出现了棒⼦，汉字的棒 [bàng] 也是拟声
+
+bar [bɑː] 棒 b + ar 组合，ar 胳膊
+
+belt [belt] ⽪带
+
+badge [bædʒ] 奖牌 adge = age 以前的奖章像⼩板⼦
+
+> 弹跳 跳跃，棒⼦打下去会有反作⽤⼒，棒⼦会弹起来
+
+bound [baʊnd]跳跃
+
+bow [baʊ] 弯腰
+
+> 棒子跟结实有关表示强壮，身体真棒代表身体真结实
+
+boy [bɒɪ]  男孩⼦，结实
+
+bear [beə(r)] 熊
+
+bad [bæd] 坏，来⾃ boar ᰀ 猪，ᰀ 猪也是像个棒⼦，粗壮，它不仅粗壮，⽽且很疯狂，吃粮⻝，⼤⾯积的毁坏，⻓相丑陋，古⼈觉得 ᰀ 猪邪恶的象征，创造了 bad
+
+> 古时用木棍成堆烧火引申的火
+
+burn [bɜːn] ⽕ b = f 和 fire 同源
+
+barbecue[ˈbɑːbɪkjuː] 烧烤
+
+blaze [ bleiz ] ⽕焰 ，蓝⾊的⽕，blue 蓝⾊，⽩⾊的⽕，blank ⽩⾊，空⽩，⽕烧⿊，black ⿊，红⾊⽕苗，blood ⾎，流⾎像⽕烧红的颜⾊
+
+> B 腓尼基人两间屋的房子，跟房屋有关，因为是两间屋，有分开的含义
+
+bathroom [ˈbɑːθruːm]浴室
+
+bra [brɑ:]胸罩
+
+breast [brest] 乳房
+
+birth [bɜːθ]⽣⽇
+
+born [bɔːrn] 出⽣
+
+## 词根
 
 B 代表腓尼基⼈两间屋的房⼦ bed 床 bath 洗浴
 B 两间屋代表分开 both 两个、brain ⼤脑、bike ⾃⾏⻋、birth ⽣⽇和⺟体分开 be 动词 = ⽣命 ⽣物 human being ⼈类

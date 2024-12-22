@@ -304,3 +304,15 @@ science ['saɪəns] 科学，sci 知道 + ence 名词， 知道的事情是知�
 scientific [ˌsaɪənˈtɪfɪk] 科学的， fic 形容词后缀，是 fic 词根做的含义，做出、产⽣
 
 prescience [ˈpresiəns] 预知， pre 前 提前就知道的，有先⻅之明的
+
+<div style="color:red">
+spher 球
+</div>
+
+atmosphere [ˈætməsfɪə(r)] 气氛， 大气层；
+
+<div style="color:red">
+struct 建造
+</div>
+
+destructive [dɪˈstrʌktɪv] 破坏性的，de 去除 ；

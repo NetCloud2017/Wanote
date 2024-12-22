@@ -98,13 +98,14 @@ anniversary [,ænɪ'vɜ:səri]周年纪念，ver 转 ary 名词
 ## 词根
 
 <div style="color:red">
-    al ol el alt ult ⽣长 成长 
+    al ol el alt ult ⽣长 成长 , 高
 </div>
 
 A: ⼜⾼⼜远、L: 拉伸 拉⻓;line 线 light 光, 印欧语 al = 在远处; old = ol + ed （ol = al 变形）
 
 **adult [ˈædʌlt]** 成年⼈ 前缀 ad = a ⽅向 ，ult = alt ， adult video AV
 
+**altitude [ˈæltɪtjuːd]** 海拔高度；
 **adolescent [ˌædəˈlesnt]** ⻘春期 ol = ⽣⻓ esc 拉丁语动词后缀 es = ex 出去 ，ent 形容词
 
 **adulthood[ˈædʌlthʊd]** 成年 hood = head (把这段时间罩住， 就是一个时期)名词后缀 neighborhood 邻⾥之间 childhood 童年

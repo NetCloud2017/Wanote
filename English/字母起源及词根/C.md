@@ -1,4 +1,104 @@
-## C
+# C
+
+## 字母起源
+
+> 字⺟ c 最初画的是骆驼的头，代表骆驼—camel ，骆驼是᯿要的运输⼯具
+
+car [kɑ:(r)] ⻋
+
+cab [kab]出租⻋ 从 car 引申
+
+coach [kəʊtʃ] ⻓途客⻋ , 之后引申了 car ⾛动、跑、流通这些词根
+
+> 字⺟ C = K 发⾳—拟声，同汉语喀嚓 [KĀ] [CHĀ]
+
+clap [klæp] 拍⼿
+
+collapse[kəˈlæps] 倒塌
+
+crack [ˈkrækə] 破裂
+
+cracker [ˈkrækə(r)] 饼⼲，饼⼲掰碎的声⾳
+
+crash [kræʃ] sh = s = c ，碰撞
+
+> 字⺟ C 的形状，像抓东⻄的样⼦，掌⼼形成弧度，引申抓
+
+scratch [skrætʃ] 抓 挠 ，s = ex 向外
+
+claw [klɔ:] ⽖，动物⽖⼦
+
+clay [kleɪ] 粘⼟ 抓在⼀起掉不下来很粘的
+
+climb [klaɪm]爬，c + limb 树枝
+
+cage [keɪdʒ] ⻦笼
+
+castle [ˈkɑːsl] 城堡
+
+cave [keɪv] ⼭洞
+
+> C — 当时游牧民族用的弯刀，兼顾近距离的攻击，砍杀，也可以作为宰杀牛羊的工具
+
+chop [tʃɒp]砍
+
+clever [ˈklevə(r)] 聪明，砍、劈这些动作需要技巧
+
+cliff [klɪf] 悬崖 峭壁
+
+carve [kɑːv] 雕刻
+
+crude [krud] 粗鲁，刚砍下没有做加⼯的 ,延伸到粗鲁的意思
+
+> C — 围绕，像个包围圈
+
+circle [ˈsɜːkl] 圆
+
+chain [tʃeɪn]链⼦
+
+chair [tʃeə(r)] 椅⼦，两边有放胳膊的地⽅，把身体围住 chairman [ˈtʃeəmən]主席 会⻓
+
+coast [kəʊst] 海岸 把陆地围住
+
+cucumber [ˈkju:kʌmbə(r)] ⻩⽠
+
+customs [ˈkʌstəmz] 海关，围住海岸的关⼝
+
+> C — 合并，抓在⼀起等于合并⼀起，前缀 co con com 代表⼀起
+
+center ['sentə] 中⼼
+
+concentrate [ˈkɒnsntreɪt] con ⼀起，浓缩
+
+cancel [ˈkæns(ə)l]取消， 划叉表示作废，叉形像是围在教堂前⾯的栏杆 — chancel
+
+crowd [kraʊd] ⼈群
+
+combine [kəmˈbaɪn] 联合，bi 分开，分开的合在⼀起
+
+couple [ˈkʌpl] 夫妇 情侣 组 cp
+
+> 字母 C — 叫 喊，嘴张开的形状，张开嘴才发出声⾳
+
+caw [kɔ:]乌鸦叫
+
+cry [kraɪ] 哭
+
+cough [kɔːf] 咳嗽，汉语咳嗽——咳，也是拟声
+
+> C — 盖⼦，C 往右转 90 度，像盖⼦⼀样，因为 C 有包围的意思，引申了盖在上⾯
+
+cover [ˈkʌvə] 覆盖 ，也是词根
+
+discover [dɪˈskʌvə(r)] dis 分开，发现
+
+casino [kəˈsi:nəʊ] 赌场, 原指意大利乡村的娱乐室， 后面活动越来越多了， 也包括有赌博， 后面就以赌博为主了。
+
+coat [kəʊt]外套 外⾐
+
+cabin [ˈkæbɪn] 船舱，从 cave 引申的 b = v in ⾥⾯
+
+## 词根
 
 <div style="color:red">
 can cann   罐⼦  

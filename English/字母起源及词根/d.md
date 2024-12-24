@@ -1,6 +1,38 @@
-## D
+# D
 
-D = 门，像牙齿的形状。
+## 字母起源
+
+> D—⻔的象形字⺟，代表⻔或者房⼦
+
+door 门；
+
+dean[di:n] 院⻓ 系主任，古罗⻢军队，⼗个⼈⼀个班
+
+decade ['dekeid]⼗年， 从 dean ⼗个⼈引申了⼗年
+
+> D = 门，像牙齿的形状。⻔引申了⽛（嘴的⻔）DICT 说的词根，跟说话产⽣了关联
+
+dine[daɪn] 吃饭  
+dinner [ˈdɪnə(r)]正餐  
+dumb [dʌm] 哑的 关上了嘴的⻔
+
+> D— 向下，古欧洲的⼤⻔下放式的，引申了向下
+
+drainage [ˈdreɪnɪdʒ] age 名词，排⽔ 下⽔道
+dip [dɪp] 蘸 浸
+drip [drɪp] ⽔滴  
+drop [drɒp]落下 drop = drip 元⾳互换
+
+> D — ⻔，向下关⻔分开了⾥和外，⻔⾥和⻔外，引申了分开
+
+double [ˈdʌb(ə)l] 两个 两倍
+dozen [ˈdʌzn] ⼀打 ⼗⼆个，do = 前缀 ⼆，zen = ten，z = s = t
+
+> D — 房⼦，房⼦是家，家⾥有主⼈，⼩到家庭⼤到国家，引申了家的主⼈保护统治
+
+decorate [ˈdekəreɪt] 装饰，decor 词根，在外⾯做保护
+
+## 词根
 
 <div style="color:red">
 den dens dent 牙 

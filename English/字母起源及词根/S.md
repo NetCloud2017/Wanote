@@ -1,6 +1,12 @@
 ## S
 
 <div style="color:red">
+scend, 爬，上升
+</div>
+
+descend /dɪˈsend/ 下降
+
+<div style="color:red">
 spec spic spect sequ spis sec secut 看 跟随
 </div>
 

@@ -1,12 +1,29 @@
-## E
+# E
 
-E = 眼睛 er = 转动
+## 字母起源
+
+> E—是窗户的符号，看到外⾯，引申了眼睛
+
+see [si:] 看， e 代表眼睛
+eye [aɪ] 眼睛 Y ⿐⼦
+weep [wiːp] 哭  
+east [i:st]东 ，第⼀眼看到太阳的⽅向，go west 去死吧 上⻄天
+easter [ˈiːstə(r)] 复活节，太阳出来了⼜是新的开始
+
+economy [ɪˈkɒnəmɪ] 经济 节约，nomy 理论 = norm 规则的变形，eco = 环境
+
+> ⾳变,元⾳字⺟ AEIOU + YW 半元⾳
+
+edge [edʒ] 边缘 acid = edge , d 不发⾳ , eg = ac egg [eg]蛋 来⾃词根 ov oo ，v 翅膀
+end [end] 结束 来⾃ ant ，a ⼜⾼⼜远，远到头了
+
+## 词根
 
 <div style="color:red">
 erg urg org ert 劳动 ⼯作
 </div>
 
-er 发⾳⾆头弯曲 work ork 词根 er = ur = or 元⾳互换
+E = 眼睛 er = 转动; er 发⾳⾆头弯曲 work ork 词根 er = ur = or 元⾳互换
 
 er 大多和 “ 转” 有关， 而 g 又是 骆驼， 意思是像骆驼一样转动，即 worker （ g，k, h 互换）
 

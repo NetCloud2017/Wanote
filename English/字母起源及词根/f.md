@@ -1,6 +1,57 @@
-## F
+# F
 
+## 字母起源
+
+> fork [fɔ:k] 叉⼦ 字⺟ F — 古埃及⼈画下⼿脚的样⼦，简化成字⺟ F
+
+fold [fəuld] 折叠  
+find [faɪnd] 找
+fetch [fetʃ]取
+fiber ['faɪbə]  纤维
+
+> F— ⼿ — ⻦的翅膀 — ⽻⽑ — 柔软
+
+far [fɑ:] 远 ar 胳膊，⻦拍打着翅膀⻜的很远
+feather [ˈfeðə(r)] ⽻⽑
+fare [feə] ⻋费，去远的地⽅要买票
+pen [pen]钢笔，pen = fin ⽻⽑ 尖
+foresight [ˈfɔːsaɪt] 展望，sight 视 ᰀ，前⾯的视 ᰀ
+
+> ⾳变— b = f = bar 棒⼦，⽊棍成堆烧⽕
+
+burn = fire  
+fireman [ˈfaɪəmən] 消防员
+fanatic[fəˈnætɪk] ic 名词 ，狂热
+favor [ˈfeɪvə] 喜欢，or 名词
+fireplace [ˈfaɪəpleɪs]壁炉，有⽕的地⽅
+flame [fleɪm] 有⽕就有⽕焰
+
+> ⾳变— b = f —⽕ — 狂热 — 喜欢 — 信任
+
+fid [fɪd]信任  
+faith [feɪθ] 信任
+fame [feɪm] 名声 名望
+
+> F — 钉⼦ — 记号 — 罪犯印在脸上 — 过错
+
+fake [feɪk] 假货  
+feign [feɪn] 假装  
+false [fɔ:ls]错的  
+fault [fɔ:lt] 过失
+fail [feil] 失败  
+failure [ˈfeɪljə(r)] 失败
+forget [fəˈɡet] 遗忘，get 拿，得到，for = f 否定，没拿
+
+> 拟声 汉语 喃喃⾃语，朗朗读书，fu fu 声，fess [fes] 词根—说
+
+profess [prəˈfes]宣称，pro 站在前⾯说
+confess [kənˈfes] 坦⽩， con ⼀起，全都说出来
+
+## 词根
+
+<div style="color:red">
 fac fec fig fic fit feas ⼲ 做  
+</div>
 F = ⼿ finger ⼿指 — fist 拳头 — fix 安装
 
 artifact 手工艺品

@@ -1,6 +1,50 @@
-## G
+# G
 
-字母 G 是 基于字母 C 造出来的，g = k [c] = h；
+## 字母起源
+
+> 字母 G 是 基于字母 C 造出来的，g = k [c] = h；C 分化出 G — 包含字⺟ C 的含义— 动。
+
+go [ɡəʊ] ⾛  
+goal [gəʊl] ⽬标 得分
+grade [greid] 等级 年级
+
+> 像侧⾯头⻣ — 开⼝ 咬合
+
+gate ⼤⻔ dent ⽛
+gear [ɡɪə(r)] ⻮轮
+grin [grɪn] 露⻮笑
+gossip [ˈgɒsɪp] 闲聊 god 上帝 + sip ⼀⼩⼝
+
+> C 分化出 G — 包含字⺟ C 的含义— 头 — 头为⾸ — 重要的
+
+great [greɪt]巨⼤的 伟⼤的
+giant [ˈdʒaɪənt] g =⼤ ，ant 后缀，巨⼤
+grand [ɡrænd]⼤，grandfather ⽐ father 还⼤
+geo ['dʒi:əu-] ⼟地，古希腊⼤地之神盖亚，George  
+geography [dʒiˈɔɡrəfi] 地理 ，graph 写
+
+> G — 头 — 头为⾸ — ᯿要的— ⼤ — ⼟地 — ⽣⻓ 孕育
+
+gene [dʒiːn]基因 ⽣命的基本因⼦
+gen [dʒen]词根，⽣⻓ gen = gn
+gn 词根，表示⽣⻓ 孕育
+germ [dʒɜːm]细菌 ，gen = ger ，n = r 互换
+pregnant [ˈpregnənt]孕妇，pre 前+gn ⽣ 在出⽣之前的 pregnancy [ˈpreɡnənsi]ancy 名词， 怀孕
+
+> 词根 gn gl gr ⽣⻓ ， m n l r 互换 , gr = ⼟壤，⽣⻓
+
+grass [ɡrɑːs] 草
+grow [grəʊ]⽣⻓ ， 词根 gr green [griːn] 同源
+
+> 字⺟ C — G 包围 保护
+
+garden ['ɡɑ:dn]花园 四周有围墙的耕地
+gardening ['ɡɑ:dnɪŋ] ing 名词 ，园艺
+garage [ˈgærɑ:ʒ]⻋库 有⼈看管⻋的地⽅
+governor [ˈɡʌvənə(r)] 统治者 管理者
+grape [greɪp] 葡萄 ，葡萄珠围在⼀起
+
+## 词根
 
 <div style="color:red"> gest gister 带来</div>
 gest 和 car 同源，car = 携带 运送, guest 客⼈ G= C = 骆驼 = 运输

@@ -1,4 +1,37 @@
-## L
+# L
+
+## 字母起源
+
+> L 拉⻓ ⻓
+
+limited [ˈlɪmɪtɪd] 有限的， limit 词根，界限
+
+long [lɒŋ] ⻓
+lavatory [ˈlævətri] 洗⼿间 lav 洗 + at + ory 地点
+laundry [ˈlɔ:ndri]洗⾐房，ry = ory 地点 洗⾐房
+
+> L 拉⻓ 、⻓、身体⻓的部位
+
+lightning [ˈlaɪtnɪŋ] 闪电
+
+lot [lɒt] 许多，抽签的⼩⽊条 , 同时还有 签的意思
+
+lottery [ˈlɒt(ə)rɪ] 彩票 抽奖， lot 引申
+
+lingua [ˈlɪŋɡjuə] ⾆头 lingu 词根
+language [ˈlæŋgwɪdʒ] 语⾔ ，langu 词根 元⾳互换
+
+> L ⻓ — 细 — 少
+
+slum [slʌm] 贫⺠窟， lum 词根光，微弱的光
+
+slim [slɪm] 细⻓， lim 线
+
+slender [ˈslendə] 苗条 s 前缀 = ex
+
+slop [slɒp] 洒出来，溅出来，lop 掉下来
+
+## 词根
 
 字⺟ L 表示⻓的，像⼀条线, lip 嘴唇 lake 湖，la 拉 — lacy 蕾丝 ladder 梯⼦; 字⺟ p 拟声⼿ — papa 拍⼿ palm ⼿掌 pace 步伐 grandpa 爷爷 = grand ⼤ + pa 拟声
 

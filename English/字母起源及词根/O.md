@@ -1,4 +1,33 @@
-## O
+# O
+
+## 字母起源
+
+> 字⺟ O — 代表圆形的 —眼睛 嘴
+
+optical [ˈɒptɪk(ə)l]视觉的
+
+optimal [ˈɔptəməl]al 形容词， 最佳的
+
+optimum [ˈɒptɪməm] 最佳条件 optim 词根 um 名词后缀
+
+option [ˈɒpʃn]选择 opt 词根
+
+orient [ˈɔ:rient]朝向，太阳 sol ⽉亮 moon
+
+> 字⺟ O — 代表圆形的 —圆柱
+
+oar [ɔː]桨，ar
+ocean [ˈəʊʃn] 海，海是环绕⼤陆的⼀条河流
+orbit [ˈɔːbɪt]轨道 orb 词根，o 沿轨道运⾏
+
+> 字⺟ O — ⾳变 —a e i o u
+
+out [aʊt] 外⾯，字⺟ a 向外  
+outcome [ˈaʊtkʌm] 结果
+
+outlay [ˈaʊtleɪ] 费⽤ ⽀出
+
+## 词根
 
 <div style="color:red">
 oper ⼯作运转

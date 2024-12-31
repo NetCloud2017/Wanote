@@ -1,4 +1,26 @@
-## I
+# I
+
+## 字母起源
+
+> i 表示我，i = a 元⾳互换，an any one ，第⼀⼈称代词 — 我 ⼈
+
+identity [aɪˈdentɪtɪ] 身份，ity 名词 ident 词根 = ideal 的变形
+
+in [ɪn] ⾥⾯ 否定，字⺟ n ⻔，in = im = un 否定
+
+> i 像⽔滴的样⼦ — ⽔
+
+ice [aɪs]冰  
+icy [ˈaɪsɪ] y 表示多 冰太多了，冰冷的
+
+> 尖 ⼀点 ⼩
+
+nch [ɪn(t)ʃ] 英⼨ = 2.54 厘⽶，和 one 同源
+inn [ɪn]⼩旅馆
+
+字⺟ i，多作为前缀 in im ，或是和其他字⺟组成单词 mini point
+
+## 字根
 
 <div style="color:red">
 it  ⾛

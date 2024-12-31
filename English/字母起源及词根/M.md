@@ -1,4 +1,50 @@
-## M
+# M
+
+## 字母起源
+
+> M 象形⼭—汉语象形⼭ — ⾼⼤ — 连接
+
+mount [maʊnt] ⼭
+most [məʊst] 最 ，ma mu mo mi 组合— 多 ⼤
+
+metropolitan[ˌmetrəˈpɒlɪtən] ⼤都市，metro ⼤ + polit 城市
+
+military [ˈmɪlɪtəri] 军队 ，词根 mile 千
+
+mini [ˈmɪnɪ] ⼩ m = l 互换，拉⻓ = 细 = 轻
+
+> M ⾼⼤ — 连绵不断—⼈与⼈之间的连接
+
+marriage [ˈmærɪdʒ]age 名词后缀 ， 婚姻
+
+mobile [ˈməʊbaɪl] 移动的 ， move 词根
+
+> M — ⼭ — 男⼈如⼭ — 劳动 — ⼿
+
+make [meɪk] 制造
+
+maple ['meipl] 枫树 , 枫叶像手。
+
+> M — ⼭ — 凸起
+
+maid [meɪd] 少⼥
+miss [mɪs] ⼩姐
+mosquito [məˈski:təʊ] 蚊⼦  
+muscle ['mʌs(ə)l] 肌⾁
+mouth [maʊθ] 嘴，嘴是脸上突出来的
+
+> M — ⼭ — 凸起 — 嘴 — 思维
+
+mind [maɪnd] 思考
+ment ['mənt] 思考词根
+mental [ˈment(ə)l] al 形容词， 精神的 智⼒的
+
+> M — ⽔⾯的波纹状
+
+marine [məˈriːn] 海
+mariner [ˈmærɪnə(r)] ⽔⼿
+
+## 词根
 
 字⺟ M 代表⼭ 和中⽂同样象形⽂字
 

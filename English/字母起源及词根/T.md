@@ -1,4 +1,106 @@
-## T
+# T
+
+## 字母起源
+
+> T — 顶端 — 记号 —标志
+
+typical [ˈtɪpɪk(ə)l] 典型的， type 词根 ， ic + al 形容词
+
+temporary [ˈtemprəri] 临时的，time 词根
+tide [taɪd] = time，潮汐 潮流
+tidy [ˈtaɪdi] = tide 整⻬ 整洁
+
+> T — ⼿杖 — 抓 — ⼿
+
+talent [ˈtælənt] 天才，ent ⼈，tal = take 变形
+
+technic [ˈteknik] 技术， tech 和 teke 同源 ch = c = k
+
+tact [tækt] 接触，词根等于 touch
+
+contact [ˈkɒntækt] 联系，con ⼀起
+
+attempt [əˈtɛmpt] 尝试 企图 ，at ⽅向
+
+taxpayer [ˈtækspeɪə(r)] payer ⽀付的⼈，纳税⼈
+
+taxi [ˈtæksi] 出租⻋，来⾃ tax 税，计价器计算交税
+
+> T — ⼿杖 — 抓 — ⼿ — 伸展 — 指示代词
+
+thief [θi:f] 贼，⼿伸出去把东⻄拿回来
+
+that ［ðæt］ 那个
+
+> T — 顶端 — ⽀撑 — 站⽴
+
+tree [tri:] 树
+
+trust [trʌst] 信任
+
+attic [ˈætɪk] 阁楼 ，a 前缀⽅向
+
+tunnle [ˈtʌnl] 隧道 词根 tun 筒
+
+tolerate [ˈtɒləreɪt] 忍受 ，词根 tole 举起来⽀撑
+
+torture [ˈtɔːtʃə] 拷打 ，tort 词根
+
+terrible [teribl] 恐惧 ter = tr
+
+thrill [θrɪl] 发抖
+
+timid [ˈtɪmɪd] 胆怯 tr 简化成了 t
+
+> T — 三叉 — Tr 转换 转
+
+trans [trænz] 转换 转移
+
+tranquil [ˈtræŋkwɪl] 平静的 trans + quiet
+
+trib [t’rɪb] 部落， t 拉伸，和 team 同源
+
+tribute [ˈtrɪbjuːt] 贡品 献礼，ute 后缀 ; 指部落之间的礼尚往来， 之后延伸到给与， 分配的意思
+
+through [θruː] 通过 穿过，和 trans 转移同源
+
+thorough [ˈθʌrə] 彻底 从头到尾的过程
+
+thrill [θrɪl] 激动，感觉像被刺穿了⼀样
+
+> T — 三叉 — 分叉 — 三 thr
+
+tail [teɪl] 词根， 分
+
+toothache [ˈtuːθeɪk] ⽛疼 ache = ang 词根⻆
+
+thrive [θraɪv] 兴旺，不断的分不断伸展，繁荣茂盛
+
+> T — 三叉 — tw — 缠绕
+
+two [tuː] = du do ⼆
+
+twenty [ˈtwenti] ⼆⼗， twoten， twe = two，nty = ten
+
+twelve [twelv] ⼗⼆，twe = two ，lve = left 互换
+
+twin [twɪn] 双胞胎， n ⿐⾳，twi = two
+
+twilight [ˈtwaɪlaɪt] ⻩昏 ，twi 两个 light 光
+
+> T — ⾳变
+
+ten = dean 同源 dean 主任管⼗个，来⾃字⺟ d 分开 分开两只⼿，⼀只⼿是五，两只⼿是⼗
+
+teenage [ˈtiːneɪdʒ] 年轻的，teen 后缀 ⼗
+
+teenager [ˈtiːneɪdʒə(r)] ⻘少年，13 thirteen — 19 nineteen
+
+tect [tekt] 词根 盖上 ⾳变 = cover ，字⺟ c 覆盖
+
+detect [dɪˈtekt] 发现，de 否定，tect 盖⼦
+
+## 词根
 
 <div style="color:red">
 tin tan ten tain 拿 容纳 

@@ -1,4 +1,36 @@
-## R
+# R
+
+## 字母起源
+
+> ⾳变 r = l ，字⺟ R 直⽴ ，向上
+
+root [ruːt] 根 ，从根部⻓起来的
+
+rot [rɒt] 腐烂
+
+reign [reɪn] 统治 ⽀配 ,开始是指牵马的缰绳
+
+realm [relm] 王国 领域，来⾃ reign
+
+royal [ˈrɔɪəl] 皇室，al 形容词 来⾃ reign
+
+radius[reidiəs] us 名词后缀，rad 放射
+
+radical [ˈrædɪkl] 根本的，⾃ root 根变形 rad
+
+> 字⺟ R 象形 — ⼈ — ⾛和跑
+
+run [rʌn] 跑
+race [reɪs] 竞赛, 古英语的竞赛指的就是跑赛拼速度的这种。
+racial [ˈreɪʃ(ə)l] 种族，race 竞赛，体型，运动来区分
+
+> R — 发⾳⾆头卷曲 — 弯曲
+
+reel [ri:l] 卷 卷筒
+
+round [raʊnd] 圆 ，词根 rot 转动
+
+## 词根
 
 字⺟ R 代表转，和发⾳时⾆型有关。语⾔发展的相似 — ear ⽿ 汉语 [ěr]
 

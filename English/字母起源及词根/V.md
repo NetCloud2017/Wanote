@@ -1,4 +1,90 @@
-## V
+# V
+
+## 字母起源
+
+> 字母 U V W — 字⺟ V 变化出 U 和 W — 中空 ⽆
+
+valley [ˈvælɪ] ⼭⾕
+
+villa [ˈvɪlə] 别墅 ，在郊外⼭⾕村庄的单层别墅
+
+village [‘vɪlɪdʒ] 村庄，在⼭⾕附近的
+
+van [væn] 货⻋
+
+vote [vəʊt] 投票 ，来⾃拉丁语 votum 宣誓
+
+vagina [vəˈdʒaɪnə] 阴道, v 代表女性的性器官
+
+> viv vig vit 词根—⼥性 — ⽣命和活⼒—男⼈的精⼒
+
+vigor [ˈvɪgə] 活⼒ 精⼒
+
+world [wɜːld] wor 活⼒ 男⼈ + old 缩写
+
+un [ʌn] 前缀 ⽆ 否定 unmoved [,ʌn’mu:vd] 不动的
+
+> ⾳变 V = B , ball = vol — 滚动 — 转动 变化
+
+vary [ˈveəri] 变化 改变
+
+wheelchair [ˈwiːltʃeə(r)] 轮椅
+
+vice [vaɪs] 罪恶，最初是钳⼦，把东⻄拧弯
+
+> V ⼭⾕—⻛道 ⽔道 — 道路—⾛动
+
+voyage [ˈvɔɪɪdʒ] 航⾏
+via [ˈvaɪə]经由 途径
+
+nowise [‘nəuwaiz] 绝不， wise 是 way 的变形
+
+walk [wɔːk] ⾛
+
+went [went] ⾛ ，go 的过去式
+
+vent [vent] ⼀系列 vad vas wad 的词根
+
+> V = F ⾳变 = ⼿
+
+victor [vɪktə(r)] 胜利 ，vict = fict ⽤⼿的意思
+
+vinner [ˈwɪnə(r)] 获胜者
+
+> U V — 中空 — 容纳
+
+urban [ˈɜːbən] 城市 ，an 形容词后缀，urb 城市
+
+utility [juːˈtɪləti] 实⽤ ，uti = use s = t 互换
+
+urgency [ˈɜ:dʒənsi:] ency 名词 ，紧急, 来⾃古法语，容器装的东⻄太多。
+
+> V —⽜⻆
+
+vinegar [ˈvɪnɪɡə(r)] 醋 v 容器 + eg = ac 尖 酸
+
+vaccine [væk’si:n] 疫苗
+
+value [ˈvæljuː] 价值 ，⽜是农耕时期最᯿要的资产
+
+video ['vidiəu] 视频
+vis = wis = wit = vid 看
+
+> V — W — 波浪
+
+washout ['wɔʃaut] 冲刷，out 外⾯
+
+wharf [wɔːf] 码头
+
+> V — W — 纹路
+
+write [raɪt] 写 来⾃古英语纹路、线条
+
+wreath [riːθ] 花环
+weave [wiːv] 编织
+wrinkle [ˈrɪŋkl] 皱纹
+
+## 词根
 
 <div style="color:red">
 vent veni van vad vas wad 风 来回 ⾛

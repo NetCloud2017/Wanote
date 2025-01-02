@@ -1,4 +1,35 @@
-## P
+# P
+
+## 字母起源
+
+> ⾳变 P = F — ⼿和脚
+
+post [pəʊst]邮政，邮递，po ⽤⼿，st 站
+
+picnic [ˈpɪknɪk] ᰀ 餐郊游， pick 引申
+
+pedestrian [pəˈdɛstrɪən] ⾏⼈ ，strian 和 street 街道同源
+
+> ⾳变 P = F — ⼿和脚 — ⼿掌 — 平
+
+pandemic [pæn'demik]流⾏病，pan ⼴泛 + dem ⼈⺠
+
+payee [ˌpeɪˈiː] 收款⼈ ，ee 表示被动接受的那个⼈
+
+> ⾳变 P = B 棒⼦
+
+pole [pəul] 杆⼦
+picture ['pɪktʃə]画 和 pen 同源，pen = fin
+
+> ⾳变
+
+proud [praʊd] ⾃豪 p = f = first
+
+private [ˈpraivit] 私⼈的 来⾃ first 变形，fir = pri
+
+字⺟ P 拟声 ，pat [pæt] 拍 [pāi] ; 字⺟ P ⾳变代表⼿，引申的平，汉语平[píng] 平 — 薄，汉语薄 [bó] ，b = p ⾳变
+
+## 词根
 
 <div style="color:red">
 pass pand 通过

@@ -1,4 +1,59 @@
-## S
+# S
+
+## 字母起源
+
+> 字⺟ S 象形 — ⽔波纹和⾛路的痕迹
+
+soak [səʊk] 泡
+soup [suːp] 汤 来⾃ soak
+
+> 字⺟ S 拟声 — 吐⽓轻细 咝 — 说话 [ 像袅袅升起的轻烟，所以有柔和，和丝的意思， 之后又延伸到气味味道这层意思 ]
+
+silk [sɪlk] 丝 丝绸，汉语丝 [sī]
+
+soar [sɔ:(r)] 滑翔 ，ar = air，s 向上的烟
+
+sofa [ˈsəʊfə] 沙发
+soft [sɒft] 柔软
+
+> 字⺟ S = C ⾳变
+
+sit [sɪt] 坐
+seat [siːt] 座位
+scar [skɑː] ⼑疤 car = carve 刻
+
+sculpture ['skʌlptʃə] 雕像，词根 sculp 雕刻 = scrib
+
+shirt [ʃɜːt] 衬衫 和 short 同源
+
+> 字⺟ S 做前缀—sp、sh、se、st、str , 等于 ex 向外或者强调作用; sh = h 有遮盖遮掩的意思; sw 主要与水有关， w 像水的波纹; sl 滑; st 站立; str 站直拉直
+
+spit [spɪt] 吐
+
+see [si:] 看
+
+sun [sʌn]太阳， sol ，se 的变形，o 太阳，l 距离⻓
+
+santa ['sæntə] 圣诞⽼⼈ , sa 词根表示神圣
+
+sacrifice [ˈsækrɪfaɪs] 牺牲 奉献，sacr 是 sa 的变形，fic 做，为神做的事情
+
+sanitary ['sænitəri] 卫⽣ 健康 ，ary 名词 san 词根神圣 = 圣洁，纯粹引申纯净
+
+swim [swim] 游泳
+sweat [swet] 汗  
+sweater [ˈswetə(r)] ⽑⾐
+
+slide [slaɪd] 滑动
+
+star [stɑ:(r)] 星星，astra 词根，comet 彗星
+
+still [stɪl] 仍然，静⽌
+
+street [striːt] 街
+straight [streɪt] 直的
+
+## 词根
 
 <div style="color:red">
 scend, 爬，上升

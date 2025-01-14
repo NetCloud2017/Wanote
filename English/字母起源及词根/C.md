@@ -426,7 +426,7 @@ recruit [rɪˈkruːt] 招聘 ，re 再⼀次，需要再增⻓ (人员不够了�
 cliv clin  斜 
 </div>
 
-cliv = slope (斜坡) 同源，s = c、l 不变、I = o 元⾳互换、p = v
+> cliv = slope (斜坡) 同源，s = c、l 不变、I = o 元⾳互换、p = v
 
 climb [klaɪm] 爬—⽖字旁，像个斜坡⼀样的往上爬 字⺟ C 代表抓
 
@@ -500,7 +500,7 @@ countdown[ˈkaʊntdaʊn] 倒数 倒计时
 cast gest  扔
 </div>
 
-和 carry 同源，c 抓 st 站（stop）
+> 和 carry 同源，c 抓 st 站（stop）
 
 broadcast [ˈbrɔ:dkɑ:st] ⼴播 ，broad 宽， br 分开， 把电波送出去，传播的⾯要⼴
 

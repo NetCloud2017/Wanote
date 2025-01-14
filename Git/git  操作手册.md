@@ -192,12 +192,13 @@ git config credential.helper ‘cache –timeout=3600’
 
 ```
 
-使用 ssh 协议 clone / pull / push 项目
+> 使用 ssh 协议 clone / pull / push 项目
+
 进入 .ssh 文件看看有没有公钥和私钥
 cd ~/.ssh ----> ls
 有 id_dsa 为私钥 。id_dsa.pub 为公钥
 没有测用以下命令生成
-ssh-keygen -t rsa -C "you registor gitlab emaiil"
+ssh-keygen -t rsa -C "you registor github email"
 然后出现
 
 Enter file in which to save the key (/home/you/.ssh/id_rsa):

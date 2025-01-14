@@ -100,4 +100,4 @@ bodyguard [ˈbɒdigɑ:d] 保镖 body 身体，守卫身体的⼈
 
 lifeguard [ˈlaɪfgɑːd] 救⽣员， life ⽣命 守卫⽣命的⼈
 
-regard [rɪˈgɑːd] ᯿视 尊᯿ ，re 往回 反复 认真仔细的看
+regard [rɪˈgɑːd] 重视 尊重 ，re 往回 反复 认真仔细的看

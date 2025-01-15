@@ -101,7 +101,7 @@ cabin [ˈkæbɪn] 船舱，从 cave 引申的 b = v in ⾥⾯
 ## 词根
 
 <div style="color:red">
-can cann   罐⼦  
+can cann  管⼦  
 </div>
 
 C = 抓 ; 字⺟ C 抓握的⼿型 cup 杯⼦，catch 抓，cat 猫，cap 帽⼦
@@ -122,7 +122,7 @@ ced ceed cess ceas  ⾛ 退（往前⾛ 往后⾛）
 
 结尾字⺟ d = s ，和 car 同源 C = G 表示骆驼 = 交通运输⼯具
 
-access[ˈækses] ac = a ⽅向 c ᯿复， 接近
+access[ˈækses] ac = a ⽅向 c 重复， 接近
 
 process[ˈprəʊses , prəˈses] pro 前⾯ cess ⾛，流程 步骤 处理
 
@@ -295,7 +295,7 @@ calcium [ˈkælsɪəm] um 化学元素后缀，⽯灰岩主要成分是碳酸钙
 camp champ 营地 （ 抓在⼀起 聚合）
 </div>
 
-camp [kæmp] ᰀ 营 ，聚合在⼀起休整
+camp [kæmp] 露营 ，聚合在⼀起休整
 
 campus [ˈkæmpəs] ⼤学校园，us 拉丁语后缀，把学⽣聚在⼀起
 

@@ -57,7 +57,7 @@ pend pens = ⽀付 — 称货币᯿ᰁ — 称在悬着
 
 expensive [iks'pensiv] 价格太⾼了，ex 向外 pens 词根 ⽀付 掏钱
 
-pound [paʊnd] 英镑 ᯿击，字⺟ p 拟声词
+pound [paʊnd] 英镑 重击，字⺟ p 拟声词
 
 expense [ɪkˈspens] 消费 ⽀付
 

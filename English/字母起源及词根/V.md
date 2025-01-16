@@ -188,7 +188,7 @@ survey [sə:’vei] 俯瞰 审视 ， sur 上⾯ 俯视去看
 wit [wɪt] 机智 v = w 互换 ⻅识，看的多了，知识就增加了，有了独⽴的判断 wisdom 智慧。
 
 <div style="color:red">
-vol volv volu volt 滚动
+vol volv volu volt 滚动, 卷入
 </div>
 
 volvo 沃尔沃 滚滚向前

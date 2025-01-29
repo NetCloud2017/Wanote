@@ -42,4 +42,4 @@
 
 ## 可以免费获取很多电子书
 
-https://zh.z-lib.gs/category/198/Computers-Programming
+https://zh.z-lib.jjs/category/198/Computers-Programming

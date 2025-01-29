@@ -123,6 +123,32 @@ let user: User = {
 //  类型别名重复报错
 ```
 
+```TS
+//接口继承类
+
+//1.接口可以继承类，当接口继承了类之后，会继承成员(类型)，但是不包括实现
+//2.接口还会继承private和protected修饰的成员，但是这个接口只可被这个类或它的子类实现
+class Person {
+    private name: string；
+}
+interface I extends Person {}
+
+//类与类，接口与接口之间使用extends
+// 类与接口 implements;
+
+class C extends Person implements I {
+// private name: string; //  报错
+// constructor(arg: string, public namel: string) {
+    // this.name = 'arg'
+// }
+    getName() {
+        return this.namel + 'new Class C'
+    }
+}
+const instance = new C()
+
+```
+
 类型别名和接口的一些使用场景
 
 使用类型别名的场景：

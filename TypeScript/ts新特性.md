@@ -47,6 +47,7 @@ let [username, age, ...rest]:[name_: string, age_: number, ...rest:any[], _discr
 
 // 确定 username age, 和最后一个值的数据类型
 // 最后一个值 不能这样取 [username, age, ...rest, disc] 会报错， 所以取值难些。
+// name_ , age_ 等等这些都是可变元组的标签，
 
 //打通 数组类型和 可变元组
 let  arr = [ 123, '123', 312 , 321]

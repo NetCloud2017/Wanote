@@ -146,17 +146,29 @@ dataFlowAnalysisWithNever(3.199923);
 接口实现
 
 ```ts
+
+const symbid = Symbol("symbid")
+
 interface Product {
+	[symbid]: number;
 	id: number;
 	name?: string; // 可选属性
 	price: number;
 	count: number;
-    [key:string]: any； // 索引属性， 即你可以加无限个属性， key 是任意组合的 string类型 value 是 any 类型；
+    [key:string]: any；
+	// 索引属性， 即你可以加无限个属性， key 是任意组合的 string类型 value 是 any 类型,
+	// 注意可以索引签名的值是要兼容接口的所有的值的类型的，所以通常是 any；
 
     // 定义方法
     func: () => void
     [key: string]: (state: any) => void // 可索引非方法
 }
+
+// 索引访问类型
+
+type A = Product['price' | 'id']
+type B = Product[ typeof symbid] // 因为 symbid 是变量， 而 price 是字面量。
+
 function calToal(product: Product) {
 	console.log("product总价：", product.price * product.count);
 }

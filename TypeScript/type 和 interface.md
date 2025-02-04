@@ -40,7 +40,11 @@ type Exclude<T, U> = T extends U? never : T
 
 ### interface 只能用于定义对象类型
 
-如 Vue
+如 Vue,
+使用场景
+(1) 一些第三方包或者框架底层源码中有大量的接口类型
+(2)提供方法的对象类型的参数时使用
+(3) 为多个同类别的类提供统一的方法和属性声明
 
 ```js
 export interface App<HostElement = any> {
@@ -98,9 +102,9 @@ type Bear = Animal & {
 
 ### 不同点
 
-- 类型别名可以为基本类型、联合类型或元组类型定义别名，而接口不行。
+- 类型别名可以为基本类型、联合类型或元组类型定义别名，而接口不行。接口只支持定义对象类型。接口可合并声明定义两个相同名称的接口会合并声明，定义两个同名的 type 会出现编译错误。
 
-```js
+```ts
 type MyNumber = number;
 type StringOrNumber = string | number;
 type Point = [number, number];
@@ -125,6 +129,8 @@ let user: User = {
 
 ```TS
 //接口继承类
+// 区别2:接口可以 extends 一个或者多个接口或类实现一个或者多个接口，也可以继承type，但 type类型没有继承功能,
+// 但一般接口继承类和 type的应用场景很少见，同学们记住有这样的语法即可。
 
 //1.接口可以继承类，当接口继承了类之后，会继承成员(类型)，但是不包括实现
 //2.接口还会继承private和protected修饰的成员，但是这个接口只可被这个类或它的子类实现
@@ -148,6 +154,8 @@ class C extends Person implements I {
 const instance = new C()
 
 ```
+
+- 用 type 交叉类型&可让类型中的成员合并成一个新的 type 类型，但接口不能交叉合并
 
 类型别名和接口的一些使用场景
 

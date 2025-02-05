@@ -17,24 +17,24 @@ enum
 1. 字符串枚举
 
 ```ts
-//字符串枚举, 有key-value双重映射，
+//字符串枚举, 没有key-value双重映射，就是一个普通对象
 enum WeekEnd {
-	Monday = "Monday",
-	Tuesday = "Tuesday",
-	Wensday = "Wensday",
-	ThirsDay = "ThirsDay",
-	Friday = "Friday"
-    Sarturday = "Sarturday",
-	Sunday = "Sunday",
+	Monday = "monday",
+	Tuesday = "tuesday",
+	Wensday = "wensday",
+	ThirsDay = "thirsDay",
+	Friday = "friday"
+    Sarturday = "sarturday",
+	Sunday = "sunday",
 }
 ```
 
 2. 数字枚举
 
 ```ts
-//数字枚举 会根据给的数字逐渐递增, 没有key-value双重映射
+//数字枚举 会根据给的数字逐渐递增, 有key-value双重映射
 enum Week {
-	Monday = 1,
+	Monday = 1, // 不写初始值时，是从 0 开始的。
 	Tuesday,
 	Wensday,
 	ThirsDay,

@@ -94,10 +94,20 @@ interface Bear extends Animal {
 interface Animal {
     name: string;
 }
+
 type Bear = Animal & {
     //  通过  & 来扩展已定义的接口类型
     honey: boolean;
 }；
+
+// 接口函数
+type TestTyp = (...args: any) => string
+// 相当于如下：
+interface Test {
+    (...args: any):string
+}
+
+
 ```
 
 ### 不同点

@@ -10,13 +10,22 @@ type T1 = () => string;
 type UnpackedArray<T> = T extends(infer U)[] ? U: T;
 
 type U0 = UnpackedArray<T0>;
+
+// 获取 数组元素类型
+type EleTypArr<T> = T extends Array<infer T> ? T : never;
+
+// vue3 的 unRef 函数
+
+function unref<T>(ref: T) : T extends Ref<infer V> ? V : T {
+    return isRef(ref) ? (ref.value as any) : ref
+}
 ```
 
 > 注意 ： infer 只能在 extends 子句中使用， 以及 infer 声明的变量只能在 true 分支中使用。
 
 ![](img/infer.png)
 
-```js
+```ts
 type UnpackedFn<T> = T extends (...args: any[]) => infer U ? U : T;
 
 // 当遇到函数重载， 就用最后的调用签名进行类型推断
@@ -24,8 +33,23 @@ type UnpackedFn<T> = T extends (...args: any[]) => infer U ? U : T;
 declare function foo(x: string): number;
 declare function foo(x: number): string;
 declare function foo(x: string | number): string | number;
-type U2= UnpackedFn<typeof foo>;
+type U2 = UnpackedFn<typeof foo>;
 // number | string
+```
+
+ 条件类型的复杂应用
+```ts
+type AddTypeKey<T, K extends string, V> ={
+    [P in keyof T | K]: P extends keyof T ? T[P] :V
+}
+
+interface Customer {
+    name: string
+    degree: number
+    phone: string
+}
+
+type Test = AddTypeKey<Customer, 'qq', string>
 ```
 
 利用条件链推断更多类型
@@ -43,6 +67,14 @@ type T2 = Unpacked<() => string>; // string
 type T3 = Unpacked<Promise<string>>;// string
 type T4 = Unpacked<Promise<string>[]>; // Promise<string>
 type T5 = Unpacked<Unpacked<Promise<string>[]>>; // string
+
+// 这个是一次性将整个 string | number | boolean 当作是一个类型进行对比。 所以是never.
+type Test = string | number | boolean extends string | number ? string : never; // never
+
+type CondTyp<T> = T extends string | number ? T : never;
+// 这种比较规则是 逐个对比， 将符合的类型返回， 组成联合类型
+type TestCondTyp = CondTyp<string| number | boolean> // string | number
+
 ```
 
 获取对象属性值类型

@@ -2,7 +2,7 @@
 
 **1、用于动态定义对象类型**
 
-```js
+```ts
 const lolo ={
 name: "lolo",
 age: 7,
@@ -44,7 +44,7 @@ type AddParamsType = Parameters<AddType>; // 获取函数参数类型 [a: number
 
 ### typeof 对类的处理
 
-```js
+```ts
 class Point {
 x: number;
 y: number;
@@ -59,6 +59,8 @@ function createPoint( Constructor: typeof Point, x: number,  y:number){
 
 ```
 
+- typeof Point 等价于 new （...args: any) => Point
+
 ### 利用 const 断言获取更精确的类型
 
 ```js
@@ -72,16 +74,16 @@ type R1 = typeof requestMethod2; // "Get"
 
 ```ts
 type Msg = {
-	msg: String;
-	type: String;
+  msg: String;
+  type: String;
 };
 let Message = Msg | string;
 function logMsg(msg: Message): number | Msg {
-	if (typeof msg === "object") {
-		return msg;
-	} else {
-		return 404;
-	}
+  if (typeof msg === "object") {
+    return msg;
+  } else {
+    return 404;
+  }
 }
 // let res = logMsg({ msg: "error", type: "server error" });
 // 解决方法：断言

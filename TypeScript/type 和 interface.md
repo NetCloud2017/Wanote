@@ -46,7 +46,7 @@ type Exclude<T, U> = T extends U? never : T
 (2)提供方法的对象类型的参数时使用
 (3) 为多个同类别的类提供统一的方法和属性声明
 
-```js
+```ts
 export interface App<HostElement = any> {
     version: string;
     config: AppConfig;
@@ -57,6 +57,16 @@ export interface App<HostElement = any> {
     directive(name: string): Directive | undefined;
     directive(name: string, directive: Directive): this;
 }
+
+interface commonFuncInter {
+    // 具名接口函数
+    eat:(...args: any)·=> any
+}
+// 接口函数 相当于 type  commonFuncInter = (...args: any) => any
+interface commonFuncInter{
+    (...args:any):any
+}
+
 ```
 
 ### 相同点

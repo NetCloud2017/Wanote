@@ -137,11 +137,10 @@ commend [kəˈmend]委托 推荐 ，mend 词根程度会⼩⼀些
 recommend [rekəˈmend] 推荐 re 再⼀次委托，再⼀次推荐
 
 <div style="color:red">
-mig，mot, mov, mob 迁移
+mig, mot, mov, mob 迁移
 </div>
 
 字⺟ M 代表⼭ — ⼭连⼭ — 连接 — 迁移
-
 emigrate [ˈemɪgreɪt] 移⺠ ， e 出去，往外迁移，移⺠到国外
 
 commotion（一起 com(=together) + mot(=move)）(com 共同+motion 动 → 大家一起动 → 动乱) n.骚动；动乱；暴乱

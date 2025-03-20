@@ -185,7 +185,7 @@ sister 姐妹 —— 站在旁边给予帮助
 
 assist [əˈsɪst] 帮助 ，as = a ⽅向 sist 帮助
 
-consist [kənˈsɪst] 由...组成 ⼤家组成了⼀个团队
+consist [kənˈsɪst] 由...组成,-sist-站立 → 站在一起,并存; ⼤家组成了⼀个团队
 
 consistence [kənˈsɪstəns] ⼀致 ， ence 名词后缀 组成的团队引申⾏动⼀致
 
@@ -377,3 +377,9 @@ struct 建造
 </div>
 
 destructive [dɪˈstrʌktɪv] 破坏性的，de 去除 ；
+
+<div style="color:red">
+-sorb（吸收
+</div>
+
+absorb /əbˈzɔːb/ = ab（从中）+sorb（吸收）→ 从中吸收。

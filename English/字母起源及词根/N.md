@@ -62,6 +62,12 @@ natural [ˈnætʃrəl] 天然的，词根 nat + ure 去 e + al 形容词，天�
 naive [naɪˈi:v] 天真的， t 脱落 + ive 形容词后缀
 
 <div style="color:red">
+neg 不，否定；
+</div>
+
+negate /nɪˈɡeɪt/ v： 否定
+
+<div style="color:red">
 not nounce 知道 
 </div>
 

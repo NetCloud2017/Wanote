@@ -265,3 +265,8 @@ music [ˈmju:zɪk] ic 名词后缀，那⾳乐这个词就来源缪斯的名字
 museum [mju(:)'ziəm] 博物馆， um 地点，缪斯的神庙⾥供奉的更像是艺术品
 
 amuse [əˈmjuːz] 娱乐 a ⽅向
+
+<div style="color:red">
+morph: 形状, 同 form.
+</div>
+amorphous /əˈmɔːfəs/ 无固定形状的

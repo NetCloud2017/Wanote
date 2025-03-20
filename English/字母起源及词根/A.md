@@ -175,3 +175,14 @@ england eng 角 + land 土地 eng = ar n = r ，mnlr 互换
 angle[ˈæŋɡl] ang 弯曲 le ⼩东⻄的后缀 ⼩弯，弯到⼀定程度就是⻆
 
 triangle[ˈtraɪæŋɡl] tri = 三，和 three 同源，h 送⽓⾳，脱落，ee = i，三⻆形
+
+<div style="color:red">
+aero-	空气，航空 
+</div>
+
+aerodynamics /ˌeərəʊdaɪˈnæmɪks/ 空气动力学
+
+<div style="color:red">
+astro-	星星，天体
+</div>
+astronaut /ˈæstrənɔːt/ 宇航员

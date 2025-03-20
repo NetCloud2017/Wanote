@@ -231,3 +231,10 @@ terr 可怕
 errible [teribl] 可怕的， terr 害怕 + ible 形容词
 
 deter[dɪˈtɜː(r)] 制⽌ 威慑， 最后省略了⼀个 r，de 否定 可怕没有了
+
+<div style="color:red">
+therm-,热，热量 
+</div>
+来源于 heat
+
+thermal 热的，热量的

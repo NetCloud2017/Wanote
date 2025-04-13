@@ -88,3 +88,8 @@ news [njuːz] 新闻，最新的消息
 novel ['nɒvl] 新的 ⼩说，el ⼩东⻄ ⼀种新的⽂学样式
 
 innovate [ˈɪnəveɪt] 创新， in ⾥⾯ 创新，是从内打破的⼀种新⽣
+
+<div style="color:red">
+neuro- 神经，
+</div>
+neurology /njʊəˈrɒlədʒi/ 神经学; neuro-,神经，-logy,学说

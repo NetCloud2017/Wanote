@@ -252,3 +252,9 @@ letter 信，信函；字母；
 illiterate [ɪˈlɪtərət] ⽂盲， il 否定 没受过教育的
 
 literal [ˈlɪtərəl] al 形容词，⽂字的
+
+<div style="color:red">
+ -liqu- 液体  
+</div>
+
+liquor /ˈlɪkə(r)/ 烈酒

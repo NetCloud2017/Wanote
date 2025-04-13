@@ -237,4 +237,4 @@ therm-,热，热量
 </div>
 来源于 heat
 
-thermal 热的，热量的
+thermal /ˈθɜːm(ə)l/ 热的，热量的

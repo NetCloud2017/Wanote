@@ -269,4 +269,17 @@ amuse [əˈmjuːz] 娱乐 a ⽅向
 <div style="color:red">
 morph: 形状, 同 form.
 </div>
+
 amorphous /əˈmɔːfəs/ 无固定形状的
+
+<div style="color:red">
+moist,微湿的，湿润的
+</div>
+
+moisture /ˈmɔɪstʃə(r)/ 潮气，水气
+
+<div style="color:red">
+-milit- 兵 
+</div>
+
+military /ˈmɪlətri/ 军事的，军用的

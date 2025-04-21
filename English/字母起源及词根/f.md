@@ -69,13 +69,17 @@ sacrifice [ˈsækrɪfaɪs] 祭祀 牺牲 sacri 神圣 跟宗教有关，为神�
 
 malfeasance [ˌmæl’fi:zəns] 违法 mal 坏 = male ance 名词后缀 ⼲了特别不好的事
 
-<div style="color:red">flex flect 弯</div>
+<div style="color:red">
+flex flect 弯
+</div>
 
 和 bend 同源 f = ⼿，l = ⻓ line long ，x = 交叉 mix
 
 flex [fleks] 弯曲 屈伸， 屈 = 弯曲
 
-<div style="color:red">flict flig 打击</div>
+<div style="color:red">
+flict flig 打击
+</div>
 
 fl ⼿伸⻓ flog 鞭打 flag 旗⼦
 
@@ -95,14 +99,16 @@ fail [feɪl] 错误
 
 falsify [ˈfɔ:lsɪfaɪ] 伪造 歪曲 篡改 ify 动词 做了错误的事情
 
-<div style="color:red">force fort ford ⼒量 强制 </div>
+<div style="color:red">
+force fort ford ⼒量 强制 
+</div>
 
 force 力量 武力 手—力量—强壮—武力
 
 forty thieves 四⼗⼤盗 = 强壮的盗贼
 
-forceful [ˈfɔːsfl] ful = full 充满 充满⼒ ᰁ 的
-m  
+forceful [ˈfɔːsfl] ful = full 充满 充满⼒量的
+
 enforce [ɪnˈfɔːs] en 使得 强制
 
 perforce [pəˈfɔ:s] 必须 per 完全 force 强制 命令的态度

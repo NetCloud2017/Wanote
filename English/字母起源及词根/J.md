@@ -33,7 +33,7 @@ junior [ˈdʒuːniə(r)]年轻⼈， jun 年轻
 ject jet jac 扔
 </div>
 
-jet [dʒet] 喷⽓式⻜机 喷出去，扔出去
+jet [dʒet] 喷⽓式⻜机 喷出去，扔出去, 开始的飞机在航母上是扔出去的。
 
 project [ˈprɒdʒekt] 项⽬ pro 向前，ject 扔 放在前⾯的指标，滚动向前
 

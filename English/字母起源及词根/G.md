@@ -51,7 +51,7 @@ gest 和 car 同源，car = 携带 运送, guest 客⼈ G= C = 骆驼 = 运输
 
 guest [gest] 客⼈ 字⺟ u = 容器 容纳—cup 带着东⻄来的⼈
 
-congest [kən'dʒest]充满 拥 ೿ con ⼀起 gest 带来
+congest [kən'dʒest]充满 拥挤，con ⼀起 gest 带来
 
 digest [dai'dʒest] 消化 di 向下 ，⻝道、胃、⼩肠、⼤肠、直肠、逐步分解
 
@@ -70,7 +70,8 @@ recognize [ˈrekəgnaɪz] 认出， re 再次
 ignore [ɪɡˈnɔː(r)] 忽视 不理睬 ，假装不知道，假装没看⻅
 
 <div style="color:red">
-grad gress  ⾛    </div>
+grad gress  ⾛    
+</div>
 
 字母 G = 骆驼 = 走 grade 4 = 四年级
 

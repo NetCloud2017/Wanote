@@ -57,12 +57,12 @@ laborer ['leɪbərə] er ⼈ ，劳动者 ⼯⼈
 collaborate [kəˈlæbəreɪt] 合作，col = com ⼀起 ⼤家在⼀起劳动
 
 <div style="color:red">
-later  边
+later  边, 末边。
 </div>
 
 la = 拉 lake 湖 陆地围城的边
 
-latter [ˈlætə(r)] 边
+latter [ˈlætə(r)] 边,末边。
 
 unilateral [ˌju:nɪˈlætrəl] 单边的，单⽅⾯的 ，uni = one al 形容词
 
@@ -158,7 +158,7 @@ library [ˈlaɪbrəri] 图书馆，ary 名词表示地点，树⽪上书写，�
 label [ˈleɪbl] 标签，el ⼩东⻄，⽤在书上的⼩东⻄
 
 <div style="color:red">
-liber ⾃由 
+-liber- ⾃由 
 </div>
 
 字母 L 代表伸长 — 松开, liber 和 love 爱同源，i = o、b = v ;
@@ -252,3 +252,9 @@ letter 信，信函；字母；
 illiterate [ɪˈlɪtərət] ⽂盲， il 否定 没受过教育的
 
 literal [ˈlɪtərəl] al 形容词，⽂字的
+
+<div style="color:red">
+ -liqu- 液体  
+</div>
+
+liquor /ˈlɪkə(r)/ 烈酒

@@ -140,7 +140,7 @@ condone [kənˈdəʊn] 宽恕，con ⼀起 ，⼀起给予的原谅，⼀起再�
 
 add [æd]加法 ad = a ⽅向，d 是 don 的缩写，加就是再给⼀个
 
-dose [dəʊs] ⼀剂，剂 ᰁ，⼀副药 ，医⽣给的，每⼀次吃⼀剂 ᰁ
+dose [dəʊs] ⼀剂，剂量，⼀副药 ，医⽣给的，每⼀次吃⼀剂
 
 <div style="color:red">
 do dou doub  ⼆ 

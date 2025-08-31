@@ -185,7 +185,7 @@ sister 姐妹 —— 站在旁边给予帮助
 
 assist [əˈsɪst] 帮助 ，as = a ⽅向 sist 帮助
 
-consist [kənˈsɪst] 由...组成 ⼤家组成了⼀个团队
+consist [kənˈsɪst] 由...组成,-sist-站立 → 站在一起,并存; ⼤家组成了⼀个团队
 
 consistence [kənˈsɪstəns] ⼀致 ， ence 名词后缀 组成的团队引申⾏动⼀致
 
@@ -226,7 +226,7 @@ solid = sol 唯⼀ + id 后缀 , 一致就是 意志坚定 => 意志坚决就是
 soldier ['səuldʒə] 军⼈， er ⼈，军⼈是钢铁炼成的
 
 <div style="color:red">
- sting stinck sti  刺 
+sting stinck sti  刺 
 </div>
 
 sting 死钉 像刺⼀样钉上
@@ -263,7 +263,7 @@ assign[əˈsaɪn] 指派 分配 ， a ⽅向 命令的信号
 resign [rɪˈzaɪn] 放弃 辞职 ，re 往回，把⼊职时签好的名字拿回去
 
 <div style="color:red">
-sper spir 精神
+sper spir 精神, 呼吸
 </div>
 
 Sprite 雪碧 提神醒脑有精神
@@ -290,7 +290,7 @@ strict [strɪkt] 严格的 精神拉的很紧
 
 district [ˈdɪstrɪkt] 区 区是把⼀⽚街道区分开
 
-restrict [rɪˈstrɪkt] 限制， re 再⼀次 ，反复的拉紧，更严᯿的程度
+restrict [rɪˈstrɪkt] 限制， re 再⼀次 ，反复的拉紧，更严重的程度
 
 stress [stres] 压⼒ ，压⼒让我们紧张
 
@@ -377,3 +377,9 @@ struct 建造
 </div>
 
 destructive [dɪˈstrʌktɪv] 破坏性的，de 去除 ；
+
+<div style="color:red">
+-sorb（吸收
+</div>
+
+absorb /əbˈzɔːb/ = ab（从中）+sorb（吸收）→ 从中吸收。

@@ -386,7 +386,7 @@ cret cre cern cert creet 筛  区分
 
 secretary [ˈsekrətri] 秘书，ary 名词后缀 ⽼板筛选出来的身边⼈
 
-secrete [si’kri:t] 私吞 ， 私和公是有区别区分的
+secrete [si’kri:t] 隐藏， 私和公是有区别区分的
 
 concern [kənˈsɜːn] con ⼀起，都混在⼀起区分需要特别的关注, 需要特别关注才能区分出来; 关注
 

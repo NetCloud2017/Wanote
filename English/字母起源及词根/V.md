@@ -193,7 +193,7 @@ vol volv volu volt 滚动, 卷入
 
 volvo 沃尔沃 滚滚向前
 
-volume [ˈvɒljuːm] ⾳ ᰁ 数 ᰁ 卷 书卷 ，⽂字写在⽺⽪纸上，卷起来存放
+volume [ˈvɒljuːm] ⾳量, 数量 卷 书卷 ，⽂字写在⽺⽪纸上，卷起来存放
 
 revolution [ˌrevəˈluːʃn] 转变 变⾰， re 返回 转变是从⼀种形式变为另⼀种形式
 

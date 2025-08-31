@@ -62,6 +62,12 @@ natural [ˈnætʃrəl] 天然的，词根 nat + ure 去 e + al 形容词，天�
 naive [naɪˈi:v] 天真的， t 脱落 + ive 形容词后缀
 
 <div style="color:red">
+neg 不，否定；
+</div>
+
+negate /nɪˈɡeɪt/ v： 否定
+
+<div style="color:red">
 not nounce 知道 
 </div>
 
@@ -82,3 +88,8 @@ news [njuːz] 新闻，最新的消息
 novel ['nɒvl] 新的 ⼩说，el ⼩东⻄ ⼀种新的⽂学样式
 
 innovate [ˈɪnəveɪt] 创新， in ⾥⾯ 创新，是从内打破的⼀种新⽣
+
+<div style="color:red">
+neuro- 神经，
+</div>
+neurology /njʊəˈrɒlədʒi/ 神经学; neuro-,神经，-logy,学说

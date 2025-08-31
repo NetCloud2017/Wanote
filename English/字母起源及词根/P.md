@@ -37,8 +37,6 @@ pass pand 通过
 
 passport [ˈpɑːspɔːt] 护照 通⾏证
 
-passage ['pæsidʒ] 路程，age 名词， 路程是⼀段要通过的地⽅
-
 bypass [ˈbaɪpɑːs] 避开 by 旁边 在旁边通过
 
 compass [ˈkʌmpəs] 圆规 罗盘
@@ -165,7 +163,7 @@ hotpot [ˈhɒtpˈɒt]热锅 = ⽕锅
 
 potable [ˈpəʊtəbl] 能饮⽤的 ，able 形容词
 
-potion [ˈpəʊʃn] 饮剂 毒药 ion 名词
+potion [ˈpəʊʃn] 饮剂, 一剂，毒药 ion 名词
 
 poison [ˈpɔɪzn] 毒药 这个 poison = potion ，饮剂 → 药⽔派⽣出来的
 
@@ -307,4 +305,4 @@ compete [kəmˈpiːt] 竞争， com ⼀起 相互之间的追逐
 
 competent [ˈkɒmpɪtənt] 能胜任的， ent 形容词 ，能追上表示有能⼒
 
-repeat [ri'pi:t] ᯿复 ， re 再次，重新去⾏动的
+repeat [ri'pi:t] 重复 ， re 再次，重新去⾏动的

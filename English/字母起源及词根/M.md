@@ -137,11 +137,10 @@ commend [kəˈmend]委托 推荐 ，mend 词根程度会⼩⼀些
 recommend [rekəˈmend] 推荐 re 再⼀次委托，再⼀次推荐
 
 <div style="color:red">
-mig，mot, mov, mob 迁移
+mig, mot, mov, mob 迁移
 </div>
 
 字⺟ M 代表⼭ — ⼭连⼭ — 连接 — 迁移
-
 emigrate [ˈemɪgreɪt] 移⺠ ， e 出去，往外迁移，移⺠到国外
 
 commotion（一起 com(=together) + mot(=move)）(com 共同+motion 动 → 大家一起动 → 动乱) n.骚动；动乱；暴乱
@@ -266,3 +265,21 @@ music [ˈmju:zɪk] ic 名词后缀，那⾳乐这个词就来源缪斯的名字
 museum [mju(:)'ziəm] 博物馆， um 地点，缪斯的神庙⾥供奉的更像是艺术品
 
 amuse [əˈmjuːz] 娱乐 a ⽅向
+
+<div style="color:red">
+morph: 形状, 同 form.
+</div>
+
+amorphous /əˈmɔːfəs/ 无固定形状的
+
+<div style="color:red">
+moist,微湿的，湿润的
+</div>
+
+moisture /ˈmɔɪstʃə(r)/ 潮气，水气
+
+<div style="color:red">
+-milit- 兵 
+</div>
+
+military /ˈmɪlətri/ 军事的，军用的

@@ -47,3 +47,9 @@ island [ˈaɪlənd] 岛，孤⽴的⼟地是岛，isol 词根 = 孤⽴ 孤独
 insulate [ˈɪnsjuleɪt] ate 动词， 孤⽴ 绝缘 不善于导流叫绝缘，不善于交流会孤⽴
 
 isolate [ˈaɪsəleɪt] 隔离 孤⽴，n ⿐⾳脱落
+
+<div style="color:red">
+infra- 下,在下 
+</div>
+
+infrastructure **/ˈɪnfrəstrʌktʃə(r)/** (团体的)基层组织，下部组织；(国家或机构的)基础设施，基础建设 , infra-下,在下 + -struct-建设,结构 + -ure

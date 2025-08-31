@@ -144,7 +144,7 @@ tent tend tens 伸展
 
 字母 T 代表支撑 tent 帐篷 tall 高 tower 塔
 
-tent [tent]本意伸展，撑起来向四周伸展出去，词根最后字⺟ d = t = s ⾳变
+tent [tent] 本意伸展，撑起来向四周伸展出去，词根最后字⺟ d = t = s ⾳变
 
 attend [əˈtend] 参加 at = a ⽅向 ，去参加出席，好像把⼈伸到那个地
 
@@ -228,6 +228,13 @@ terr 可怕
 
 字⺟ T 表示⽀撑，tall ⾼ tree 树，在⾼处引申的害怕
 
-errible [teribl] 可怕的， terr 害怕 + ible 形容词
+terrible [teribl] 可怕的， terr 害怕 + ible 形容词
 
 deter[dɪˈtɜː(r)] 制⽌ 威慑， 最后省略了⼀个 r，de 否定 可怕没有了
+
+<div style="color:red">
+therm-,热，热量 
+</div>
+来源于 heat
+
+thermal /ˈθɜːm(ə)l/ 热的，热量的

@@ -200,6 +200,8 @@ i (inner), a(around);
 |     2 c c     | 向下删除两行并进入 insert mode         |
 |     c i t     | 删除标签里的内容                       |
 |     c a t     | 删除光标所在的，包括标签在内的所有内容 |
+|    c t <      | 如 "sdderer<div>" 光标在s 这里时删除到 < 这里|
+
 
 ---
 
@@ -313,4 +315,22 @@ m,     # 第m行与当前行之间
 
 **匹配替换**
 
-<b> : % s / match string / replace string g(默认) enter </b>
+1. `:<range>s/<from>/<to>`
+```bash
+:2,5s/hello/hi  # 从第二行到第五行的 hello 换成 hi
+```
+
+2. `:%s/<from>/<to>` 
+
+```bash
+:%s/hello/hi  # 全部 hello 换成 hi, 但是只能替换每行首次匹配到的。 
+```
+3. `:<range>s/<from>/<to>/g`
+```bash
+ 
+:%s/hello/hi  # 全局 hello 换成 hi, 
+
+```
+
+neovim 博客  
+https://shaobin-jiang.github.io/blog/posts/neovim-beginner-guide/update/

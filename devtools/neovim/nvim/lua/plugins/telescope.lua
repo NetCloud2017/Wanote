@@ -1,24 +1,19 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	version = "*",
+	-- version = "*",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
+		"nvim-tree/nvim-web-devicons",
 		-- optional but recommended
-		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		{
+			"nvim-telescope/telescope-fzf-native.nvim",
+			build = "make",
+		},
 	},
-	-- dependencies = {
-	--     "nvim-lua/plenary.nvim",
-	--     {
-	--         "nvim-telescope/telescope-fzf-native.nvim",
-	--         build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && "
-	--             .. "cmake --build build --config Release && "
-	--             .. "cmake --install build --prefix build",
-	--     },
-	-- },
 	cmd = "Telescope",
 	keys = {
 		{ "<leader>ff", "<CMD>Telescope find_files<CR>", desc = "find files" },
-		{ "<leader>fs", "<cmd>Telescope live_grep<cr>" },
+		{ "<leader>fs", "<cmd>Telescope live_grep<CR>" },
 		{ "<leader>fc", "<cmd>Telescope grep_string<cr>" },
 		{ "<leader>fb", "<cmd>Telescope buffers<cr>" },
 		{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "list available help tags" },

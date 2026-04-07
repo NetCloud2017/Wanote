@@ -8,6 +8,13 @@ return {
 			},
 		},
 	},
+    config = function(_, opts)
+        require('lspsaga').setup(opts)
+    end,
+    dependencies = {
+        'nvim-treesitter/nvim-treesitter', -- optional
+        'nvim-tree/nvim-web-devicons',     -- optional
+    },
 	keys = {
 		{ "<leader>lr", ":Lspsaga rename<CR>" },
 		{ "<leader>lc", ":Lspsaga code_action<CR>" },

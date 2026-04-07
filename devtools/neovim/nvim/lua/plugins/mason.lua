@@ -1,12 +1,10 @@
 return {
-	"williamboman/mason.nvim",
-
+	"mason-org/mason.nvim",
 	event = "VeryLazy",
 	opts = {},
 	dependencies = {
 		"neovim/nvim-lspconfig",
-		"williamboman/mason-lspconfig",
-
+		"mason-org/mason-lspconfig.nvim",
 	},
 	config = function (_, opts)
 		require("mason").setup(opts)
@@ -54,7 +52,7 @@ return {
 			setup(server, config)
 		end
 
-		vim.cmd("LspStart")
+		vim.cmd("lsp enable")
 		vim.diagnostic.config({
 			virtual_text = true,
 			virtual_lines = true,

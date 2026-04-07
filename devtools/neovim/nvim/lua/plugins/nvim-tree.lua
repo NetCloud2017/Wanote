@@ -11,13 +11,14 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	opts = {
+		sort = {sorter = "name"},
 		actions = {
 			open_file = {
 				quit_on_open = true,
 			},
 		},
 	},
-	config = function()
-		require("nvim-tree").setup({})
+	config = function(_, opts)
+		require("nvim-tree").setup(opts)
 	end,
 }

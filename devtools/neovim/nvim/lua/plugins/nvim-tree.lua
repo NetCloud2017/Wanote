@@ -11,7 +11,19 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	opts = {
-		sort = {sorter = "name"},
+		sort = {
+			natural = true,
+			sorter = function(nodes)
+				table.sort(nodes, function(a, b)
+					local function pad(s)
+						return s:gsub("%d+", function(n)
+							return string.format("%05d", tonumber(n))
+						end)
+					end
+					return pad(a.name) < pad(b.name)
+				end)
+			end,
+		},
 		actions = {
 			open_file = {
 				quit_on_open = true,

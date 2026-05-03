@@ -12,7 +12,6 @@ return {
 	},
 	opts = {
 		sort = {
-			natural = true,
 			sorter = function(nodes)
 				table.sort(nodes, function(a, b)
 					local function pad(s)

@@ -16,6 +16,7 @@ return {
 	config = function()
 		local none_ls = require("null-ls")
 		local registry = require("mason-registry")
+		local formatting = none_ls.builtins.formatting
 
 		local function install(name)
 			local success, package = pcall(registry.get_package, name)
@@ -25,10 +26,23 @@ return {
 		end
 
 		install("stylua")
+		install("prettier")
+		install("ts-standard")
 
 		none_ls.setup({
 			sources = {
 				none_ls.builtins.formatting.stylua,
+				formatting.prettier.with({
+					filetypes = {
+						"html",
+						"css",
+						"javascript",
+						"json",
+						"typescript",
+						"markdown",
+					}
+				})
+				
 			},
 		})
 	end,

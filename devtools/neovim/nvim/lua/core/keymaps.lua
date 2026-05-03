@@ -28,4 +28,4 @@ keymap.set({"n", "i"}, "<C-z>", "<Cmd>undo<CR>", {silent = true})
 
 -- 保存
 
-keymap.set({"n", "i"}, "<C-s>", ":wa<CR>", {silent = true})
+keymap.set({"n", "i"}, "<C-s>", "<cmd>wa<CR>", {silent = true})

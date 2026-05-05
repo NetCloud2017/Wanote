@@ -14,7 +14,10 @@ opt.autoindent = true
 opt.autoread = true  --如切换分支文件自动变更, 如另一个编辑器更改当前打开的文件， 这里也同步更新。
 
 -- 防止包裹
-opt.wrap = false
+opt.wrap = true
+
+opt.linebreak = true
+opt.breakindent = true
 
 -- 光标行
 opt.cursorline = false

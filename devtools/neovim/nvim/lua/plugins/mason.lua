@@ -46,6 +46,7 @@ return {
 				},
 			},
 			["html-lsp"] = {},
+			["eslint-lsp"] = {},
 			["css-lsp"] = {},
 			["emmet-ls"] = {},
 			["vtsls"] = {

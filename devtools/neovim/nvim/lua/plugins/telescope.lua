@@ -5,10 +5,10 @@ return {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons",
 		-- optional but recommended
-		{
-			"nvim-telescope/telescope-fzf-native.nvim",
-			build = "make",
-		},
+		-- {
+		-- 	"nvim-telescope/telescope-fzf-native.nvim",
+		-- 	build = "make",
+		-- },
 	},
 	cmd = "Telescope",
 	keys = {
@@ -57,6 +57,6 @@ return {
 	config = function(_, opts)
 		local telescope = require("telescope")
 		telescope.setup(opts)
-		telescope.load_extension("fzf")
+		-- telescope.load_extension("fzf")
 	end,
 }

@@ -19,7 +19,7 @@ return {
 			preset = "super-tab"
 		},
 		sources = {
-			default = { "path", "snippets", "lsp", "buffer"}
+			default = { "path", "snippets", "lsp", "buffer",}
 		},
 		cmdline = {
 			sources = function ()

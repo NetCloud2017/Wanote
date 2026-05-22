@@ -27,7 +27,6 @@ return {
 
 		install("stylua")
 		install("prettier")
-		install("ts-standard")
 
 		none_ls.setup({
 			sources = {

@@ -10,7 +10,6 @@ return {
 	},
 
 	config = function(_, opts)
-
 		require("mason").setup(opts)
 		local registry = require("mason-registry")
 
@@ -45,12 +44,54 @@ return {
 					},
 				},
 			},
-			["html-lsp"] = {},
+			-- ["html-lsp"] = {},
 			["eslint-lsp"] = {},
-			["css-lsp"] = {},
-			["emmet-ls"] = {},
+			-- ["css-lsp"] = {},
+			["emmet-ls"] = {
+				filetypes = {
+					"css",
+					"eruby",
+					"html",
+					"javascript",
+					"javascriptreact",
+					"less",
+					"sass",
+					"scss",
+					"svelte",
+					"pug",
+					"typescriptreact",
+					"vue",
+				},
+				init_options = {
+					html = {
+						options = {
+							-- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+							["bem.enabled"] = true,
+						},
+					},
+				},
+			},
 			["vtsls"] = {
-
+				settings = {
+					typescript = {
+						inlayHints = {
+							parameterNames = { enabled = "literals" },
+							parameterTypes = { enabled = true },
+							variableTypes = { enabled = true },
+							propertyDeclarationTypes = { enabled = true },
+							functionLikeReturnTypes = { enabled = true },
+							enumMemberValues = { enabled = true },
+						},
+						suggest = {
+							completeFunctionCalls = true,
+						},
+						-- 启用 node_modules 类型检查
+						implicitProjectConfiguration = {
+							checkJs = true,
+							allowJs = true,
+						},
+					},
+				},
 			},
 		}
 
@@ -58,11 +99,10 @@ return {
 			setup(server, config)
 		end
 
-		vim.cmd("lsp enable")
 		vim.diagnostic.config({
 			virtual_text = true,
-			virtual_lines = true,
-			update_in_insert = true,
+			virtual_lines = false,
+			update_in_insert = false,
 		})
 	end,
 }

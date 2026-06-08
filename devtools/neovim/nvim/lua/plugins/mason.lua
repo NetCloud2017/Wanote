@@ -72,24 +72,33 @@ return {
 				},
 			},
 			["vtsls"] = {
+				filetypes = {
+					"javascript",
+					"javascriptreact",
+					"typescript",
+					"typescriptreact",
+					"json",
+				},
+				root_dir = require("lspconfig").util.root_pattern(
+					"tsconfig.json",
+					"jsconfig.json",
+					"next.config.js",
+					"package.json",
+					".git"
+				),
 				settings = {
+					vtsls = {
+						-- 可选：避免大型项目卡顿
+						tsserver = { maxTsServerMemory = 4096, useWorkspaceTsdk = true },
+						-- 限制补全条目数
+						entriesLimit = 500,
+						completeFunctionCalls = true,
+					},
 					typescript = {
-						inlayHints = {
-							parameterNames = { enabled = "literals" },
-							parameterTypes = { enabled = true },
-							variableTypes = { enabled = true },
-							propertyDeclarationTypes = { enabled = true },
-							functionLikeReturnTypes = { enabled = true },
-							enumMemberValues = { enabled = true },
-						},
-						suggest = {
-							completeFunctionCalls = true,
-						},
-						-- 启用 node_modules 类型检查
-						implicitProjectConfiguration = {
-							checkJs = true,
-							allowJs = true,
-						},
+						preferences = { importModuleSpecifierPreference = "non-relative" },
+					},
+					javascript = {
+						preferences = { importModuleSpecifierPreference = "non-relative" },
 					},
 				},
 			},

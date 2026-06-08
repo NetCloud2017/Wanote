@@ -12,6 +12,7 @@ Packer , Nvimtree, Tokyonight
 [ Nerdfonts ](https://www.nerdfonts.com/)
 [ Ripgrep ](https://github.com/BurntSushi/ripgrep)
 
+[neovimcraft 插件安装] (https://neovimcraft.com/)
 ### 安装
 
 下载好了，就解压文件，将解压的文件放到安装的目录里面，我一般放到 D 盘, Programs 文件夹里面。 接着设置 Nvim 的环境变量：

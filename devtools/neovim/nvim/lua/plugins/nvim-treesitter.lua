@@ -12,9 +12,11 @@ return {
 			'markdown',
 			"json",
 			"yaml",
+			"javascriptreact",
+			"typescriptreact",
 		},
 		highlight = {
 			enable = true
-		}
+		},
 	}
 }

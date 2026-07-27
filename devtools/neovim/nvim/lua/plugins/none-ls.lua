@@ -39,6 +39,7 @@ return {
 						"json",
 						"typescript",
 						"markdown",
+						'javascriptreact',
 					}
 				})
 				

@@ -10,18 +10,23 @@ return {
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
+
+	keys = {
+		{ "<leader>ef", ":NvimTreeFindFileToggle<CR>", silent = true },
+	},
 	opts = {
 		sort = {
-			sorter = function(nodes)
-				table.sort(nodes, function(a, b)
-					local function pad(s)
-						return s:gsub("%d+", function(n)
-							return string.format("%05d", tonumber(n))
-						end)
-					end
-					return pad(a.name) < pad(b.name)
-				end)
-			end,
+			sorter = "case_sensitive",
+			-- function(nodes)
+			-- 	table.sort(nodes, function(a, b)
+			-- 		local function pad(s)
+			-- 			return s:gsub("%d+", function(n)
+			-- 				return string.format("%05d", tonumber(n))
+			-- 			end)
+			-- 		end
+			-- 		return pad(a.name) < pad(b.name)
+			-- 	end)
+			-- end,
 		},
 		actions = {
 			open_file = {

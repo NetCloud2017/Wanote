@@ -28,7 +28,6 @@ return {
 				client.server_capabilities.documentFormattingProvider = false
 				client.server_capabilities.documentRangeFormattingProvider = false
 			end
-
 			vim.lsp.config(nvim_lsp_mapping_str, config)
 		end
 
@@ -46,6 +45,7 @@ return {
 			},
 			-- ["html-lsp"] = {},
 			["eslint-lsp"] = {},
+			["prisma-language-server"] = {},
 			-- ["css-lsp"] = {},
 			["emmet-ls"] = {
 				filetypes = {
@@ -78,28 +78,6 @@ return {
 					"typescript",
 					"typescriptreact",
 					"json",
-				},
-				root_dir = require("lspconfig").util.root_pattern(
-					"tsconfig.json",
-					"jsconfig.json",
-					"next.config.js",
-					"package.json",
-					".git"
-				),
-				settings = {
-					vtsls = {
-						-- 可选：避免大型项目卡顿
-						tsserver = { maxTsServerMemory = 4096, useWorkspaceTsdk = true },
-						-- 限制补全条目数
-						entriesLimit = 500,
-						completeFunctionCalls = true,
-					},
-					typescript = {
-						preferences = { importModuleSpecifierPreference = "non-relative" },
-					},
-					javascript = {
-						preferences = { importModuleSpecifierPreference = "non-relative" },
-					},
 				},
 			},
 		}
